@@ -15,7 +15,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Irytech.AdmissionJankari.Web</RootNamespace>
     <AssemblyName>Irytech.AdmissionJankari.Web</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -25,6 +25,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <Use64BitIISExpress />
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -34,6 +35,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -42,6 +44,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AjaxControlToolkit, Version=4.1.40412.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
@@ -69,6 +72,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Spaanjaars.Toolkit.dll</HintPath>
     </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -76,16 +80,14 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="AdminPanel\Form Package\FactorMaster.aspx" />
@@ -575,7 +577,9 @@
     <Content Include="fckeditor\skins\v2\templates.css" />
     <Content Include="fckeditor\themes\default\theme.js" />
     <Content Include="IryTech.AdmissionJankari20.Web.csproj" />
-    <Content Include="IryTech.AdmissionJankari20.Web.csproj.user" />
+    <Content Include="IryTech.AdmissionJankari20.Web.csproj.user">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="PaymentOptions.aspx" />
     <Content Include="PrivacyPolicy.aspx" />
     <Content Include="Refund.aspx" />
@@ -1679,7 +1683,11 @@
     <Compile Include="AdminPanel\User\UserMaster.aspx.designer.cs">
       <DependentUpon>UserMaster.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App_GlobalResources\label.designer.cs" />
+    <Compile Include="App_GlobalResources\label1.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>label.resx</DependentUpon>
+    </Compile>
     <Compile Include="ConformationPage.aspx.cs">
       <DependentUpon>ConformationPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
