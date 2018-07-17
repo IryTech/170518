@@ -1,0 +1,3413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetTableNamesNPrimaryField">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetTableNamesNPrimaryFieldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTableNamesNPrimaryFieldResult" type="tns:ArrayOfClsDBTablesAttributes" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfClsDBTablesAttributes">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ClsDBTablesAttributes" nillable="true" type="tns:ClsDBTablesAttributes" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ClsDBTablesAttributes">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="strColumnName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strDataType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strColumnDTCharLength" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strTABLENAME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strPK_COLUMNNAME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PropColumnName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PropDataType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PropColumnDTCharLength" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PropTABLENAME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PropPK_COLUMNNAME" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetColumns">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TableName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AutoIncrementedColumnName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetColumnsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetColumnsResult" type="tns:ArrayOfClsDBTablesAttributes" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCSVColumns">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FilePath" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCSVColumnsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCSVColumnsResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ImportFinal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_strTableName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_strPrimaryKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fileName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Columns" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="AssignTo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ImportFinalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ImportFinalResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckMobileIsAlreadyExists">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MobileNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckMobileIsAlreadyExistsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckMobileIsAlreadyExistsResult" type="tns:ArrayOfLeadProperty" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfLeadProperty">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="LeadProperty" nillable="true" type="tns:LeadProperty" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="LeadProperty">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="StudentMobile" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LeadName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CourseName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DuplicateCount" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="MailAddress" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MailAddressCity" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="MailAddressCityName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MailAddressState" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="MailAddressStateName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MailAddressCountry" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="MailAddressCountryName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MailAddressPin" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PermanentAddress" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PermanentAddressCity" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="PermanentAddressCityName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PermanentAddressState" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="PermanentAddressStateName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PermanentAddressCountry" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="PermanentAddressCountryName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalCount" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="RowIndex" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="LeadId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="AssignedUserId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="AssignedUserName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AssignedOn" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsConverted" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="DoNotCall" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="GuardiansName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GuardiansMobile" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResidentCity" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CourseCity" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastRemark" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DayElapsed" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="LeadSource" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StreamName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExamAppeared" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RankMarks" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InterestedInCollege" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StudentQueryText" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CollegeQueryText" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PhoneHome" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PhoneOther" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PhoneFax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsEmailInvalid" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsCourseLocked" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserSubName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PermanentAddressPin" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalScheduledAppointments" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalReminders" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReminderStartDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Qualification" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AggregatePercentage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CourseCombination" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CourseAggregate" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResultAwaited" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="SentToManager" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SentToCollege" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="GradSpecialization" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GradAggregate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GradYOP" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GradCollageName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GradUniversityName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="GradIsAppearing" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="SSecSpecialization" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SSecAggregate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SSecYOP" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SSecSchoolName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SSecBoardName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SSecIsAppearing" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="HSecAggregate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HSecYOP" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HSecSchoolName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HSecBoardName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdmissionStage" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ConvertedBy" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ConvertedOn" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="CampaignId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CampaignName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RemarkCount" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsFollowed" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="LeadStatus" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="LastSmsSendOn" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedBy" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedOn" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ModifiedBy" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ModifiedOn" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="TransferedBy" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TransferedOn" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="AssignedTransferedTo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CalendarDates" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="BindLeadByLeadId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LeadID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BindLeadByLeadIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BindLeadByLeadIdResult" type="tns:ArrayOfLeadProperty" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckReminder">
+        <s:complexType />
+      </s:element>
+      <s:element name="CheckReminderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckReminderResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckSession">
+        <s:complexType />
+      </s:element>
+      <s:element name="CheckSessionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckSessionResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRelatedMobileNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="prefixText" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contextKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRelatedMobileNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRelatedMobileNoResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AutoCompleteLeadsName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="prefixText" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contextKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AutoCompleteLeadsNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AutoCompleteLeadsNameResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProductsRows">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UserId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ForeignId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="AppointmentType" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CurrentPage" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="RecordsPerPage" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ControlType" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="LastSrNo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProductsRowsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProductsRowsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AutoCompleteConvertedLeadsNumber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="prefixText" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contextKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AutoCompleteConvertedLeadsNumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AutoCompleteConvertedLeadsNumberResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="prefixText" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contextKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAccountNameResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStreamsForSelectedCourse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="prefixText" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contextKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStreamsForSelectedCourseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStreamsForSelectedCourseResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchColleges">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="prefixText" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchCollegesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchCollegesResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCollegeForSelectedCourse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="prefixText" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contextKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCollegeForSelectedCourseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCollegeForSelectedCourseResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetColleges">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CourseId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strStream" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strCities" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="findByCities" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="participated" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCollegesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCollegesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCollegesForIndividualLead">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CourseId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strStream" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strCities" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="findByCities" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="participated" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCollegesForIndividualLeadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCollegesForIndividualLeadResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCities">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="prefixText" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCitiesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCitiesResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllActivityLog">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllActivityLogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllActivityLogResult" type="tns:ArrayOfActivityLogProperty" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfActivityLogProperty">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ActivityLogProperty" nillable="true" type="tns:ActivityLogProperty" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ActivityLogProperty">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ActivityLogId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ActivityLogMasterId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActivityLogDesc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActivityType" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ActivityUserCategoryId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedBy" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatedByFullName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedOn" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="bindFollowUpsForALead">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LeadId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="bindFollowUpsForALeadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="bindFollowUpsForALeadResult" type="tns:ArrayOfFollowupProperty" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfFollowupProperty">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="FollowupProperty" nillable="true" type="tns:FollowupProperty" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="FollowupProperty">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="TotalCount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="RowIndex" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="FollowupId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ForeignKeyId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ForeignKeyName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FollowupText" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FollowUpType" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedBy" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatorName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ModifiedBy" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ModifierName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedOn" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ModifiedOn" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="CrmFollowUpStatus" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="goToContactNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StudentMobile" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="goToContactNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="goToContactNoResult" type="tns:ArrayOfLeadProperty" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="goToLeadByName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LeadName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="goToLeadByNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="goToLeadByNameResult" type="tns:ArrayOfLeadProperty" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="bindFollowUpsForAccount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AccountId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="bindFollowUpsForAccountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="bindFollowUpsForAccountResult" type="tns:ArrayOfFollowupProperty" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="bindAppointmentsForAnIndividualSource">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AppointmentType" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="AccountOrLeadId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="bindAppointmentsForAnIndividualSourceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="bindAppointmentsForAnIndividualSourceResult" type="tns:ArrayOfAppointmentProperty" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfAppointmentProperty">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="AppointmentProperty" nillable="true" type="tns:AppointmentProperty" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AppointmentProperty">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="TotalCount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="AppointmentId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="UserId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="foreignIdId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContactNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LeadOrAccountName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CourseName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AppointmentType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OpportunityName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AppointmentName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AppointmentDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="AppointmentDescription" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AppointmentStatus" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ScheduleFor" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedBy" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedOn" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ModifiedBy" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ModifiedOn" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreateByName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CollegeAndOfficeName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsConverted" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="StateName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CityName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AppointmentExecuted" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="AppointmentIsVisted" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="BindCollegesWithCheckBox">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AppointmentId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BindCollegesWithCheckBoxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BindCollegesWithCheckBoxResult" type="tns:ArrayOfAppointmentProperty" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="bindRemindersBySourceIdAndType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReminderType" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ForeignId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PageSize" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="bindRemindersBySourceIdAndTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="bindRemindersBySourceIdAndTypeResult" type="tns:ArrayOfReminderProperty" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfReminderProperty">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ReminderProperty" nillable="true" type="tns:ReminderProperty" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ReminderProperty">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContactNo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalCount" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReminderType" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RelatedForeignId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReminderId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="UserId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReminderName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReminderDesc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReminderStartDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReminderEndDate" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReminderStatus" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsExecuted" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatedOn" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedBy" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ModifiedOn" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ModifiedBy" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LogOutUser">
+        <s:complexType />
+      </s:element>
+      <s:element name="LogOutUserResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetUserName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="contextKey" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="prefixText" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserNameResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetLeadsFromOuterResource">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StudentName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EmailId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StudentMobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PreferedCity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CourseName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IntrestedColleges" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StudentQuery" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetLeadsFromOuterResourceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetLeadsFromOuterResourceResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MergeLeads">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LeadIds" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DynamicQuery" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MergeLeadsResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="LeadsQueryFromPortal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LeadName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EmailId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StudentMobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CourseCity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CourseName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StudentQuery" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LeadSource" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LeadsQueryFromPortalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LeadsQueryFromPortalResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ImportAdmissionJankariLeads">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LeadId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="StudentMobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LeadName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EmailId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CourseName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ExamAppeared" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StreamName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CourseCity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InterestedInCollege" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StudentQuery" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="LeadStatus" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ImportAdmissionJankariLeadsResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="CheckADMJImportedLeadsAlert">
+        <s:complexType />
+      </s:element>
+      <s:element name="CheckADMJImportedLeadsAlertResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckADMJImportedLeadsAlertResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BindCountryDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="knownCategoryValues" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="category" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BindCountryDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BindCountryDetailsResult" type="tns:ArrayOfCascadingDropDownNameValue" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCascadingDropDownNameValue">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CascadingDropDownNameValue" nillable="true" type="tns:CascadingDropDownNameValue" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CascadingDropDownNameValue">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="value" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="isDefaultValue" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="optionTitle" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="BindStateDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="knownCategoryValues" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="category" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BindStateDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BindStateDetailsResult" type="tns:ArrayOfCascadingDropDownNameValue" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BindCityDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="knownCategoryValues" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="category" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BindCityDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BindCityDetailsResult" type="tns:ArrayOfCascadingDropDownNameValue" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BindOnlyCitiesFromLocal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="knownCategoryValues" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="category" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BindOnlyCitiesFromLocalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BindOnlyCitiesFromLocalResult" type="tns:ArrayOfCascadingDropDownNameValue" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ArrayOfClsDBTablesAttributes" nillable="true" type="tns:ArrayOfClsDBTablesAttributes" />
+      <s:element name="ArrayOfString" nillable="true" type="tns:ArrayOfString" />
+      <s:element name="ArrayOfLeadProperty" nillable="true" type="tns:ArrayOfLeadProperty" />
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="boolean" type="s:boolean" />
+      <s:element name="ArrayOfActivityLogProperty" nillable="true" type="tns:ArrayOfActivityLogProperty" />
+      <s:element name="ArrayOfFollowupProperty" nillable="true" type="tns:ArrayOfFollowupProperty" />
+      <s:element name="ArrayOfAppointmentProperty" nillable="true" type="tns:ArrayOfAppointmentProperty" />
+      <s:element name="ArrayOfReminderProperty" nillable="true" type="tns:ArrayOfReminderProperty" />
+      <s:element name="int" type="s:int" />
+      <s:element name="ArrayOfCascadingDropDownNameValue" nillable="true" type="tns:ArrayOfCascadingDropDownNameValue" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetTableNamesNPrimaryFieldSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTableNamesNPrimaryField" />
+  </wsdl:message>
+  <wsdl:message name="GetTableNamesNPrimaryFieldSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTableNamesNPrimaryFieldResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetColumnsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetColumns" />
+  </wsdl:message>
+  <wsdl:message name="GetColumnsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetColumnsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCSVColumnsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCSVColumns" />
+  </wsdl:message>
+  <wsdl:message name="GetCSVColumnsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCSVColumnsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ImportFinalSoapIn">
+    <wsdl:part name="parameters" element="tns:ImportFinal" />
+  </wsdl:message>
+  <wsdl:message name="ImportFinalSoapOut">
+    <wsdl:part name="parameters" element="tns:ImportFinalResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckMobileIsAlreadyExistsSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckMobileIsAlreadyExists" />
+  </wsdl:message>
+  <wsdl:message name="CheckMobileIsAlreadyExistsSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckMobileIsAlreadyExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="BindLeadByLeadIdSoapIn">
+    <wsdl:part name="parameters" element="tns:BindLeadByLeadId" />
+  </wsdl:message>
+  <wsdl:message name="BindLeadByLeadIdSoapOut">
+    <wsdl:part name="parameters" element="tns:BindLeadByLeadIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckReminderSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckReminder" />
+  </wsdl:message>
+  <wsdl:message name="CheckReminderSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckReminderResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckSessionSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckSession" />
+  </wsdl:message>
+  <wsdl:message name="CheckSessionSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRelatedMobileNoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRelatedMobileNo" />
+  </wsdl:message>
+  <wsdl:message name="GetRelatedMobileNoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRelatedMobileNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AutoCompleteLeadsNameSoapIn">
+    <wsdl:part name="parameters" element="tns:AutoCompleteLeadsName" />
+  </wsdl:message>
+  <wsdl:message name="AutoCompleteLeadsNameSoapOut">
+    <wsdl:part name="parameters" element="tns:AutoCompleteLeadsNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProductsRowsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProductsRows" />
+  </wsdl:message>
+  <wsdl:message name="GetProductsRowsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProductsRowsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AutoCompleteConvertedLeadsNumberSoapIn">
+    <wsdl:part name="parameters" element="tns:AutoCompleteConvertedLeadsNumber" />
+  </wsdl:message>
+  <wsdl:message name="AutoCompleteConvertedLeadsNumberSoapOut">
+    <wsdl:part name="parameters" element="tns:AutoCompleteConvertedLeadsNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAccountName" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAccountNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStreamsForSelectedCourseSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStreamsForSelectedCourse" />
+  </wsdl:message>
+  <wsdl:message name="GetStreamsForSelectedCourseSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStreamsForSelectedCourseResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchCollegesSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchColleges" />
+  </wsdl:message>
+  <wsdl:message name="SearchCollegesSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchCollegesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCollegeForSelectedCourseSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCollegeForSelectedCourse" />
+  </wsdl:message>
+  <wsdl:message name="GetCollegeForSelectedCourseSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCollegeForSelectedCourseResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCollegesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetColleges" />
+  </wsdl:message>
+  <wsdl:message name="GetCollegesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCollegesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCollegesForIndividualLeadSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCollegesForIndividualLead" />
+  </wsdl:message>
+  <wsdl:message name="GetCollegesForIndividualLeadSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCollegesForIndividualLeadResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCitiesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCities" />
+  </wsdl:message>
+  <wsdl:message name="GetCitiesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllActivityLogSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllActivityLog" />
+  </wsdl:message>
+  <wsdl:message name="GetAllActivityLogSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllActivityLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="bindFollowUpsForALeadSoapIn">
+    <wsdl:part name="parameters" element="tns:bindFollowUpsForALead" />
+  </wsdl:message>
+  <wsdl:message name="bindFollowUpsForALeadSoapOut">
+    <wsdl:part name="parameters" element="tns:bindFollowUpsForALeadResponse" />
+  </wsdl:message>
+  <wsdl:message name="goToContactNoSoapIn">
+    <wsdl:part name="parameters" element="tns:goToContactNo" />
+  </wsdl:message>
+  <wsdl:message name="goToContactNoSoapOut">
+    <wsdl:part name="parameters" element="tns:goToContactNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="goToLeadByNameSoapIn">
+    <wsdl:part name="parameters" element="tns:goToLeadByName" />
+  </wsdl:message>
+  <wsdl:message name="goToLeadByNameSoapOut">
+    <wsdl:part name="parameters" element="tns:goToLeadByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="bindFollowUpsForAccountSoapIn">
+    <wsdl:part name="parameters" element="tns:bindFollowUpsForAccount" />
+  </wsdl:message>
+  <wsdl:message name="bindFollowUpsForAccountSoapOut">
+    <wsdl:part name="parameters" element="tns:bindFollowUpsForAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="bindAppointmentsForAnIndividualSourceSoapIn">
+    <wsdl:part name="parameters" element="tns:bindAppointmentsForAnIndividualSource" />
+  </wsdl:message>
+  <wsdl:message name="bindAppointmentsForAnIndividualSourceSoapOut">
+    <wsdl:part name="parameters" element="tns:bindAppointmentsForAnIndividualSourceResponse" />
+  </wsdl:message>
+  <wsdl:message name="BindCollegesWithCheckBoxSoapIn">
+    <wsdl:part name="parameters" element="tns:BindCollegesWithCheckBox" />
+  </wsdl:message>
+  <wsdl:message name="BindCollegesWithCheckBoxSoapOut">
+    <wsdl:part name="parameters" element="tns:BindCollegesWithCheckBoxResponse" />
+  </wsdl:message>
+  <wsdl:message name="bindRemindersBySourceIdAndTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:bindRemindersBySourceIdAndType" />
+  </wsdl:message>
+  <wsdl:message name="bindRemindersBySourceIdAndTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:bindRemindersBySourceIdAndTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogOutUserSoapIn">
+    <wsdl:part name="parameters" element="tns:LogOutUser" />
+  </wsdl:message>
+  <wsdl:message name="LogOutUserSoapOut">
+    <wsdl:part name="parameters" element="tns:LogOutUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserName" />
+  </wsdl:message>
+  <wsdl:message name="GetUserNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetLeadsFromOuterResourceSoapIn">
+    <wsdl:part name="parameters" element="tns:SetLeadsFromOuterResource" />
+  </wsdl:message>
+  <wsdl:message name="SetLeadsFromOuterResourceSoapOut">
+    <wsdl:part name="parameters" element="tns:SetLeadsFromOuterResourceResponse" />
+  </wsdl:message>
+  <wsdl:message name="MergeLeadsSoapIn">
+    <wsdl:part name="parameters" element="tns:MergeLeads" />
+  </wsdl:message>
+  <wsdl:message name="MergeLeadsSoapOut">
+    <wsdl:part name="parameters" element="tns:MergeLeadsResponse" />
+  </wsdl:message>
+  <wsdl:message name="LeadsQueryFromPortalSoapIn">
+    <wsdl:part name="parameters" element="tns:LeadsQueryFromPortal" />
+  </wsdl:message>
+  <wsdl:message name="LeadsQueryFromPortalSoapOut">
+    <wsdl:part name="parameters" element="tns:LeadsQueryFromPortalResponse" />
+  </wsdl:message>
+  <wsdl:message name="ImportAdmissionJankariLeadsSoapIn">
+    <wsdl:part name="parameters" element="tns:ImportAdmissionJankariLeads" />
+  </wsdl:message>
+  <wsdl:message name="ImportAdmissionJankariLeadsSoapOut">
+    <wsdl:part name="parameters" element="tns:ImportAdmissionJankariLeadsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckADMJImportedLeadsAlertSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckADMJImportedLeadsAlert" />
+  </wsdl:message>
+  <wsdl:message name="CheckADMJImportedLeadsAlertSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckADMJImportedLeadsAlertResponse" />
+  </wsdl:message>
+  <wsdl:message name="BindCountryDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:BindCountryDetails" />
+  </wsdl:message>
+  <wsdl:message name="BindCountryDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:BindCountryDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="BindStateDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:BindStateDetails" />
+  </wsdl:message>
+  <wsdl:message name="BindStateDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:BindStateDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="BindCityDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:BindCityDetails" />
+  </wsdl:message>
+  <wsdl:message name="BindCityDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:BindCityDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="BindOnlyCitiesFromLocalSoapIn">
+    <wsdl:part name="parameters" element="tns:BindOnlyCitiesFromLocal" />
+  </wsdl:message>
+  <wsdl:message name="BindOnlyCitiesFromLocalSoapOut">
+    <wsdl:part name="parameters" element="tns:BindOnlyCitiesFromLocalResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTableNamesNPrimaryFieldHttpGetIn" />
+  <wsdl:message name="GetTableNamesNPrimaryFieldHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfClsDBTablesAttributes" />
+  </wsdl:message>
+  <wsdl:message name="GetColumnsHttpGetIn">
+    <wsdl:part name="TableName" type="s:string" />
+    <wsdl:part name="AutoIncrementedColumnName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetColumnsHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfClsDBTablesAttributes" />
+  </wsdl:message>
+  <wsdl:message name="GetCSVColumnsHttpGetIn">
+    <wsdl:part name="FilePath" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCSVColumnsHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="ImportFinalHttpGetIn">
+    <wsdl:part name="_strTableName" type="s:string" />
+    <wsdl:part name="_strPrimaryKey" type="s:string" />
+    <wsdl:part name="fileName" type="s:string" />
+    <wsdl:part name="Columns" type="s:string" />
+    <wsdl:part name="AssignTo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ImportFinalHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="CheckMobileIsAlreadyExistsHttpGetIn">
+    <wsdl:part name="MobileNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckMobileIsAlreadyExistsHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLeadProperty" />
+  </wsdl:message>
+  <wsdl:message name="BindLeadByLeadIdHttpGetIn">
+    <wsdl:part name="LeadID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BindLeadByLeadIdHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLeadProperty" />
+  </wsdl:message>
+  <wsdl:message name="CheckReminderHttpGetIn" />
+  <wsdl:message name="CheckReminderHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckSessionHttpGetIn" />
+  <wsdl:message name="CheckSessionHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="GetRelatedMobileNoHttpGetIn">
+    <wsdl:part name="prefixText" type="s:string" />
+    <wsdl:part name="contextKey" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetRelatedMobileNoHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="AutoCompleteLeadsNameHttpGetIn">
+    <wsdl:part name="prefixText" type="s:string" />
+    <wsdl:part name="contextKey" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AutoCompleteLeadsNameHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="GetProductsRowsHttpGetIn">
+    <wsdl:part name="UserId" type="s:string" />
+    <wsdl:part name="ForeignId" type="s:string" />
+    <wsdl:part name="AppointmentType" type="s:string" />
+    <wsdl:part name="CurrentPage" type="s:string" />
+    <wsdl:part name="RecordsPerPage" type="s:string" />
+    <wsdl:part name="ControlType" type="s:string" />
+    <wsdl:part name="LastSrNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProductsRowsHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AutoCompleteConvertedLeadsNumberHttpGetIn">
+    <wsdl:part name="prefixText" type="s:string" />
+    <wsdl:part name="contextKey" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AutoCompleteConvertedLeadsNumberHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountNameHttpGetIn">
+    <wsdl:part name="prefixText" type="s:string" />
+    <wsdl:part name="contextKey" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountNameHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="GetStreamsForSelectedCourseHttpGetIn">
+    <wsdl:part name="prefixText" type="s:string" />
+    <wsdl:part name="contextKey" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetStreamsForSelectedCourseHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="SearchCollegesHttpGetIn">
+    <wsdl:part name="prefixText" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SearchCollegesHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="GetCollegeForSelectedCourseHttpGetIn">
+    <wsdl:part name="prefixText" type="s:string" />
+    <wsdl:part name="contextKey" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCollegeForSelectedCourseHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="GetCollegesHttpGetIn">
+    <wsdl:part name="CourseId" type="s:string" />
+    <wsdl:part name="strStream" type="s:string" />
+    <wsdl:part name="strCities" type="s:string" />
+    <wsdl:part name="findByCities" type="s:string" />
+    <wsdl:part name="participated" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCollegesHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCollegesForIndividualLeadHttpGetIn">
+    <wsdl:part name="CourseId" type="s:string" />
+    <wsdl:part name="strStream" type="s:string" />
+    <wsdl:part name="strCities" type="s:string" />
+    <wsdl:part name="findByCities" type="s:string" />
+    <wsdl:part name="participated" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCollegesForIndividualLeadHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCitiesHttpGetIn">
+    <wsdl:part name="prefixText" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCitiesHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="GetAllActivityLogHttpGetIn" />
+  <wsdl:message name="GetAllActivityLogHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfActivityLogProperty" />
+  </wsdl:message>
+  <wsdl:message name="bindFollowUpsForALeadHttpGetIn">
+    <wsdl:part name="LeadId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="bindFollowUpsForALeadHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfFollowupProperty" />
+  </wsdl:message>
+  <wsdl:message name="goToContactNoHttpGetIn">
+    <wsdl:part name="StudentMobile" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="goToContactNoHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLeadProperty" />
+  </wsdl:message>
+  <wsdl:message name="goToLeadByNameHttpGetIn">
+    <wsdl:part name="LeadName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="goToLeadByNameHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLeadProperty" />
+  </wsdl:message>
+  <wsdl:message name="bindFollowUpsForAccountHttpGetIn">
+    <wsdl:part name="AccountId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="bindFollowUpsForAccountHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfFollowupProperty" />
+  </wsdl:message>
+  <wsdl:message name="bindAppointmentsForAnIndividualSourceHttpGetIn">
+    <wsdl:part name="AppointmentType" type="s:string" />
+    <wsdl:part name="AccountOrLeadId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="bindAppointmentsForAnIndividualSourceHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfAppointmentProperty" />
+  </wsdl:message>
+  <wsdl:message name="BindCollegesWithCheckBoxHttpGetIn">
+    <wsdl:part name="AppointmentId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BindCollegesWithCheckBoxHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfAppointmentProperty" />
+  </wsdl:message>
+  <wsdl:message name="bindRemindersBySourceIdAndTypeHttpGetIn">
+    <wsdl:part name="ReminderType" type="s:string" />
+    <wsdl:part name="ForeignId" type="s:string" />
+    <wsdl:part name="PageSize" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="bindRemindersBySourceIdAndTypeHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfReminderProperty" />
+  </wsdl:message>
+  <wsdl:message name="LogOutUserHttpGetIn" />
+  <wsdl:message name="LogOutUserHttpGetOut" />
+  <wsdl:message name="GetUserNameHttpGetIn">
+    <wsdl:part name="contextKey" type="s:string" />
+    <wsdl:part name="prefixText" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetUserNameHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="SetLeadsFromOuterResourceHttpGetIn">
+    <wsdl:part name="StudentName" type="s:string" />
+    <wsdl:part name="EmailId" type="s:string" />
+    <wsdl:part name="StudentMobile" type="s:string" />
+    <wsdl:part name="PreferedCity" type="s:string" />
+    <wsdl:part name="CourseName" type="s:string" />
+    <wsdl:part name="IntrestedColleges" type="s:string" />
+    <wsdl:part name="StudentQuery" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SetLeadsFromOuterResourceHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="MergeLeadsHttpGetIn">
+    <wsdl:part name="LeadIds" type="s:string" />
+    <wsdl:part name="DynamicQuery" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="MergeLeadsHttpGetOut" />
+  <wsdl:message name="LeadsQueryFromPortalHttpGetIn">
+    <wsdl:part name="LeadName" type="s:string" />
+    <wsdl:part name="EmailId" type="s:string" />
+    <wsdl:part name="StudentMobile" type="s:string" />
+    <wsdl:part name="CourseCity" type="s:string" />
+    <wsdl:part name="CourseName" type="s:string" />
+    <wsdl:part name="StudentQuery" type="s:string" />
+    <wsdl:part name="LeadSource" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LeadsQueryFromPortalHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="ImportAdmissionJankariLeadsHttpGetIn">
+    <wsdl:part name="LeadId" type="s:string" />
+    <wsdl:part name="StudentMobile" type="s:string" />
+    <wsdl:part name="LeadName" type="s:string" />
+    <wsdl:part name="EmailId" type="s:string" />
+    <wsdl:part name="CourseName" type="s:string" />
+    <wsdl:part name="ExamAppeared" type="s:string" />
+    <wsdl:part name="StreamName" type="s:string" />
+    <wsdl:part name="CourseCity" type="s:string" />
+    <wsdl:part name="InterestedInCollege" type="s:string" />
+    <wsdl:part name="StudentQuery" type="s:string" />
+    <wsdl:part name="LeadStatus" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ImportAdmissionJankariLeadsHttpGetOut" />
+  <wsdl:message name="CheckADMJImportedLeadsAlertHttpGetIn" />
+  <wsdl:message name="CheckADMJImportedLeadsAlertHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="BindCountryDetailsHttpGetIn">
+    <wsdl:part name="knownCategoryValues" type="s:string" />
+    <wsdl:part name="category" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BindCountryDetailsHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCascadingDropDownNameValue" />
+  </wsdl:message>
+  <wsdl:message name="BindStateDetailsHttpGetIn">
+    <wsdl:part name="knownCategoryValues" type="s:string" />
+    <wsdl:part name="category" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BindStateDetailsHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCascadingDropDownNameValue" />
+  </wsdl:message>
+  <wsdl:message name="BindCityDetailsHttpGetIn">
+    <wsdl:part name="knownCategoryValues" type="s:string" />
+    <wsdl:part name="category" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BindCityDetailsHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCascadingDropDownNameValue" />
+  </wsdl:message>
+  <wsdl:message name="BindOnlyCitiesFromLocalHttpGetIn">
+    <wsdl:part name="knownCategoryValues" type="s:string" />
+    <wsdl:part name="category" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BindOnlyCitiesFromLocalHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCascadingDropDownNameValue" />
+  </wsdl:message>
+  <wsdl:message name="GetTableNamesNPrimaryFieldHttpPostIn" />
+  <wsdl:message name="GetTableNamesNPrimaryFieldHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfClsDBTablesAttributes" />
+  </wsdl:message>
+  <wsdl:message name="GetColumnsHttpPostIn">
+    <wsdl:part name="TableName" type="s:string" />
+    <wsdl:part name="AutoIncrementedColumnName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetColumnsHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfClsDBTablesAttributes" />
+  </wsdl:message>
+  <wsdl:message name="GetCSVColumnsHttpPostIn">
+    <wsdl:part name="FilePath" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCSVColumnsHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="ImportFinalHttpPostIn">
+    <wsdl:part name="_strTableName" type="s:string" />
+    <wsdl:part name="_strPrimaryKey" type="s:string" />
+    <wsdl:part name="fileName" type="s:string" />
+    <wsdl:part name="Columns" type="s:string" />
+    <wsdl:part name="AssignTo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ImportFinalHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="CheckMobileIsAlreadyExistsHttpPostIn">
+    <wsdl:part name="MobileNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckMobileIsAlreadyExistsHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLeadProperty" />
+  </wsdl:message>
+  <wsdl:message name="BindLeadByLeadIdHttpPostIn">
+    <wsdl:part name="LeadID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BindLeadByLeadIdHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLeadProperty" />
+  </wsdl:message>
+  <wsdl:message name="CheckReminderHttpPostIn" />
+  <wsdl:message name="CheckReminderHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckSessionHttpPostIn" />
+  <wsdl:message name="CheckSessionHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="GetRelatedMobileNoHttpPostIn">
+    <wsdl:part name="prefixText" type="s:string" />
+    <wsdl:part name="contextKey" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetRelatedMobileNoHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="AutoCompleteLeadsNameHttpPostIn">
+    <wsdl:part name="prefixText" type="s:string" />
+    <wsdl:part name="contextKey" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AutoCompleteLeadsNameHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="GetProductsRowsHttpPostIn">
+    <wsdl:part name="UserId" type="s:string" />
+    <wsdl:part name="ForeignId" type="s:string" />
+    <wsdl:part name="AppointmentType" type="s:string" />
+    <wsdl:part name="CurrentPage" type="s:string" />
+    <wsdl:part name="RecordsPerPage" type="s:string" />
+    <wsdl:part name="ControlType" type="s:string" />
+    <wsdl:part name="LastSrNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProductsRowsHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AutoCompleteConvertedLeadsNumberHttpPostIn">
+    <wsdl:part name="prefixText" type="s:string" />
+    <wsdl:part name="contextKey" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AutoCompleteConvertedLeadsNumberHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountNameHttpPostIn">
+    <wsdl:part name="prefixText" type="s:string" />
+    <wsdl:part name="contextKey" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountNameHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="GetStreamsForSelectedCourseHttpPostIn">
+    <wsdl:part name="prefixText" type="s:string" />
+    <wsdl:part name="contextKey" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetStreamsForSelectedCourseHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="SearchCollegesHttpPostIn">
+    <wsdl:part name="prefixText" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SearchCollegesHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="GetCollegeForSelectedCourseHttpPostIn">
+    <wsdl:part name="prefixText" type="s:string" />
+    <wsdl:part name="contextKey" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCollegeForSelectedCourseHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="GetCollegesHttpPostIn">
+    <wsdl:part name="CourseId" type="s:string" />
+    <wsdl:part name="strStream" type="s:string" />
+    <wsdl:part name="strCities" type="s:string" />
+    <wsdl:part name="findByCities" type="s:string" />
+    <wsdl:part name="participated" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCollegesHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCollegesForIndividualLeadHttpPostIn">
+    <wsdl:part name="CourseId" type="s:string" />
+    <wsdl:part name="strStream" type="s:string" />
+    <wsdl:part name="strCities" type="s:string" />
+    <wsdl:part name="findByCities" type="s:string" />
+    <wsdl:part name="participated" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCollegesForIndividualLeadHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCitiesHttpPostIn">
+    <wsdl:part name="prefixText" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCitiesHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="GetAllActivityLogHttpPostIn" />
+  <wsdl:message name="GetAllActivityLogHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfActivityLogProperty" />
+  </wsdl:message>
+  <wsdl:message name="bindFollowUpsForALeadHttpPostIn">
+    <wsdl:part name="LeadId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="bindFollowUpsForALeadHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfFollowupProperty" />
+  </wsdl:message>
+  <wsdl:message name="goToContactNoHttpPostIn">
+    <wsdl:part name="StudentMobile" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="goToContactNoHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLeadProperty" />
+  </wsdl:message>
+  <wsdl:message name="goToLeadByNameHttpPostIn">
+    <wsdl:part name="LeadName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="goToLeadByNameHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLeadProperty" />
+  </wsdl:message>
+  <wsdl:message name="bindFollowUpsForAccountHttpPostIn">
+    <wsdl:part name="AccountId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="bindFollowUpsForAccountHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfFollowupProperty" />
+  </wsdl:message>
+  <wsdl:message name="bindAppointmentsForAnIndividualSourceHttpPostIn">
+    <wsdl:part name="AppointmentType" type="s:string" />
+    <wsdl:part name="AccountOrLeadId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="bindAppointmentsForAnIndividualSourceHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfAppointmentProperty" />
+  </wsdl:message>
+  <wsdl:message name="BindCollegesWithCheckBoxHttpPostIn">
+    <wsdl:part name="AppointmentId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BindCollegesWithCheckBoxHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfAppointmentProperty" />
+  </wsdl:message>
+  <wsdl:message name="bindRemindersBySourceIdAndTypeHttpPostIn">
+    <wsdl:part name="ReminderType" type="s:string" />
+    <wsdl:part name="ForeignId" type="s:string" />
+    <wsdl:part name="PageSize" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="bindRemindersBySourceIdAndTypeHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfReminderProperty" />
+  </wsdl:message>
+  <wsdl:message name="LogOutUserHttpPostIn" />
+  <wsdl:message name="LogOutUserHttpPostOut" />
+  <wsdl:message name="GetUserNameHttpPostIn">
+    <wsdl:part name="contextKey" type="s:string" />
+    <wsdl:part name="prefixText" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetUserNameHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="SetLeadsFromOuterResourceHttpPostIn">
+    <wsdl:part name="StudentName" type="s:string" />
+    <wsdl:part name="EmailId" type="s:string" />
+    <wsdl:part name="StudentMobile" type="s:string" />
+    <wsdl:part name="PreferedCity" type="s:string" />
+    <wsdl:part name="CourseName" type="s:string" />
+    <wsdl:part name="IntrestedColleges" type="s:string" />
+    <wsdl:part name="StudentQuery" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SetLeadsFromOuterResourceHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="MergeLeadsHttpPostIn">
+    <wsdl:part name="LeadIds" type="s:string" />
+    <wsdl:part name="DynamicQuery" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="MergeLeadsHttpPostOut" />
+  <wsdl:message name="LeadsQueryFromPortalHttpPostIn">
+    <wsdl:part name="LeadName" type="s:string" />
+    <wsdl:part name="EmailId" type="s:string" />
+    <wsdl:part name="StudentMobile" type="s:string" />
+    <wsdl:part name="CourseCity" type="s:string" />
+    <wsdl:part name="CourseName" type="s:string" />
+    <wsdl:part name="StudentQuery" type="s:string" />
+    <wsdl:part name="LeadSource" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LeadsQueryFromPortalHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="ImportAdmissionJankariLeadsHttpPostIn">
+    <wsdl:part name="LeadId" type="s:string" />
+    <wsdl:part name="StudentMobile" type="s:string" />
+    <wsdl:part name="LeadName" type="s:string" />
+    <wsdl:part name="EmailId" type="s:string" />
+    <wsdl:part name="CourseName" type="s:string" />
+    <wsdl:part name="ExamAppeared" type="s:string" />
+    <wsdl:part name="StreamName" type="s:string" />
+    <wsdl:part name="CourseCity" type="s:string" />
+    <wsdl:part name="InterestedInCollege" type="s:string" />
+    <wsdl:part name="StudentQuery" type="s:string" />
+    <wsdl:part name="LeadStatus" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ImportAdmissionJankariLeadsHttpPostOut" />
+  <wsdl:message name="CheckADMJImportedLeadsAlertHttpPostIn" />
+  <wsdl:message name="CheckADMJImportedLeadsAlertHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="BindCountryDetailsHttpPostIn">
+    <wsdl:part name="knownCategoryValues" type="s:string" />
+    <wsdl:part name="category" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BindCountryDetailsHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCascadingDropDownNameValue" />
+  </wsdl:message>
+  <wsdl:message name="BindStateDetailsHttpPostIn">
+    <wsdl:part name="knownCategoryValues" type="s:string" />
+    <wsdl:part name="category" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BindStateDetailsHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCascadingDropDownNameValue" />
+  </wsdl:message>
+  <wsdl:message name="BindCityDetailsHttpPostIn">
+    <wsdl:part name="knownCategoryValues" type="s:string" />
+    <wsdl:part name="category" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BindCityDetailsHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCascadingDropDownNameValue" />
+  </wsdl:message>
+  <wsdl:message name="BindOnlyCitiesFromLocalHttpPostIn">
+    <wsdl:part name="knownCategoryValues" type="s:string" />
+    <wsdl:part name="category" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BindOnlyCitiesFromLocalHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCascadingDropDownNameValue" />
+  </wsdl:message>
+  <wsdl:portType name="CommonServicesSoap">
+    <wsdl:operation name="GetTableNamesNPrimaryField">
+      <wsdl:input message="tns:GetTableNamesNPrimaryFieldSoapIn" />
+      <wsdl:output message="tns:GetTableNamesNPrimaryFieldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetColumns">
+      <wsdl:input message="tns:GetColumnsSoapIn" />
+      <wsdl:output message="tns:GetColumnsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCSVColumns">
+      <wsdl:input message="tns:GetCSVColumnsSoapIn" />
+      <wsdl:output message="tns:GetCSVColumnsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportFinal">
+      <wsdl:input message="tns:ImportFinalSoapIn" />
+      <wsdl:output message="tns:ImportFinalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckMobileIsAlreadyExists">
+      <wsdl:input message="tns:CheckMobileIsAlreadyExistsSoapIn" />
+      <wsdl:output message="tns:CheckMobileIsAlreadyExistsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BindLeadByLeadId">
+      <wsdl:input message="tns:BindLeadByLeadIdSoapIn" />
+      <wsdl:output message="tns:BindLeadByLeadIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckReminder">
+      <wsdl:input message="tns:CheckReminderSoapIn" />
+      <wsdl:output message="tns:CheckReminderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckSession">
+      <wsdl:input message="tns:CheckSessionSoapIn" />
+      <wsdl:output message="tns:CheckSessionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRelatedMobileNo">
+      <wsdl:input message="tns:GetRelatedMobileNoSoapIn" />
+      <wsdl:output message="tns:GetRelatedMobileNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AutoCompleteLeadsName">
+      <wsdl:input message="tns:AutoCompleteLeadsNameSoapIn" />
+      <wsdl:output message="tns:AutoCompleteLeadsNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductsRows">
+      <wsdl:input message="tns:GetProductsRowsSoapIn" />
+      <wsdl:output message="tns:GetProductsRowsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AutoCompleteConvertedLeadsNumber">
+      <wsdl:input message="tns:AutoCompleteConvertedLeadsNumberSoapIn" />
+      <wsdl:output message="tns:AutoCompleteConvertedLeadsNumberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountName">
+      <wsdl:input message="tns:GetAccountNameSoapIn" />
+      <wsdl:output message="tns:GetAccountNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStreamsForSelectedCourse">
+      <wsdl:input message="tns:GetStreamsForSelectedCourseSoapIn" />
+      <wsdl:output message="tns:GetStreamsForSelectedCourseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchColleges">
+      <wsdl:input message="tns:SearchCollegesSoapIn" />
+      <wsdl:output message="tns:SearchCollegesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCollegeForSelectedCourse">
+      <wsdl:input message="tns:GetCollegeForSelectedCourseSoapIn" />
+      <wsdl:output message="tns:GetCollegeForSelectedCourseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetColleges">
+      <wsdl:input message="tns:GetCollegesSoapIn" />
+      <wsdl:output message="tns:GetCollegesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCollegesForIndividualLead">
+      <wsdl:input message="tns:GetCollegesForIndividualLeadSoapIn" />
+      <wsdl:output message="tns:GetCollegesForIndividualLeadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCities">
+      <wsdl:input message="tns:GetCitiesSoapIn" />
+      <wsdl:output message="tns:GetCitiesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllActivityLog">
+      <wsdl:input message="tns:GetAllActivityLogSoapIn" />
+      <wsdl:output message="tns:GetAllActivityLogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="bindFollowUpsForALead">
+      <wsdl:input message="tns:bindFollowUpsForALeadSoapIn" />
+      <wsdl:output message="tns:bindFollowUpsForALeadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="goToContactNo">
+      <wsdl:input message="tns:goToContactNoSoapIn" />
+      <wsdl:output message="tns:goToContactNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="goToLeadByName">
+      <wsdl:input message="tns:goToLeadByNameSoapIn" />
+      <wsdl:output message="tns:goToLeadByNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="bindFollowUpsForAccount">
+      <wsdl:input message="tns:bindFollowUpsForAccountSoapIn" />
+      <wsdl:output message="tns:bindFollowUpsForAccountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="bindAppointmentsForAnIndividualSource">
+      <wsdl:input message="tns:bindAppointmentsForAnIndividualSourceSoapIn" />
+      <wsdl:output message="tns:bindAppointmentsForAnIndividualSourceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BindCollegesWithCheckBox">
+      <wsdl:input message="tns:BindCollegesWithCheckBoxSoapIn" />
+      <wsdl:output message="tns:BindCollegesWithCheckBoxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="bindRemindersBySourceIdAndType">
+      <wsdl:input message="tns:bindRemindersBySourceIdAndTypeSoapIn" />
+      <wsdl:output message="tns:bindRemindersBySourceIdAndTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LogOutUser">
+      <wsdl:input message="tns:LogOutUserSoapIn" />
+      <wsdl:output message="tns:LogOutUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserName">
+      <wsdl:input message="tns:GetUserNameSoapIn" />
+      <wsdl:output message="tns:GetUserNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetLeadsFromOuterResource">
+      <wsdl:input message="tns:SetLeadsFromOuterResourceSoapIn" />
+      <wsdl:output message="tns:SetLeadsFromOuterResourceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MergeLeads">
+      <wsdl:input message="tns:MergeLeadsSoapIn" />
+      <wsdl:output message="tns:MergeLeadsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LeadsQueryFromPortal">
+      <wsdl:input message="tns:LeadsQueryFromPortalSoapIn" />
+      <wsdl:output message="tns:LeadsQueryFromPortalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportAdmissionJankariLeads">
+      <wsdl:input message="tns:ImportAdmissionJankariLeadsSoapIn" />
+      <wsdl:output message="tns:ImportAdmissionJankariLeadsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckADMJImportedLeadsAlert">
+      <wsdl:input message="tns:CheckADMJImportedLeadsAlertSoapIn" />
+      <wsdl:output message="tns:CheckADMJImportedLeadsAlertSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BindCountryDetails">
+      <wsdl:input message="tns:BindCountryDetailsSoapIn" />
+      <wsdl:output message="tns:BindCountryDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BindStateDetails">
+      <wsdl:input message="tns:BindStateDetailsSoapIn" />
+      <wsdl:output message="tns:BindStateDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BindCityDetails">
+      <wsdl:input message="tns:BindCityDetailsSoapIn" />
+      <wsdl:output message="tns:BindCityDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BindOnlyCitiesFromLocal">
+      <wsdl:input message="tns:BindOnlyCitiesFromLocalSoapIn" />
+      <wsdl:output message="tns:BindOnlyCitiesFromLocalSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="CommonServicesHttpGet">
+    <wsdl:operation name="GetTableNamesNPrimaryField">
+      <wsdl:input message="tns:GetTableNamesNPrimaryFieldHttpGetIn" />
+      <wsdl:output message="tns:GetTableNamesNPrimaryFieldHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetColumns">
+      <wsdl:input message="tns:GetColumnsHttpGetIn" />
+      <wsdl:output message="tns:GetColumnsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCSVColumns">
+      <wsdl:input message="tns:GetCSVColumnsHttpGetIn" />
+      <wsdl:output message="tns:GetCSVColumnsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportFinal">
+      <wsdl:input message="tns:ImportFinalHttpGetIn" />
+      <wsdl:output message="tns:ImportFinalHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckMobileIsAlreadyExists">
+      <wsdl:input message="tns:CheckMobileIsAlreadyExistsHttpGetIn" />
+      <wsdl:output message="tns:CheckMobileIsAlreadyExistsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BindLeadByLeadId">
+      <wsdl:input message="tns:BindLeadByLeadIdHttpGetIn" />
+      <wsdl:output message="tns:BindLeadByLeadIdHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckReminder">
+      <wsdl:input message="tns:CheckReminderHttpGetIn" />
+      <wsdl:output message="tns:CheckReminderHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckSession">
+      <wsdl:input message="tns:CheckSessionHttpGetIn" />
+      <wsdl:output message="tns:CheckSessionHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRelatedMobileNo">
+      <wsdl:input message="tns:GetRelatedMobileNoHttpGetIn" />
+      <wsdl:output message="tns:GetRelatedMobileNoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AutoCompleteLeadsName">
+      <wsdl:input message="tns:AutoCompleteLeadsNameHttpGetIn" />
+      <wsdl:output message="tns:AutoCompleteLeadsNameHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductsRows">
+      <wsdl:input message="tns:GetProductsRowsHttpGetIn" />
+      <wsdl:output message="tns:GetProductsRowsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AutoCompleteConvertedLeadsNumber">
+      <wsdl:input message="tns:AutoCompleteConvertedLeadsNumberHttpGetIn" />
+      <wsdl:output message="tns:AutoCompleteConvertedLeadsNumberHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountName">
+      <wsdl:input message="tns:GetAccountNameHttpGetIn" />
+      <wsdl:output message="tns:GetAccountNameHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStreamsForSelectedCourse">
+      <wsdl:input message="tns:GetStreamsForSelectedCourseHttpGetIn" />
+      <wsdl:output message="tns:GetStreamsForSelectedCourseHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchColleges">
+      <wsdl:input message="tns:SearchCollegesHttpGetIn" />
+      <wsdl:output message="tns:SearchCollegesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCollegeForSelectedCourse">
+      <wsdl:input message="tns:GetCollegeForSelectedCourseHttpGetIn" />
+      <wsdl:output message="tns:GetCollegeForSelectedCourseHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetColleges">
+      <wsdl:input message="tns:GetCollegesHttpGetIn" />
+      <wsdl:output message="tns:GetCollegesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCollegesForIndividualLead">
+      <wsdl:input message="tns:GetCollegesForIndividualLeadHttpGetIn" />
+      <wsdl:output message="tns:GetCollegesForIndividualLeadHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCities">
+      <wsdl:input message="tns:GetCitiesHttpGetIn" />
+      <wsdl:output message="tns:GetCitiesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllActivityLog">
+      <wsdl:input message="tns:GetAllActivityLogHttpGetIn" />
+      <wsdl:output message="tns:GetAllActivityLogHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="bindFollowUpsForALead">
+      <wsdl:input message="tns:bindFollowUpsForALeadHttpGetIn" />
+      <wsdl:output message="tns:bindFollowUpsForALeadHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="goToContactNo">
+      <wsdl:input message="tns:goToContactNoHttpGetIn" />
+      <wsdl:output message="tns:goToContactNoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="goToLeadByName">
+      <wsdl:input message="tns:goToLeadByNameHttpGetIn" />
+      <wsdl:output message="tns:goToLeadByNameHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="bindFollowUpsForAccount">
+      <wsdl:input message="tns:bindFollowUpsForAccountHttpGetIn" />
+      <wsdl:output message="tns:bindFollowUpsForAccountHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="bindAppointmentsForAnIndividualSource">
+      <wsdl:input message="tns:bindAppointmentsForAnIndividualSourceHttpGetIn" />
+      <wsdl:output message="tns:bindAppointmentsForAnIndividualSourceHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BindCollegesWithCheckBox">
+      <wsdl:input message="tns:BindCollegesWithCheckBoxHttpGetIn" />
+      <wsdl:output message="tns:BindCollegesWithCheckBoxHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="bindRemindersBySourceIdAndType">
+      <wsdl:input message="tns:bindRemindersBySourceIdAndTypeHttpGetIn" />
+      <wsdl:output message="tns:bindRemindersBySourceIdAndTypeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LogOutUser">
+      <wsdl:input message="tns:LogOutUserHttpGetIn" />
+      <wsdl:output message="tns:LogOutUserHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserName">
+      <wsdl:input message="tns:GetUserNameHttpGetIn" />
+      <wsdl:output message="tns:GetUserNameHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetLeadsFromOuterResource">
+      <wsdl:input message="tns:SetLeadsFromOuterResourceHttpGetIn" />
+      <wsdl:output message="tns:SetLeadsFromOuterResourceHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MergeLeads">
+      <wsdl:input message="tns:MergeLeadsHttpGetIn" />
+      <wsdl:output message="tns:MergeLeadsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LeadsQueryFromPortal">
+      <wsdl:input message="tns:LeadsQueryFromPortalHttpGetIn" />
+      <wsdl:output message="tns:LeadsQueryFromPortalHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportAdmissionJankariLeads">
+      <wsdl:input message="tns:ImportAdmissionJankariLeadsHttpGetIn" />
+      <wsdl:output message="tns:ImportAdmissionJankariLeadsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckADMJImportedLeadsAlert">
+      <wsdl:input message="tns:CheckADMJImportedLeadsAlertHttpGetIn" />
+      <wsdl:output message="tns:CheckADMJImportedLeadsAlertHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BindCountryDetails">
+      <wsdl:input message="tns:BindCountryDetailsHttpGetIn" />
+      <wsdl:output message="tns:BindCountryDetailsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BindStateDetails">
+      <wsdl:input message="tns:BindStateDetailsHttpGetIn" />
+      <wsdl:output message="tns:BindStateDetailsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BindCityDetails">
+      <wsdl:input message="tns:BindCityDetailsHttpGetIn" />
+      <wsdl:output message="tns:BindCityDetailsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BindOnlyCitiesFromLocal">
+      <wsdl:input message="tns:BindOnlyCitiesFromLocalHttpGetIn" />
+      <wsdl:output message="tns:BindOnlyCitiesFromLocalHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="CommonServicesHttpPost">
+    <wsdl:operation name="GetTableNamesNPrimaryField">
+      <wsdl:input message="tns:GetTableNamesNPrimaryFieldHttpPostIn" />
+      <wsdl:output message="tns:GetTableNamesNPrimaryFieldHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetColumns">
+      <wsdl:input message="tns:GetColumnsHttpPostIn" />
+      <wsdl:output message="tns:GetColumnsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCSVColumns">
+      <wsdl:input message="tns:GetCSVColumnsHttpPostIn" />
+      <wsdl:output message="tns:GetCSVColumnsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportFinal">
+      <wsdl:input message="tns:ImportFinalHttpPostIn" />
+      <wsdl:output message="tns:ImportFinalHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckMobileIsAlreadyExists">
+      <wsdl:input message="tns:CheckMobileIsAlreadyExistsHttpPostIn" />
+      <wsdl:output message="tns:CheckMobileIsAlreadyExistsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BindLeadByLeadId">
+      <wsdl:input message="tns:BindLeadByLeadIdHttpPostIn" />
+      <wsdl:output message="tns:BindLeadByLeadIdHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckReminder">
+      <wsdl:input message="tns:CheckReminderHttpPostIn" />
+      <wsdl:output message="tns:CheckReminderHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckSession">
+      <wsdl:input message="tns:CheckSessionHttpPostIn" />
+      <wsdl:output message="tns:CheckSessionHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRelatedMobileNo">
+      <wsdl:input message="tns:GetRelatedMobileNoHttpPostIn" />
+      <wsdl:output message="tns:GetRelatedMobileNoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AutoCompleteLeadsName">
+      <wsdl:input message="tns:AutoCompleteLeadsNameHttpPostIn" />
+      <wsdl:output message="tns:AutoCompleteLeadsNameHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductsRows">
+      <wsdl:input message="tns:GetProductsRowsHttpPostIn" />
+      <wsdl:output message="tns:GetProductsRowsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AutoCompleteConvertedLeadsNumber">
+      <wsdl:input message="tns:AutoCompleteConvertedLeadsNumberHttpPostIn" />
+      <wsdl:output message="tns:AutoCompleteConvertedLeadsNumberHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountName">
+      <wsdl:input message="tns:GetAccountNameHttpPostIn" />
+      <wsdl:output message="tns:GetAccountNameHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStreamsForSelectedCourse">
+      <wsdl:input message="tns:GetStreamsForSelectedCourseHttpPostIn" />
+      <wsdl:output message="tns:GetStreamsForSelectedCourseHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchColleges">
+      <wsdl:input message="tns:SearchCollegesHttpPostIn" />
+      <wsdl:output message="tns:SearchCollegesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCollegeForSelectedCourse">
+      <wsdl:input message="tns:GetCollegeForSelectedCourseHttpPostIn" />
+      <wsdl:output message="tns:GetCollegeForSelectedCourseHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetColleges">
+      <wsdl:input message="tns:GetCollegesHttpPostIn" />
+      <wsdl:output message="tns:GetCollegesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCollegesForIndividualLead">
+      <wsdl:input message="tns:GetCollegesForIndividualLeadHttpPostIn" />
+      <wsdl:output message="tns:GetCollegesForIndividualLeadHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCities">
+      <wsdl:input message="tns:GetCitiesHttpPostIn" />
+      <wsdl:output message="tns:GetCitiesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllActivityLog">
+      <wsdl:input message="tns:GetAllActivityLogHttpPostIn" />
+      <wsdl:output message="tns:GetAllActivityLogHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="bindFollowUpsForALead">
+      <wsdl:input message="tns:bindFollowUpsForALeadHttpPostIn" />
+      <wsdl:output message="tns:bindFollowUpsForALeadHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="goToContactNo">
+      <wsdl:input message="tns:goToContactNoHttpPostIn" />
+      <wsdl:output message="tns:goToContactNoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="goToLeadByName">
+      <wsdl:input message="tns:goToLeadByNameHttpPostIn" />
+      <wsdl:output message="tns:goToLeadByNameHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="bindFollowUpsForAccount">
+      <wsdl:input message="tns:bindFollowUpsForAccountHttpPostIn" />
+      <wsdl:output message="tns:bindFollowUpsForAccountHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="bindAppointmentsForAnIndividualSource">
+      <wsdl:input message="tns:bindAppointmentsForAnIndividualSourceHttpPostIn" />
+      <wsdl:output message="tns:bindAppointmentsForAnIndividualSourceHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BindCollegesWithCheckBox">
+      <wsdl:input message="tns:BindCollegesWithCheckBoxHttpPostIn" />
+      <wsdl:output message="tns:BindCollegesWithCheckBoxHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="bindRemindersBySourceIdAndType">
+      <wsdl:input message="tns:bindRemindersBySourceIdAndTypeHttpPostIn" />
+      <wsdl:output message="tns:bindRemindersBySourceIdAndTypeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LogOutUser">
+      <wsdl:input message="tns:LogOutUserHttpPostIn" />
+      <wsdl:output message="tns:LogOutUserHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserName">
+      <wsdl:input message="tns:GetUserNameHttpPostIn" />
+      <wsdl:output message="tns:GetUserNameHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetLeadsFromOuterResource">
+      <wsdl:input message="tns:SetLeadsFromOuterResourceHttpPostIn" />
+      <wsdl:output message="tns:SetLeadsFromOuterResourceHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MergeLeads">
+      <wsdl:input message="tns:MergeLeadsHttpPostIn" />
+      <wsdl:output message="tns:MergeLeadsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LeadsQueryFromPortal">
+      <wsdl:input message="tns:LeadsQueryFromPortalHttpPostIn" />
+      <wsdl:output message="tns:LeadsQueryFromPortalHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportAdmissionJankariLeads">
+      <wsdl:input message="tns:ImportAdmissionJankariLeadsHttpPostIn" />
+      <wsdl:output message="tns:ImportAdmissionJankariLeadsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckADMJImportedLeadsAlert">
+      <wsdl:input message="tns:CheckADMJImportedLeadsAlertHttpPostIn" />
+      <wsdl:output message="tns:CheckADMJImportedLeadsAlertHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BindCountryDetails">
+      <wsdl:input message="tns:BindCountryDetailsHttpPostIn" />
+      <wsdl:output message="tns:BindCountryDetailsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BindStateDetails">
+      <wsdl:input message="tns:BindStateDetailsHttpPostIn" />
+      <wsdl:output message="tns:BindStateDetailsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BindCityDetails">
+      <wsdl:input message="tns:BindCityDetailsHttpPostIn" />
+      <wsdl:output message="tns:BindCityDetailsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BindOnlyCitiesFromLocal">
+      <wsdl:input message="tns:BindOnlyCitiesFromLocalHttpPostIn" />
+      <wsdl:output message="tns:BindOnlyCitiesFromLocalHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CommonServicesSoap" type="tns:CommonServicesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetTableNamesNPrimaryField">
+      <soap:operation soapAction="http://tempuri.org/GetTableNamesNPrimaryField" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetColumns">
+      <soap:operation soapAction="http://tempuri.org/GetColumns" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCSVColumns">
+      <soap:operation soapAction="http://tempuri.org/GetCSVColumns" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportFinal">
+      <soap:operation soapAction="http://tempuri.org/ImportFinal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckMobileIsAlreadyExists">
+      <soap:operation soapAction="http://tempuri.org/CheckMobileIsAlreadyExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BindLeadByLeadId">
+      <soap:operation soapAction="http://tempuri.org/BindLeadByLeadId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckReminder">
+      <soap:operation soapAction="http://tempuri.org/CheckReminder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckSession">
+      <soap:operation soapAction="http://tempuri.org/CheckSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRelatedMobileNo">
+      <soap:operation soapAction="http://tempuri.org/GetRelatedMobileNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoCompleteLeadsName">
+      <soap:operation soapAction="http://tempuri.org/AutoCompleteLeadsName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductsRows">
+      <soap:operation soapAction="http://tempuri.org/GetProductsRows" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoCompleteConvertedLeadsNumber">
+      <soap:operation soapAction="http://tempuri.org/AutoCompleteConvertedLeadsNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountName">
+      <soap:operation soapAction="http://tempuri.org/GetAccountName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStreamsForSelectedCourse">
+      <soap:operation soapAction="http://tempuri.org/GetStreamsForSelectedCourse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchColleges">
+      <soap:operation soapAction="http://tempuri.org/SearchColleges" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCollegeForSelectedCourse">
+      <soap:operation soapAction="http://tempuri.org/GetCollegeForSelectedCourse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetColleges">
+      <soap:operation soapAction="http://tempuri.org/GetColleges" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCollegesForIndividualLead">
+      <soap:operation soapAction="http://tempuri.org/GetCollegesForIndividualLead" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCities">
+      <soap:operation soapAction="http://tempuri.org/GetCities" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllActivityLog">
+      <soap:operation soapAction="http://tempuri.org/GetAllActivityLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bindFollowUpsForALead">
+      <soap:operation soapAction="http://tempuri.org/bindFollowUpsForALead" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="goToContactNo">
+      <soap:operation soapAction="http://tempuri.org/goToContactNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="goToLeadByName">
+      <soap:operation soapAction="http://tempuri.org/goToLeadByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bindFollowUpsForAccount">
+      <soap:operation soapAction="http://tempuri.org/bindFollowUpsForAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bindAppointmentsForAnIndividualSource">
+      <soap:operation soapAction="http://tempuri.org/bindAppointmentsForAnIndividualSource" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BindCollegesWithCheckBox">
+      <soap:operation soapAction="http://tempuri.org/BindCollegesWithCheckBox" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bindRemindersBySourceIdAndType">
+      <soap:operation soapAction="http://tempuri.org/bindRemindersBySourceIdAndType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogOutUser">
+      <soap:operation soapAction="http://tempuri.org/LogOutUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserName">
+      <soap:operation soapAction="http://tempuri.org/GetUserName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetLeadsFromOuterResource">
+      <soap:operation soapAction="http://tempuri.org/SetLeadsFromOuterResource" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MergeLeads">
+      <soap:operation soapAction="http://tempuri.org/MergeLeads" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LeadsQueryFromPortal">
+      <soap:operation soapAction="http://tempuri.org/LeadsQueryFromPortal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportAdmissionJankariLeads">
+      <soap:operation soapAction="http://tempuri.org/ImportAdmissionJankariLeads" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckADMJImportedLeadsAlert">
+      <soap:operation soapAction="http://tempuri.org/CheckADMJImportedLeadsAlert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BindCountryDetails">
+      <soap:operation soapAction="http://tempuri.org/BindCountryDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BindStateDetails">
+      <soap:operation soapAction="http://tempuri.org/BindStateDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BindCityDetails">
+      <soap:operation soapAction="http://tempuri.org/BindCityDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BindOnlyCitiesFromLocal">
+      <soap:operation soapAction="http://tempuri.org/BindOnlyCitiesFromLocal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CommonServicesSoap12" type="tns:CommonServicesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetTableNamesNPrimaryField">
+      <soap12:operation soapAction="http://tempuri.org/GetTableNamesNPrimaryField" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetColumns">
+      <soap12:operation soapAction="http://tempuri.org/GetColumns" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCSVColumns">
+      <soap12:operation soapAction="http://tempuri.org/GetCSVColumns" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportFinal">
+      <soap12:operation soapAction="http://tempuri.org/ImportFinal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckMobileIsAlreadyExists">
+      <soap12:operation soapAction="http://tempuri.org/CheckMobileIsAlreadyExists" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BindLeadByLeadId">
+      <soap12:operation soapAction="http://tempuri.org/BindLeadByLeadId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckReminder">
+      <soap12:operation soapAction="http://tempuri.org/CheckReminder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckSession">
+      <soap12:operation soapAction="http://tempuri.org/CheckSession" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRelatedMobileNo">
+      <soap12:operation soapAction="http://tempuri.org/GetRelatedMobileNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoCompleteLeadsName">
+      <soap12:operation soapAction="http://tempuri.org/AutoCompleteLeadsName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductsRows">
+      <soap12:operation soapAction="http://tempuri.org/GetProductsRows" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoCompleteConvertedLeadsNumber">
+      <soap12:operation soapAction="http://tempuri.org/AutoCompleteConvertedLeadsNumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountName">
+      <soap12:operation soapAction="http://tempuri.org/GetAccountName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStreamsForSelectedCourse">
+      <soap12:operation soapAction="http://tempuri.org/GetStreamsForSelectedCourse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchColleges">
+      <soap12:operation soapAction="http://tempuri.org/SearchColleges" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCollegeForSelectedCourse">
+      <soap12:operation soapAction="http://tempuri.org/GetCollegeForSelectedCourse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetColleges">
+      <soap12:operation soapAction="http://tempuri.org/GetColleges" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCollegesForIndividualLead">
+      <soap12:operation soapAction="http://tempuri.org/GetCollegesForIndividualLead" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCities">
+      <soap12:operation soapAction="http://tempuri.org/GetCities" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllActivityLog">
+      <soap12:operation soapAction="http://tempuri.org/GetAllActivityLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bindFollowUpsForALead">
+      <soap12:operation soapAction="http://tempuri.org/bindFollowUpsForALead" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="goToContactNo">
+      <soap12:operation soapAction="http://tempuri.org/goToContactNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="goToLeadByName">
+      <soap12:operation soapAction="http://tempuri.org/goToLeadByName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bindFollowUpsForAccount">
+      <soap12:operation soapAction="http://tempuri.org/bindFollowUpsForAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bindAppointmentsForAnIndividualSource">
+      <soap12:operation soapAction="http://tempuri.org/bindAppointmentsForAnIndividualSource" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BindCollegesWithCheckBox">
+      <soap12:operation soapAction="http://tempuri.org/BindCollegesWithCheckBox" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bindRemindersBySourceIdAndType">
+      <soap12:operation soapAction="http://tempuri.org/bindRemindersBySourceIdAndType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogOutUser">
+      <soap12:operation soapAction="http://tempuri.org/LogOutUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserName">
+      <soap12:operation soapAction="http://tempuri.org/GetUserName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetLeadsFromOuterResource">
+      <soap12:operation soapAction="http://tempuri.org/SetLeadsFromOuterResource" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MergeLeads">
+      <soap12:operation soapAction="http://tempuri.org/MergeLeads" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LeadsQueryFromPortal">
+      <soap12:operation soapAction="http://tempuri.org/LeadsQueryFromPortal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportAdmissionJankariLeads">
+      <soap12:operation soapAction="http://tempuri.org/ImportAdmissionJankariLeads" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckADMJImportedLeadsAlert">
+      <soap12:operation soapAction="http://tempuri.org/CheckADMJImportedLeadsAlert" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BindCountryDetails">
+      <soap12:operation soapAction="http://tempuri.org/BindCountryDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BindStateDetails">
+      <soap12:operation soapAction="http://tempuri.org/BindStateDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BindCityDetails">
+      <soap12:operation soapAction="http://tempuri.org/BindCityDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BindOnlyCitiesFromLocal">
+      <soap12:operation soapAction="http://tempuri.org/BindOnlyCitiesFromLocal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CommonServicesHttpGet" type="tns:CommonServicesHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetTableNamesNPrimaryField">
+      <http:operation location="/GetTableNamesNPrimaryField" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetColumns">
+      <http:operation location="/GetColumns" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCSVColumns">
+      <http:operation location="/GetCSVColumns" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportFinal">
+      <http:operation location="/ImportFinal" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckMobileIsAlreadyExists">
+      <http:operation location="/CheckMobileIsAlreadyExists" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BindLeadByLeadId">
+      <http:operation location="/BindLeadByLeadId" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckReminder">
+      <http:operation location="/CheckReminder" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckSession">
+      <http:operation location="/CheckSession" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRelatedMobileNo">
+      <http:operation location="/GetRelatedMobileNo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoCompleteLeadsName">
+      <http:operation location="/AutoCompleteLeadsName" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductsRows">
+      <http:operation location="/GetProductsRows" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoCompleteConvertedLeadsNumber">
+      <http:operation location="/AutoCompleteConvertedLeadsNumber" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountName">
+      <http:operation location="/GetAccountName" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStreamsForSelectedCourse">
+      <http:operation location="/GetStreamsForSelectedCourse" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchColleges">
+      <http:operation location="/SearchColleges" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCollegeForSelectedCourse">
+      <http:operation location="/GetCollegeForSelectedCourse" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetColleges">
+      <http:operation location="/GetColleges" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCollegesForIndividualLead">
+      <http:operation location="/GetCollegesForIndividualLead" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCities">
+      <http:operation location="/GetCities" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllActivityLog">
+      <http:operation location="/GetAllActivityLog" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bindFollowUpsForALead">
+      <http:operation location="/bindFollowUpsForALead" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="goToContactNo">
+      <http:operation location="/goToContactNo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="goToLeadByName">
+      <http:operation location="/goToLeadByName" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bindFollowUpsForAccount">
+      <http:operation location="/bindFollowUpsForAccount" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bindAppointmentsForAnIndividualSource">
+      <http:operation location="/bindAppointmentsForAnIndividualSource" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BindCollegesWithCheckBox">
+      <http:operation location="/BindCollegesWithCheckBox" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bindRemindersBySourceIdAndType">
+      <http:operation location="/bindRemindersBySourceIdAndType" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogOutUser">
+      <http:operation location="/LogOutUser" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserName">
+      <http:operation location="/GetUserName" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetLeadsFromOuterResource">
+      <http:operation location="/SetLeadsFromOuterResource" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MergeLeads">
+      <http:operation location="/MergeLeads" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="LeadsQueryFromPortal">
+      <http:operation location="/LeadsQueryFromPortal" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportAdmissionJankariLeads">
+      <http:operation location="/ImportAdmissionJankariLeads" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="CheckADMJImportedLeadsAlert">
+      <http:operation location="/CheckADMJImportedLeadsAlert" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BindCountryDetails">
+      <http:operation location="/BindCountryDetails" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BindStateDetails">
+      <http:operation location="/BindStateDetails" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BindCityDetails">
+      <http:operation location="/BindCityDetails" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BindOnlyCitiesFromLocal">
+      <http:operation location="/BindOnlyCitiesFromLocal" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CommonServicesHttpPost" type="tns:CommonServicesHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetTableNamesNPrimaryField">
+      <http:operation location="/GetTableNamesNPrimaryField" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetColumns">
+      <http:operation location="/GetColumns" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCSVColumns">
+      <http:operation location="/GetCSVColumns" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportFinal">
+      <http:operation location="/ImportFinal" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckMobileIsAlreadyExists">
+      <http:operation location="/CheckMobileIsAlreadyExists" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BindLeadByLeadId">
+      <http:operation location="/BindLeadByLeadId" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckReminder">
+      <http:operation location="/CheckReminder" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckSession">
+      <http:operation location="/CheckSession" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRelatedMobileNo">
+      <http:operation location="/GetRelatedMobileNo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoCompleteLeadsName">
+      <http:operation location="/AutoCompleteLeadsName" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductsRows">
+      <http:operation location="/GetProductsRows" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoCompleteConvertedLeadsNumber">
+      <http:operation location="/AutoCompleteConvertedLeadsNumber" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountName">
+      <http:operation location="/GetAccountName" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStreamsForSelectedCourse">
+      <http:operation location="/GetStreamsForSelectedCourse" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchColleges">
+      <http:operation location="/SearchColleges" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCollegeForSelectedCourse">
+      <http:operation location="/GetCollegeForSelectedCourse" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetColleges">
+      <http:operation location="/GetColleges" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCollegesForIndividualLead">
+      <http:operation location="/GetCollegesForIndividualLead" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCities">
+      <http:operation location="/GetCities" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllActivityLog">
+      <http:operation location="/GetAllActivityLog" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bindFollowUpsForALead">
+      <http:operation location="/bindFollowUpsForALead" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="goToContactNo">
+      <http:operation location="/goToContactNo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="goToLeadByName">
+      <http:operation location="/goToLeadByName" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bindFollowUpsForAccount">
+      <http:operation location="/bindFollowUpsForAccount" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bindAppointmentsForAnIndividualSource">
+      <http:operation location="/bindAppointmentsForAnIndividualSource" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BindCollegesWithCheckBox">
+      <http:operation location="/BindCollegesWithCheckBox" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bindRemindersBySourceIdAndType">
+      <http:operation location="/bindRemindersBySourceIdAndType" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogOutUser">
+      <http:operation location="/LogOutUser" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserName">
+      <http:operation location="/GetUserName" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetLeadsFromOuterResource">
+      <http:operation location="/SetLeadsFromOuterResource" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MergeLeads">
+      <http:operation location="/MergeLeads" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="LeadsQueryFromPortal">
+      <http:operation location="/LeadsQueryFromPortal" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportAdmissionJankariLeads">
+      <http:operation location="/ImportAdmissionJankariLeads" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="CheckADMJImportedLeadsAlert">
+      <http:operation location="/CheckADMJImportedLeadsAlert" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BindCountryDetails">
+      <http:operation location="/BindCountryDetails" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BindStateDetails">
+      <http:operation location="/BindStateDetails" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BindCityDetails">
+      <http:operation location="/BindCityDetails" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BindOnlyCitiesFromLocal">
+      <http:operation location="/BindOnlyCitiesFromLocal" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CommonServices">
+    <wsdl:port name="CommonServicesSoap" binding="tns:CommonServicesSoap">
+      <soap:address location="http://crm.admissionjankari.com/services/commonservices.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CommonServicesSoap12" binding="tns:CommonServicesSoap12">
+      <soap12:address location="http://crm.admissionjankari.com/services/commonservices.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CommonServicesHttpGet" binding="tns:CommonServicesHttpGet">
+      <http:address location="http://crm.admissionjankari.com/services/commonservices.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CommonServicesHttpPost" binding="tns:CommonServicesHttpPost">
+      <http:address location="http://crm.admissionjankari.com/services/commonservices.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

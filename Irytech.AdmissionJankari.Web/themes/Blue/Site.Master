@@ -1,0 +1,242 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="IryTech.AdmissionJankari20.Web.themes.Site" %>
+
+<%@ Import Namespace="IryTech.AdmissionJankari.BL" %>
+<%@ Register TagPrefix="ADMJ" Namespace="Irytech.Components.Breadcrumbs.Bread" Assembly="Irytech.Components.Breadcrumbs" %>
+<%@ Register Src="/UserControl/ucHomeTopBanner.ascx" TagPrefix="AJ" TagName="TopBannner" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-us">
+<head runat="server">
+    <link rel="shortcut icon" href="/image.axd?Common=AJ_favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="contact_addr" content="www.admissionjankari.com, 74, 2nd Floor, Amrit Chambers, Scindia House, Connaught Place, Janpath Road, New Delhi - 110001 INDIA | Email: info@admissionjankari.com/sales@admissionjankari.com" />
+    <meta name="copyright" content="2013 admissionjankari.com" />
+    <meta name="content-language" content="EN" />
+    <meta name="DC.title" content="" />
+    <meta name="geo.region" content="IN-DL" />
+    <meta name="geo.placename" content="New Delhi" />
+    <meta name="geo.position" content="20.593684;78.96288" />
+    <meta name="ICBM" content="20.593684, 78.96288" />
+    <meta name="author" content="www.admissionjankari.com" />
+    <meta name="resource-type" content="document" />
+    <meta name="distribution" content="GLOBAL" />
+    <meta name="revisit-after" content="1 day" />
+    <meta name="rating" content="general" />
+    <meta name="classification" content="Education admission and counseling: education portal,admission,college university directory" />
+    <link href="Site.css" rel="stylesheet" type="text/css" />
+   
+   
+</head>
+<body>
+    <form id="form1" runat="server"  >
+    <asp:ScriptManager ID="scriptManager" EnableScriptGlobalization="True" runat="server"
+         AsyncPostBackTimeout="35000">
+    </asp:ScriptManager>
+    <asp:HiddenField ID="hndMenuId" runat="server" />
+    <div class="mainOuterDiv">
+        <div class="headerTop">
+            <div class="fleft width20Percent">
+                <ul class="vertical fleft marginleft">
+                    <li style="padding-top: 2px;">
+                        <p style="font-size: 11px; padding-top: 3px; color: #fff; margin-right: 10px;" class="fleft">
+                            Connect With Us</p>
+                        <a target="_blank" title="admissionjankari Facebook" href="http://www.facebook.com/admissionjankari">
+                            <span class="icon_fb"></span></a><a target="_blank" title="admissionjankari Twitter"
+                                href="http://www.twitter.com/admissionjankar"><span class="icon_twt"></span>
+                        </a></li>
+                </ul>
+            </div>
+            <div class="three_fourth fright textalignRight last topLink">
+                <ul class="vertical fright">
+                    <li id="loginRegisterPanel" class="hide1">Welcome Guest&nbsp;!&nbsp;To enable all features
+                        please <span class="bgName"><a title="College Login" class="whiteRightlink" href='<%=IryTech.AdmissionJankari.Components.Utils.ApplicationRelativeWebRoot+("Account/"+"College-Login").ToLower()%>'>
+                            College Login</a></span> or <span class="bgName"><a id="sndLogin" class="whiteRightlink"
+                                title="Login" href='<%=IryTech.AdmissionJankari.Components.Utils.ApplicationRelativeWebRoot+("Account/"+"Login").ToLower()%>'>
+                                Login</a> </span>or <span class="bgName"><a id="sndRegister" class="whiteRightlink"
+                                    title="Register" href='<%=IryTech.AdmissionJankari.Components.Utils.ApplicationRelativeWebRoot+("Account/"+"New-User-Registration-Form").ToLower()%>'>
+                                    Register</a></span> </li>
+                    <li id="divProfile" class="hide1">
+                        <p>
+                            Welcome &raquo;<i><label id="lblUserName"></label></i>
+                            <%if (CheckUserSession)
+                            {  %>
+                            <span class="bgName" id="spnUserProfile"><a id="accountLink" class="whiteRightlink"
+                                title="Profile" href='<%=IryTech.AdmissionJankari.Components.Utils.ApplicationRelativeWebRoot+("Account/"+Regex.Replace(Common.GetStringProperCase(Session["LoginUserName"].ToString()), @"\s", "" )).ToLower()%>'>
+                                Profile</a></span> <span class="bgName hide" id="clgProfile"><a class="whiteRightlink"
+                                    title="College Profile" href='<%=IryTech.AdmissionJankari.Components.Utils.ApplicationRelativeWebRoot+("Account/college-profile").ToLower()%>'>
+                                    college-profile</a></span>
+                            <%}%></p>
+                    </li>
+                    <li class="bgLogin hide1" id="divLogout"><a href="#" class="whiteRightlink" title="Logout"
+                        onclick="Logout()">Logout</a></li>
+                    <li class="bgLogin"><a id="sndHeaderDirectAdmission" class="whiteRightlink " title="Apply Now"
+                        href='<%=IryTech.AdmissionJankari.Components.Utils.ApplicationRelativeWebRoot+(IryTech.AdmissionJankari.Components.Utils.RemoveIllegealFromCourse((new Common().CourseName))+("/Get-Direct-Admission")).ToLower()%>'>
+                        Apply Now</a> </li>
+                </ul>
+            </div>
+        </div>
+        <div class="headerMain">
+            <div class="one_fourth ajLogo">
+                <a href='<%=IryTech.AdmissionJankari.Components.Utils.ApplicationRelativeWebRoot%>'>
+                    <img src="/image.axd?Common=logo.png" width="235" height="50" alt="AdmissionJankari.com"
+                        title="AdmissionJankari.com" /></a>
+            </div>
+            <div class="ajHeaderBanner">
+                <div class="fleft">
+                    <AJ:TopBannner ID="TopBannner" runat="server" />
+                </div>
+                <div class="fright">
+                    <a title='Anti-Donation Campaign, get direct admission ' class="href" href='<%=IryTech.AdmissionJankari.Components.Utils.ApplicationRelativeWebRoot+(IryTech.AdmissionJankari.Components.Utils.RemoveIllegealFromCourse((new Common().CourseName))+"/Get-Direct-Admission").ToLower() %>'>
+                        <img src='<%=IryTech.AdmissionJankari.Components.Utils.ApplicationRelativeWebRoot%>image.axd?Banner=Direct_Admission.gif'
+                            width="260" height="90" alt="Anti-Donation Campaign, get direct admission" />
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="navUpper clearBoth">
+            <div class="nav">
+                <ul>
+                    <li id="lnkHome"><a class="website" id="sndHome" title="Home" href='<%=IryTech.AdmissionJankari.Components.Utils.ApplicationRelativeWebRoot%>'>
+                        Home</a></li>
+                    <li id="liCollSrch"><a id="sndCollSrch" title="College Search" href='<%=IryTech.AdmissionJankari.Components.Utils.ApplicationRelativeWebRoot+ ("Course/"+ IryTech.AdmissionJankari.Components.Utils.RemoveIllegealFromCourse((new Common().CourseName))).ToLower() %>'>
+                        College Search</a></li>
+                    <li id="liBook"><a id="libookseat" title="Book Seat" href='<%=IryTech.AdmissionJankari.Components.Utils.ApplicationRelativeWebRoot+ ("bookseat/"+ IryTech.AdmissionJankari.Components.Utils.RemoveIllegealFromCourse((new Common().CourseName))).ToLower() %>'>
+                        Book Seat </a></li>
+                    <li id="liDirectAdmission"><span style="float: left; margin-top: -5px;">
+                        <img src="/image.axd?Common=new.png" alt="Direct Admission" width="18" height="30" /></span><a
+                            title="Direct Online Admission" id="sndDirectAdmission" href='<%=IryTech.AdmissionJankari.Components.Utils.ApplicationRelativeWebRoot+(IryTech.AdmissionJankari.Components.Utils.RemoveIllegealFromCourse((new Common().CourseName))+"/Get-Direct-Admission").ToLower() %>'>Direct
+                            Online Admission</a></li>
+                    <li id='liCollCompare'><a title="College Comparison" id="sndCollCompare" href='<%=IryTech.AdmissionJankari.Components.Utils.ApplicationRelativeWebRoot+(IryTech.AdmissionJankari.Components.Utils.RemoveIllegealFromCourse((new Common().CourseName))+"/Compare-Colleges/").ToLower() %>'>
+                        College Comparison </a></li>
+                    <li id="liCourseCompare"><a title="Course Comparison" id="sndCourseCompare" href='<%=IryTech.AdmissionJankari.Components.Utils.ApplicationRelativeWebRoot+(IryTech.AdmissionJankari.Components.Utils.RemoveIllegealFromCourse((new Common().CourseName))+"/Compare-Streams/").ToLower() %>'>
+                        Course Comparison </a></li>
+                    <li id="liExamLink"><a title="Exam" id="sndExamLink" href='<%=IryTech.AdmissionJankari.Components.Utils.ApplicationRelativeWebRoot+ ("Exams/"+ IryTech.AdmissionJankari.Components.Utils.RemoveIllegealFromCourse((new Common().CourseName))).ToLower() %>'>
+                        Exam</a></li>
+                    <li id="linews"><a title="News and Articles" id="news" href='<%=IryTech.AdmissionJankari.Components.Utils.ApplicationRelativeWebRoot+("Latest-News/").ToLower()%>'>
+                        News and Articles</a> </li>
+                    <li id="linotice"><a title="Notices" id="notice" href='<%=IryTech.AdmissionJankari.Components.Utils.ApplicationRelativeWebRoot+("Admission-Notices/").ToLower()%>'>
+                        Notices</a></li>
+                    <li id="liloan"><a title="Education Loan" id="loan" href='<%=IryTech.AdmissionJankari.Components.Utils.ApplicationRelativeWebRoot+("Education-Loan/").ToLower()%>'>
+                        Education Loan </a></li>
+                    <li id="lidonation"><a title="Report Donation" id="donation" href='<%=IryTech.AdmissionJankari.Components.Utils.ApplicationRelativeWebRoot+("report-donation/")%>'>
+                        Report Donation </a></li>
+                    <li id="liblog"><a title="Blog" id='blog' href='http://blog.admissionjankari.com/'
+                        target="_blank">Blog</a></li>
+                    <li id="liforum"><a title="Forum" id='forum' href='http://forum.admissionjankari.com/'>
+                        Forum</a></li>
+                    <li id="liAdvertise">
+                        <asp:LinkButton ID="lnkAdvertise" runat="server" OnClick="lnkAdvertise_Click">Advertise With Us</asp:LinkButton></li>
+                </ul>
+            </div>
+        </div>
+        <div class="subNav" id="divCityMenu">
+            <h5>
+                Colleges in &raquo;
+            </h5>
+            <a title="Ahmedabad" id="ahmedabad" href='<%=IryTech.AdmissionJankari.Components.Utils.ApplicationRelativeWebRoot +(IryTech.AdmissionJankari.Components.Utils.RemoveIllegealFromCourse((new Common().CourseName))+"/City/"+ IryTech.AdmissionJankari.Components.Utils.RemoveIllegalCharacters("Ahmedabad")).ToLower()%>'>
+                Ahmedabad</a> <a title="bangalore" id="bangalore" href='<%=IryTech.AdmissionJankari.Components.Utils.ApplicationRelativeWebRoot+(IryTech.AdmissionJankari.Components.Utils.RemoveIllegealFromCourse((new Common().CourseName))+"/City/"+IryTech.AdmissionJankari.Components.Utils.RemoveIllegalCharacters(("Bangalore"))).ToLower()%>'>
+                    Bangalore</a> <a title="bhubaneswar" id="bhubaneswar" href='<%=IryTech.AdmissionJankari.Components.Utils.ApplicationRelativeWebRoot+(IryTech.AdmissionJankari.Components.Utils.RemoveIllegealFromCourse((new Common().CourseName))+"/City/"+"Bhubaneswar").ToLower()%>'>
+                        Bhubaneswar</a> <a title="chennai" id="chennai" href='<%=IryTech.AdmissionJankari.Components.Utils.ApplicationRelativeWebRoot+(IryTech.AdmissionJankari.Components.Utils.RemoveIllegealFromCourse((new Common().CourseName))+"/City/"+IryTech.AdmissionJankari.Components.Utils.RemoveIllegalCharacters(("Chennai"))).ToLower()%>'>
+                            Chennai</a> <a title="new-delhi" id="new-delhi" href='<%=IryTech.AdmissionJankari.Components.Utils.ApplicationRelativeWebRoot+(IryTech.AdmissionJankari.Components.Utils.RemoveIllegealFromCourse((new Common().CourseName))+"/City/"+IryTech.AdmissionJankari.Components.Utils.RemoveIllegalCharacters(("New Delhi"))).ToLower()%>'>
+                                Delhi</a> <a title="greater-noida" id="greater-noida" href='<%=IryTech.AdmissionJankari.Components.Utils.ApplicationRelativeWebRoot+(IryTech.AdmissionJankari.Components.Utils.RemoveIllegealFromCourse((new Common().CourseName))+"/City/"+IryTech.AdmissionJankari.Components.Utils.RemoveIllegalCharacters(("Greater Noida"))).ToLower()%>'>
+                                    Greater Noida</a> <a title="ghaziabad" id="ghaziabad" href='<%=IryTech.AdmissionJankari.Components.Utils.ApplicationRelativeWebRoot+(IryTech.AdmissionJankari.Components.Utils.RemoveIllegealFromCourse((new Common().CourseName))+"/City/"+IryTech.AdmissionJankari.Components.Utils.RemoveIllegalCharacters(("Ghaziabad"))).ToLower()%>'>
+                                        Ghaziabad</a> <a title="hyderabad" id="hyderabad" href='<%=IryTech.AdmissionJankari.Components.Utils.ApplicationRelativeWebRoot+(IryTech.AdmissionJankari.Components.Utils.RemoveIllegealFromCourse((new Common().CourseName))+"/City/"+IryTech.AdmissionJankari.Components.Utils.RemoveIllegalCharacters(("Hyderabad"))).ToLower()%>'>
+                                            Hyderabad</a> <a title="bhopal" id="bhopal" href='<%=IryTech.AdmissionJankari.Components.Utils.ApplicationRelativeWebRoot+(IryTech.AdmissionJankari.Components.Utils.RemoveIllegealFromCourse((new Common().CourseName))+"/City/"+IryTech.AdmissionJankari.Components.Utils.RemoveIllegalCharacters(("Bhopal"))).ToLower()%>'>
+                                                Bhopal</a> <a title="jaipur" id="jaipur" href='<%=IryTech.AdmissionJankari.Components.Utils.ApplicationRelativeWebRoot+(IryTech.AdmissionJankari.Components.Utils.RemoveIllegealFromCourse((new Common().CourseName))+"/City/"+IryTech.AdmissionJankari.Components.Utils.RemoveIllegalCharacters(("Jaipur"))).ToLower()%>'>
+                                                    Jaipur</a> <a title="kolkata" id="kolkata" href='<%=IryTech.AdmissionJankari.Components.Utils.ApplicationRelativeWebRoot+(IryTech.AdmissionJankari.Components.Utils.RemoveIllegealFromCourse((new Common().CourseName))+"/City/"+IryTech.AdmissionJankari.Components.Utils.RemoveIllegalCharacters(("Kolkata"))).ToLower()%>'>
+                                                        Kolkata</a> <a title="mumbai" id="mumbai" href='<%=IryTech.AdmissionJankari.Components.Utils.ApplicationRelativeWebRoot+(IryTech.AdmissionJankari.Components.Utils.RemoveIllegealFromCourse((new Common().CourseName))+"/City/"+IryTech.AdmissionJankari.Components.Utils.RemoveIllegalCharacters(("Mumbai"))).ToLower()%>'>
+                                                            Mumbai</a> <a title="pune" id="pune" href='<%=IryTech.AdmissionJankari.Components.Utils.ApplicationRelativeWebRoot+(IryTech.AdmissionJankari.Components.Utils.RemoveIllegealFromCourse((new Common().CourseName))+"/City/"+IryTech.AdmissionJankari.Components.Utils.RemoveIllegalCharacters(("Pune"))).ToLower()%>'>
+                                                                Pune</a> <a title="lucknow" id="lucknow" href='<%=IryTech.AdmissionJankari.Components.Utils.ApplicationRelativeWebRoot+(IryTech.AdmissionJankari.Components.Utils.RemoveIllegealFromCourse((new Common().CourseName))+"/City/"+IryTech.AdmissionJankari.Components.Utils.RemoveIllegalCharacters(("Lucknow"))).ToLower()%>'>
+                                                                    Lucknow</a> <a title="indore" id="indore" href='<%=IryTech.AdmissionJankari.Components.Utils.ApplicationRelativeWebRoot+(IryTech.AdmissionJankari.Components.Utils.RemoveIllegealFromCourse((new Common().CourseName))+"/City/"+IryTech.AdmissionJankari.Components.Utils.RemoveIllegalCharacters(("Indore"))).ToLower()%>'
+                                                                        class="last">Indore</a>
+        </div>
+        <div class="breadcums">
+            <ADMJ:BreadCrumbControl Font-Bold="true" ID="breadcrumb" runat="Server" />
+            <div class="clearBoth">
+            </div>
+        </div>
+        <div class="clearBoth">
+        </div>
+        <div class="mainContent">
+            <asp:ContentPlaceHolder ID="cphBody" runat="server">
+            </asp:ContentPlaceHolder>
+            <div class="clearBoth">
+            </div>
+        </div>
+        <div class="helplineBox">
+        </div>
+        <hr />
+        <div class="footerMain">
+            <div class="footerMainInner">
+                <div class="one_fourth footerlinkBox fleft last">
+                    <h4>
+                        Search</h4>
+                    <ul class="horizontal fleft marginleft">
+                        <li><a title="Colleges Search" id="sndFooterCllgSrch" href='<%=IryTech.AdmissionJankari.Components.Utils.ApplicationRelativeWebRoot+ ("Course/"+ IryTech.AdmissionJankari.Components.Utils.RemoveIllegealFromCourse((new Common().CourseName))).ToLower() %>'>
+                            Colleges Search</a></li>
+                        <li><a title="Exam Search" id="sndFooterExam" href='<%=IryTech.AdmissionJankari.Components.Utils.ApplicationRelativeWebRoot+ ("Exams/"+ IryTech.AdmissionJankari.Components.Utils.RemoveIllegealFromCourse((new Common().CourseName))).ToLower() %>'>
+                            Exam Search</a></li>
+                        <li><a title="Education Loan Search" href='<%=IryTech.AdmissionJankari.Components.Utils.ApplicationRelativeWebRoot+("Education-Loan/").ToLower()%>'>
+                            Education Loan Search</a></li>
+                    </ul>
+                </div>
+                <div class="one_fourth footerlinkBox last fleft">
+                    <h4>
+                        News</h4>
+                    <ul class="horizontal marginleft">
+                        <li><a title="Notices" href='<%=IryTech.AdmissionJankari.Components.Utils.ApplicationRelativeWebRoot+("Admission-Notices/").ToLower()%>'>
+                            Notices</a></li>
+                        <li><a title="News and Articles" href='<%=IryTech.AdmissionJankari.Components.Utils.ApplicationRelativeWebRoot+("Latest-News/").ToLower()%>'>
+                            News and Articles</a></li>
+                    </ul>
+                </div>
+                <div class="one_fourth fleft last footerlinkBox">
+                    <h4>
+                        About</h4>
+                    <ul class="horizontal two_fifth fleft marginleft">
+                        <li id="li1"><a title="Forum" id='A4' href='http://forum.admissionjankari.com/'>Forum</a></li>
+                        <li><a title="Blogs" href='http://blog.admissionjankari.com/' target="_blank">Blogs</a></li>
+                        <li><a title="Contact Us" href='<%=IryTech.AdmissionJankari.Components.Utils.ApplicationRelativeWebRoot+("Contact-Us").ToLower()%>'>
+                            Contact Us</a></li>
+                        <li><a title="About Us" href='<%=IryTech.AdmissionJankari.Components.Utils.ApplicationRelativeWebRoot+("About-Us").ToLower()%>'>
+                            About Us</a></li>
+                    </ul>
+                </div>
+                <div class="one_fourth last fleft footerlinkBox">
+                    <h4>
+                        Admission</h4>
+                    <ul class="horizontal fleft marginleft">
+                        <li><a title="Direct Online Admission" id="A2" href='<%=IryTech.AdmissionJankari.Components.Utils.ApplicationRelativeWebRoot+(IryTech.AdmissionJankari.Components.Utils.RemoveIllegealFromCourse((new Common().CourseName))+"/Get-Direct-Admission").ToLower() %>'>
+                            Direct Online Admission</a></li>
+                        <li><a title="Report Donation" id="A3" href='<%=IryTech.AdmissionJankari.Components.Utils.ApplicationRelativeWebRoot+("ReportDonation/")%>'>
+                            Report Donation</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="clearBoth">
+            </div>
+            <div class="footerbottmDiv">
+                <ul class="vertical one_half fleft marginleft">
+                    <li><a title="About Us" href='<%=IryTech.AdmissionJankari.Components.Utils.ApplicationRelativeWebRoot+("About-Us").ToLower()%>'>
+                        About Us</a></li>
+                    <li><a title="Contact Us" href='<%=IryTech.AdmissionJankari.Components.Utils.ApplicationRelativeWebRoot+("Contact-Us").ToLower()%>'>
+                        Contact Us</a></li>
+                    <li><a title="Privacy Policy" href='<%=IryTech.AdmissionJankari.Components.Utils.ApplicationRelativeWebRoot+("Privacy-Policy").ToLower()%>'>
+                        Privacy Policy</a></li>
+                    <li><a title="Terms and Conditions" href='<%=IryTech.AdmissionJankari.Components.Utils.ApplicationRelativeWebRoot+("Terms-and-Conditions").ToLower()%>'>
+                        Terms and Conditions</a></li>
+                </ul>
+                <ul class="one_third fright last">
+                    <li class="textalignRight">
+                        <h6>
+                            &copy; 2013 Copyright | www.AdmissionJankari.com</h6>
+                    </li>
+                </ul>
+                <div class="clearBoth">
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+<script type="text/javascript" src='http://www.google-analytics.com/ga.js'></script>
+</html>

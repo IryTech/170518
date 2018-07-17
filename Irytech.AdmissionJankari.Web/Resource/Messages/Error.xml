@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <message MessageID="noRecords" description="Sorry No Records Found">
+  </message>
+  <message MessageID="Choose" description="Choose any field for search">
+  </message>
+  <message MessageID="SuccessExcelUpload" description="You have successfully imported the excel data in sql table.">
+  </message>
+  <message MessageID="warningExcelUpload" description="You have successfully imported the excel data in sql table.">
+  </message>
+  <message MessageID="lblSucessMsg" description="Successfully inserted">
+  </message>
+  <message MessageID="lblErrMsg" description="Error:check Data ">
+  </message>
+  <message MessageID="lblCheckField" description="Please enter only one field">
+  </message>
+  <message MessageID="lblCollegeRegisaterSuccess" description="Thanks for register with us.We have sent your password to prove contact mail.You can login from college login after activating account by us">
+  </message>
+  <message MessageID="clgRegister" description="Sorry,this college is registered by someone other,Please try for other college">
+  </message>
+</Root>

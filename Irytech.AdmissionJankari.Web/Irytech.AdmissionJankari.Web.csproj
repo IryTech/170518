@@ -1,0 +1,3088 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6A03A10A-74BE-4D61-9858-456AED435BEB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Irytech.AdmissionJankari.Web</RootNamespace>
+    <AssemblyName>Irytech.AdmissionJankari.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=4.1.40412.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="CKEditor.NET, Version=3.6.2.0, Culture=neutral, PublicKeyToken=e379cdf2f8354999, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\CKEditor.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="integration, Version=0.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\integration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Spaanjaars.Toolkit, Version=1.0.2531.23768, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Spaanjaars.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminPanel\Form Package\FactorMaster.aspx" />
+    <Content Include="AdminPanel\Form Package\PackageCreation.aspx" />
+    <Content Include="bin\AjaxControlToolkit.dll" />
+    <Content Include="bin\AjaxMin.dll" />
+    <Content Include="bin\Autofac.dll" />
+    <Content Include="bin\CKEditor.NET.dll" />
+    <Content Include="bin\CookComputing.XmlRpcV2.dll" />
+    <Content Include="bin\FarsiLibrary.dll" />
+    <Content Include="bin\integration.dll" />
+    <Content Include="bin\Intelligencia.UrlRewriter.dll" />
+    <Content Include="bin\Irytech.AdmissionJankari.Web.dll" />
+    <Content Include="bin\Irytech.AdmissionJankari.Web.pdb" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\nStuff.UpdateControls.dll" />
+    <Content Include="bin\Omu.ValueInjecter.dll" />
+    <Content Include="bin\ServiceStack.Common.dll" />
+    <Content Include="bin\ServiceStack.Interfaces.dll" />
+    <Content Include="bin\ServiceStack.OrmLite.dll" />
+    <Content Include="bin\ServiceStack.OrmLite.SqlServer.dll" />
+    <Content Include="bin\ServiceStack.Text.dll" />
+    <Content Include="bin\Spaanjaars.Toolkit.dll" />
+    <Content Include="bin\WebProfiler.dll" />
+    <Content Include="bin\YAF.Classes.Config.dll" />
+    <Content Include="bin\YAF.Classes.Data.dll" />
+    <Content Include="bin\YAF.Controls.dll" />
+    <Content Include="bin\YAF.Core.dll" />
+    <Content Include="bin\YAF.Data.MsSql.dll" />
+    <Content Include="bin\YAF.dll" />
+    <Content Include="bin\YAF.Providers.dll" />
+    <Content Include="bin\YAF.SampleWebApplication.dll" />
+    <Content Include="bin\YAF.SampleWebApplication.pdb" />
+    <Content Include="bin\YAF.Types.dll" />
+    <Content Include="bin\YAF.Utils.dll" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Global.asax" />
+    <Content Include="AdminPanel\College\CentralUniversity.xls" />
+    <Content Include="AdminPanel\College\CentralUniversity.xlsx" />
+    <Content Include="AdminPanel\College\Indian University.xlsx" />
+    <Content Include="AdminPanel\Controls\Admin.Master" />
+    <Content Include="AdminPanel\Course\StreamMaster.xlsx" />
+    <Content Include="AdminPanel\ExcelPreview\CitySheet.xlsx" />
+    <Content Include="AdminPanel\ExcelPreview\CountrySheet.xlsx" />
+    <Content Include="AdminPanel\ExcelPreview\CourseCategory.xlsx" />
+    <Content Include="AdminPanel\ExcelPreview\CourseEligibilty.xlsx" />
+    <Content Include="AdminPanel\ExcelPreview\CourseMaster.xlsx" />
+    <Content Include="AdminPanel\ExcelPreview\CourseStream.xlsx" />
+    <Content Include="AdminPanel\ExcelPreview\ExamFormr.xlsx" />
+    <Content Include="AdminPanel\ExcelPreview\ExamMaster.xlsx" />
+    <Content Include="AdminPanel\ExcelPreview\HostelType.xlsx" />
+    <Content Include="AdminPanel\ExcelPreview\InstituteType.xlsx" />
+    <Content Include="AdminPanel\ExcelPreview\NewsDetails.xlsx" />
+    <Content Include="AdminPanel\ExcelPreview\NoticeCategory.xlsx" />
+    <Content Include="AdminPanel\ExcelPreview\NoticeDetails.xlsx" />
+    <Content Include="AdminPanel\ExcelPreview\StateSheet.xlsx" />
+    <Content Include="AdminPanel\ExcelPreview\StreamMaster.xlsx" />
+    <Content Include="AdminPanel\ExcelPreview\UniversityCategory.xlsx" />
+    <Content Include="AdminPanel\ExcelPreview\UniversityMaster.xlsx" />
+    <Content Include="AdminPanel\ExcelPreview\ZoneSheet.xlsx" />
+    <Content Include="App_Browsers\w3cvalidator.browser" />
+    <Content Include="fckeditor\.htaccess" />
+    <Content Include="Image\Web.config" />
+    <Content Include="MailTemplate\ChangePassword.cshtml" />
+    <Content Include="MailTemplate\ForgetPassword.cshtml" />
+    <Content Include="MailTemplate\Register.cshtml" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Debug\Irytech.AdmissionJankari.Web.csprojResolveAssemblyReference.cache" />
+    <Content Include="Resource\Download\ApplicationForm_FinalDec12_2012.pdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Account\ChangePassword.aspx" />
+    <Content Include="Account\CollegeLogin.aspx" />
+    <Content Include="Account\CollegeProfile.aspx" />
+    <Content Include="Account\CollegeRegisteration.aspx" />
+    <Content Include="Account\ForgetPassword.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\PaymentConfirmation.aspx" />
+    <Content Include="Account\PaymentOption.aspx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="Account\UserProfile.aspx" />
+    <Content Include="AdminPanel\AdmissionjankariTestimonial.aspx" />
+    <Content Include="AdminPanel\ApplicationSetting.aspx" />
+    <Content Include="AdminPanel\BankDetailsSunset.jpg" />
+    <Content Include="AdminPanel\BankDetailsWater lilies.jpg" />
+    <Content Include="AdminPanel\BankDetailsWinter.jpg" />
+    <Content Include="AdminPanel\BankDetails\AddBankLoanDetails.aspx" />
+    <Content Include="AdminPanel\BankDetails\ManageBankDetails.aspx" />
+    <Content Include="AdminPanel\CollegeBookSeat\BookSeat.aspx" />
+    <Content Include="AdminPanel\College\AddCollegeBanner.aspx" />
+    <Content Include="AdminPanel\College\AddCollegeGallery.aspx" />
+    <Content Include="AdminPanel\College\AddReportDonation.aspx" />
+    <Content Include="AdminPanel\College\AddUniversityMaster.aspx" />
+    <Content Include="AdminPanel\College\CollegeAdvetise.aspx" />
+    <Content Include="AdminPanel\College\CollegeAssociationCategoryMaster.aspx" />
+    <Content Include="AdminPanel\College\CollegeGallery.aspx" />
+    <Content Include="AdminPanel\College\CollegeGroupMaster.aspx" />
+    <Content Include="AdminPanel\College\CollegeImport\CollegeExcelImport.aspx" />
+    <Content Include="AdminPanel\College\CollegeImport\CompletedExcelUtitlity.aspx" />
+    <Content Include="AdminPanel\College\CollegeImport\FieldMapping.aspx" />
+    <Content Include="AdminPanel\College\CollegeList.aspx" />
+    <Content Include="AdminPanel\College\CollegeOnlineParticipationStatus.aspx" />
+    <Content Include="AdminPanel\College\CollegeRankSourceCategory.aspx" />
+    <Content Include="AdminPanel\College\CollegeTopHirer.aspx" />
+    <Content Include="AdminPanel\College\FactorMaster.aspx" />
+    <Content Include="AdminPanel\College\HostelMaster.aspx" />
+    <Content Include="AdminPanel\College\InstituteTypeDetail.aspx" />
+    <Content Include="AdminPanel\College\ManageCollegeContactDetails.aspx" />
+    <Content Include="AdminPanel\College\ManageCollegeReportDonation.aspx" />
+    <Content Include="AdminPanel\College\UniversityCategory.aspx" />
+    <Content Include="AdminPanel\College\UniversityMaster.aspx" />
+    <Content Include="AdminPanel\College\UpdateCollegeDetails.aspx" />
+    <Content Include="AdminPanel\College\UpdateNewCollegeRegisteration.aspx" />
+    <Content Include="AdminPanel\Course\AddCourse.aspx" />
+    <Content Include="AdminPanel\Course\AddCourseStreamMaster.aspx" />
+    <Content Include="AdminPanel\Course\CourseCategory.aspx" />
+    <Content Include="AdminPanel\Course\CourseEligibility.aspx" />
+    <Content Include="AdminPanel\Course\CourseMaster.aspx" />
+    <Content Include="AdminPanel\Course\CoursePaymentMaster.aspx" />
+    <Content Include="AdminPanel\Course\CourseStreamMaster.aspx" />
+    <Content Include="AdminPanel\CreatePrmotionalPage.aspx" />
+    <Content Include="AdminPanel\Exam\AddExamFormMaster.aspx" />
+    <Content Include="AdminPanel\Exam\ExamMaster.aspx" />
+    <Content Include="AdminPanel\Exam\ManageExamFormMaster.aspx" />
+    <Content Include="AdminPanel\Home\Home.aspx" />
+    <Content Include="AdminPanel\Home\index.aspx" />
+    <Content Include="AdminPanel\Images\CommonImages\AjLogo234.png" />
+    <Content Include="AdminPanel\Images\CommonImages\arrow-square.gif" />
+    <Content Include="AdminPanel\Images\CommonImages\base_floppydisk_32.png" />
+    <Content Include="AdminPanel\Images\CommonImages\bg-normal.png" />
+    <Content Include="AdminPanel\Images\CommonImages\bg-red.png" />
+    <Content Include="AdminPanel\Images\CommonImages\bg.png" />
+    <Content Include="AdminPanel\Images\CommonImages\bg_header.png" />
+    <Content Include="AdminPanel\Images\CommonImages\big_search.png" />
+    <Content Include="AdminPanel\Images\CommonImages\bodybg.png" />
+    <Content Include="AdminPanel\Images\CommonImages\buttonbg.png" />
+    <Content Include="AdminPanel\Images\CommonImages\ContactImg.png" />
+    <Content Include="AdminPanel\Images\CommonImages\dark.png" />
+    <Content Include="AdminPanel\Images\CommonImages\dots.png" />
+    <Content Include="AdminPanel\Images\CommonImages\downloadExcel.png" />
+    <Content Include="AdminPanel\Images\CommonImages\downloadExcel1.png" />
+    <Content Include="AdminPanel\Images\CommonImages\downloadExcel2.png" />
+    <Content Include="AdminPanel\Images\CommonImages\editIcon.png" />
+    <Content Include="AdminPanel\Images\CommonImages\form.png" />
+    <Content Include="AdminPanel\Images\CommonImages\homesmall.png" />
+    <Content Include="AdminPanel\Images\CommonImages\img.png" />
+    <Content Include="AdminPanel\Images\CommonImages\ImgClose.png" />
+    <Content Include="AdminPanel\Images\CommonImages\importdata.png" />
+    <Content Include="AdminPanel\Images\CommonImages\insertIcon.png" />
+    <Content Include="AdminPanel\Images\CommonImages\lock.png" />
+    <Content Include="AdminPanel\Images\CommonImages\loginBgTop.png" />
+    <Content Include="AdminPanel\Images\CommonImages\Loginheader-bg.png" />
+    <Content Include="AdminPanel\Images\CommonImages\logo.png" />
+    <Content Include="AdminPanel\Images\CommonImages\manageClg.png" />
+    <Content Include="AdminPanel\Images\CommonImages\manageLocation.png" />
+    <Content Include="AdminPanel\Images\CommonImages\Menubg.png" />
+    <Content Include="AdminPanel\Images\CommonImages\mngclgSetting.png" />
+    <Content Include="AdminPanel\Images\CommonImages\mngcourse.png" />
+    <Content Include="AdminPanel\Images\CommonImages\mngError.png" />
+    <Content Include="AdminPanel\Images\CommonImages\mngExam.png" />
+    <Content Include="AdminPanel\Images\CommonImages\mnglocation.png" />
+    <Content Include="AdminPanel\Images\CommonImages\mngsetting.png" />
+    <Content Include="AdminPanel\Images\CommonImages\mngUniversity.png" />
+    <Content Include="AdminPanel\Images\CommonImages\mngUser.png" />
+    <Content Include="AdminPanel\Images\CommonImages\module_top_shading.png" />
+    <Content Include="AdminPanel\Images\CommonImages\no-profile.png" />
+    <Content Include="AdminPanel\Images\CommonImages\separator2.png" />
+    <Content Include="AdminPanel\Images\CommonImages\sidebar_divider.png" />
+    <Content Include="AdminPanel\Images\CommonImages\signInbutton.png" />
+    <Content Include="AdminPanel\Images\CommonImages\signInbuttonHover.png" />
+    <Content Include="AdminPanel\Images\CommonImages\socialCommonLogo.png" />
+    <Content Include="AdminPanel\Images\CommonImages\test.png" />
+    <Content Include="AdminPanel\Images\CommonImages\uploadExcel.png" />
+    <Content Include="AdminPanel\Images\CommonImages\uploadfile.png" />
+    <Content Include="AdminPanel\Images\CommonImages\viewIcon.png" />
+    <Content Include="AdminPanel\Images\NewsArticle\1010891_679811975368228_665080498_n.jpg" />
+    <Content Include="AdminPanel\Images\NewsArticle\1010906_680887391927353_480666021_n.jpg" />
+    <Content Include="AdminPanel\Images\NewsArticle\BlueTab.jpg" />
+    <Content Include="AdminPanel\JS\AjexFileUploader.js" />
+    <Content Include="AdminPanel\JS\CollegeBranch.js" />
+    <Content Include="AdminPanel\JS\commonscripts.js" />
+    <Content Include="AdminPanel\JS\general.js" />
+    <Content Include="AdminPanel\JS\hideshow.js" />
+    <Content Include="AdminPanel\JS\html5shiv.js" />
+    <Content Include="AdminPanel\JS\jquery-1.7.min.js" />
+    <Content Include="AdminPanel\JS\jquery-ui.min.js" />
+    <Content Include="AdminPanel\JS\jquery.equalHeight.js" />
+    <Content Include="AdminPanel\JS\jquery.MultiFile.js" />
+    <Content Include="AdminPanel\JS\jquery.tablesorter.min.js" />
+    <Content Include="AdminPanel\JS\jquery.ui.core.js" />
+    <Content Include="AdminPanel\JS\jquery.ui.datepicker.js" />
+    <Content Include="AdminPanel\JS\University.js" />
+    <Content Include="AdminPanel\Location\City.aspx" />
+    <Content Include="AdminPanel\Location\Country.aspx" />
+    <Content Include="AdminPanel\Location\State.aspx" />
+    <Content Include="AdminPanel\Location\Zone.aspx" />
+    <Content Include="AdminPanel\ManageCollegeEvent.aspx" />
+    <Content Include="AdminPanel\Message\ErrorMessage.aspx" />
+    <Content Include="AdminPanel\Message\ImagesPath.aspx" />
+    <Content Include="AdminPanel\Message\ValidationMessage.aspx" />
+    <Content Include="AdminPanel\NewsArticle\AddFAQDetails.aspx" />
+    <Content Include="AdminPanel\NewsArticle\AddNewsAndArticles.aspx" />
+    <Content Include="AdminPanel\NewsArticle\AddNoticeDetails.aspx" />
+    <Content Include="AdminPanel\NewsArticle\FAQCategoryMaster.aspx" />
+    <Content Include="AdminPanel\NewsArticle\FAQDetails.aspx" />
+    <Content Include="AdminPanel\NewsArticle\NewsAndArticles.aspx" />
+    <Content Include="AdminPanel\NewsArticle\NoticeCategory.aspx" />
+    <Content Include="AdminPanel\NewsArticle\NoticeMaster.aspx" />
+    <Content Include="AdminPanel\PageTitle\PageTitle.aspx" />
+    <Content Include="AdminPanel\PresidentSpeech\PresidentSpeechDetails.aspx" />
+    <Content Include="AdminPanel\Product\AddAdsProduct.aspx" />
+    <Content Include="AdminPanel\Product\ManageProduct.aspx" />
+    <Content Include="AdminPanel\Product\ProductDetails.aspx" />
+    <Content Include="AdminPanel\Query\QueryList.aspx" />
+    <Content Include="AdminPanel\RequestforRefund.aspx" />
+    <Content Include="AdminPanel\Setting\AppsError.aspx" />
+    <Content Include="AdminPanel\Setting\AppsException.aspx" />
+    <Content Include="AdminPanel\Setting\UserNotification.aspx" />
+    <Content Include="AdminPanel\StyleSheets\Admin_style.css" />
+    <Content Include="AdminPanel\StyleSheets\jquery.ui.datepicker.css" />
+    <Content Include="AdminPanel\StyleSheets\login.css" />
+    <Content Include="AdminPanel\StyleSheets\Tabs.css" />
+    <Content Include="AdminPanel\Test.aspx" />
+    <Content Include="AdminPanel\Testimonial\ManageTestimonial.aspx" />
+    <Content Include="AdminPanel\UserControl\ExcelSuccessCount.ascx" />
+    <Content Include="AdminPanel\User\EditUserDetails.aspx" />
+    <Content Include="AdminPanel\User\OnilneCounsellingMember.aspx" />
+    <Content Include="AdminPanel\User\User.aspx" />
+    <Content Include="AdminPanel\User\UserComment.aspx" />
+    <Content Include="AdminPanel\User\UserMaster.aspx" />
+    <Content Include="BankLoan\BankList.aspx" />
+    <Content Include="BankLoan\BankLoanDetails.aspx" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="College\CollegeComparison.aspx" />
+    <Content Include="College\CollegeDetails.aspx" />
+    <Content Include="College\CollegeQuery.aspx" />
+    <Content Include="College\CollegeSearch.aspx" />
+    <Content Include="College\CourseComparison.aspx" />
+    <Content Include="College\ParticipatedCollegeList.aspx" />
+    <Content Include="College\QueryReply.aspx" />
+    <Content Include="College\SponserCollegeDetails.aspx" />
+    <Content Include="ConformationPage.aspx" />
+    <Content Include="ContactUs.aspx" />
+    <Content Include="ContentWriting.aspx" />
+    <Content Include="counselling\BookYourSeat.aspx" />
+    <Content Include="counselling\ChooseCollege.aspx" />
+    <Content Include="counselling\Confirmation.aspx" />
+    <Content Include="counselling\DirectAdmission.aspx" />
+    <Content Include="counselling\FinalStreamList.aspx" />
+    <Content Include="counselling\FinalUserIntertestedList.aspx" />
+    <Content Include="counselling\OnlineApplicationInstrucation.aspx" />
+    <Content Include="counselling\Payment.aspx" />
+    <Content Include="counselling\PaymentConformation.aspx" />
+    <Content Include="counselling\PaymentOptions.aspx" />
+    <Content Include="counselling\RegCanditate.aspx" />
+    <Content Include="counselling\StudentConformationList.aspx" />
+    <Content Include="counselling\StudentCounselling.aspx" />
+    <Content Include="Course\StreamDecsription.aspx" />
+    <Content Include="Course\UniversityDescription.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="error.aspx" />
+    <Content Include="error404.aspx" />
+    <Content Include="Exam\ExamDetails.aspx" />
+    <Content Include="Exam\ExamList.aspx" />
+    <Content Include="fckeditor\adapters\jquery.js" />
+    <Content Include="fckeditor\CHANGES.html" />
+    <Content Include="fckeditor\ckeditor.js" />
+    <Content Include="fckeditor\ckeditor_basic.js" />
+    <Content Include="fckeditor\config.js" />
+    <Content Include="fckeditor\contents.css" />
+    <Content Include="fckeditor\images\spacer.gif" />
+    <Content Include="fckeditor\INSTALL.html" />
+    <Content Include="fckeditor\lang\af.js" />
+    <Content Include="fckeditor\lang\ar.js" />
+    <Content Include="fckeditor\lang\bg.js" />
+    <Content Include="fckeditor\lang\bn.js" />
+    <Content Include="fckeditor\lang\bs.js" />
+    <Content Include="fckeditor\lang\ca.js" />
+    <Content Include="fckeditor\lang\cs.js" />
+    <Content Include="fckeditor\lang\cy.js" />
+    <Content Include="fckeditor\lang\da.js" />
+    <Content Include="fckeditor\lang\de.js" />
+    <Content Include="fckeditor\lang\el.js" />
+    <Content Include="fckeditor\lang\en-au.js" />
+    <Content Include="fckeditor\lang\en-ca.js" />
+    <Content Include="fckeditor\lang\en-gb.js" />
+    <Content Include="fckeditor\lang\en.js" />
+    <Content Include="fckeditor\lang\eo.js" />
+    <Content Include="fckeditor\lang\es.js" />
+    <Content Include="fckeditor\lang\et.js" />
+    <Content Include="fckeditor\lang\eu.js" />
+    <Content Include="fckeditor\lang\fa.js" />
+    <Content Include="fckeditor\lang\fi.js" />
+    <Content Include="fckeditor\lang\fo.js" />
+    <Content Include="fckeditor\lang\fr-ca.js" />
+    <Content Include="fckeditor\lang\fr.js" />
+    <Content Include="fckeditor\lang\gl.js" />
+    <Content Include="fckeditor\lang\gu.js" />
+    <Content Include="fckeditor\lang\he.js" />
+    <Content Include="fckeditor\lang\hi.js" />
+    <Content Include="fckeditor\lang\hr.js" />
+    <Content Include="fckeditor\lang\hu.js" />
+    <Content Include="fckeditor\lang\is.js" />
+    <Content Include="fckeditor\lang\it.js" />
+    <Content Include="fckeditor\lang\ja.js" />
+    <Content Include="fckeditor\lang\ka.js" />
+    <Content Include="fckeditor\lang\km.js" />
+    <Content Include="fckeditor\lang\ko.js" />
+    <Content Include="fckeditor\lang\lt.js" />
+    <Content Include="fckeditor\lang\lv.js" />
+    <Content Include="fckeditor\lang\mn.js" />
+    <Content Include="fckeditor\lang\ms.js" />
+    <Content Include="fckeditor\lang\nb.js" />
+    <Content Include="fckeditor\lang\nl.js" />
+    <Content Include="fckeditor\lang\no.js" />
+    <Content Include="fckeditor\lang\pl.js" />
+    <Content Include="fckeditor\lang\pt-br.js" />
+    <Content Include="fckeditor\lang\pt.js" />
+    <Content Include="fckeditor\lang\ro.js" />
+    <Content Include="fckeditor\lang\ru.js" />
+    <Content Include="fckeditor\lang\sk.js" />
+    <Content Include="fckeditor\lang\sl.js" />
+    <Content Include="fckeditor\lang\sr-latn.js" />
+    <Content Include="fckeditor\lang\sr.js" />
+    <Content Include="fckeditor\lang\sv.js" />
+    <Content Include="fckeditor\lang\th.js" />
+    <Content Include="fckeditor\lang\tr.js" />
+    <Content Include="fckeditor\lang\uk.js" />
+    <Content Include="fckeditor\lang\vi.js" />
+    <Content Include="fckeditor\lang\zh-cn.js" />
+    <Content Include="fckeditor\lang\zh.js" />
+    <Content Include="fckeditor\lang\_languages.js" />
+    <Content Include="fckeditor\lang\_translationstatus.txt" />
+    <Content Include="fckeditor\LICENSE.html" />
+    <Content Include="fckeditor\plugins\a11yhelp\dialogs\a11yhelp.js" />
+    <Content Include="fckeditor\plugins\a11yhelp\lang\en.js" />
+    <Content Include="fckeditor\plugins\a11yhelp\lang\he.js" />
+    <Content Include="fckeditor\plugins\about\dialogs\about.js" />
+    <Content Include="fckeditor\plugins\about\dialogs\logo_ckeditor.png" />
+    <Content Include="fckeditor\plugins\adobeair\plugin.js" />
+    <Content Include="fckeditor\plugins\ajax\plugin.js" />
+    <Content Include="fckeditor\plugins\autogrow\plugin.js" />
+    <Content Include="fckeditor\plugins\bbcode\plugin.js" />
+    <Content Include="fckeditor\plugins\clipboard\dialogs\paste.js" />
+    <Content Include="fckeditor\plugins\colordialog\dialogs\colordialog.js" />
+    <Content Include="fckeditor\plugins\devtools\lang\en.js" />
+    <Content Include="fckeditor\plugins\devtools\plugin.js" />
+    <Content Include="fckeditor\plugins\dialog\dialogDefinition.js" />
+    <Content Include="fckeditor\plugins\div\dialogs\div.js" />
+    <Content Include="fckeditor\plugins\docprops\dialogs\docprops.js" />
+    <Content Include="fckeditor\plugins\docprops\plugin.js" />
+    <Content Include="fckeditor\plugins\find\dialogs\find.js" />
+    <Content Include="fckeditor\plugins\flash\dialogs\flash.js" />
+    <Content Include="fckeditor\plugins\flash\images\placeholder.png" />
+    <Content Include="fckeditor\plugins\forms\dialogs\button.js" />
+    <Content Include="fckeditor\plugins\forms\dialogs\checkbox.js" />
+    <Content Include="fckeditor\plugins\forms\dialogs\form.js" />
+    <Content Include="fckeditor\plugins\forms\dialogs\hiddenfield.js" />
+    <Content Include="fckeditor\plugins\forms\dialogs\radio.js" />
+    <Content Include="fckeditor\plugins\forms\dialogs\select.js" />
+    <Content Include="fckeditor\plugins\forms\dialogs\textarea.js" />
+    <Content Include="fckeditor\plugins\forms\dialogs\textfield.js" />
+    <Content Include="fckeditor\plugins\forms\images\hiddenfield.gif" />
+    <Content Include="fckeditor\plugins\iframedialog\plugin.js" />
+    <Content Include="fckeditor\plugins\iframe\dialogs\iframe.js" />
+    <Content Include="fckeditor\plugins\iframe\images\placeholder.png" />
+    <Content Include="fckeditor\plugins\image\dialogs\image.js" />
+    <Content Include="fckeditor\plugins\link\dialogs\anchor.js" />
+    <Content Include="fckeditor\plugins\link\dialogs\link.js" />
+    <Content Include="fckeditor\plugins\link\images\anchor.gif" />
+    <Content Include="fckeditor\plugins\liststyle\dialogs\liststyle.js" />
+    <Content Include="fckeditor\plugins\pagebreak\images\pagebreak.gif" />
+    <Content Include="fckeditor\plugins\pastefromword\filter\default.js" />
+    <Content Include="fckeditor\plugins\pastetext\dialogs\pastetext.js" />
+    <Content Include="fckeditor\plugins\placeholder\dialogs\placeholder.js" />
+    <Content Include="fckeditor\plugins\placeholder\lang\en.js" />
+    <Content Include="fckeditor\plugins\placeholder\lang\he.js" />
+    <Content Include="fckeditor\plugins\placeholder\placeholder.gif" />
+    <Content Include="fckeditor\plugins\placeholder\plugin.js" />
+    <Content Include="fckeditor\plugins\scayt\dialogs\options.js" />
+    <Content Include="fckeditor\plugins\scayt\dialogs\toolbar.css" />
+    <Content Include="fckeditor\plugins\showblocks\images\block_address.png" />
+    <Content Include="fckeditor\plugins\showblocks\images\block_blockquote.png" />
+    <Content Include="fckeditor\plugins\showblocks\images\block_div.png" />
+    <Content Include="fckeditor\plugins\showblocks\images\block_h1.png" />
+    <Content Include="fckeditor\plugins\showblocks\images\block_h2.png" />
+    <Content Include="fckeditor\plugins\showblocks\images\block_h3.png" />
+    <Content Include="fckeditor\plugins\showblocks\images\block_h4.png" />
+    <Content Include="fckeditor\plugins\showblocks\images\block_h5.png" />
+    <Content Include="fckeditor\plugins\showblocks\images\block_h6.png" />
+    <Content Include="fckeditor\plugins\showblocks\images\block_p.png" />
+    <Content Include="fckeditor\plugins\showblocks\images\block_pre.png" />
+    <Content Include="fckeditor\plugins\smiley\dialogs\smiley.js" />
+    <Content Include="fckeditor\plugins\smiley\images\angel_smile.gif" />
+    <Content Include="fckeditor\plugins\smiley\images\angry_smile.gif" />
+    <Content Include="fckeditor\plugins\smiley\images\broken_heart.gif" />
+    <Content Include="fckeditor\plugins\smiley\images\confused_smile.gif" />
+    <Content Include="fckeditor\plugins\smiley\images\cry_smile.gif" />
+    <Content Include="fckeditor\plugins\smiley\images\devil_smile.gif" />
+    <Content Include="fckeditor\plugins\smiley\images\embaressed_smile.gif" />
+    <Content Include="fckeditor\plugins\smiley\images\envelope.gif" />
+    <Content Include="fckeditor\plugins\smiley\images\heart.gif" />
+    <Content Include="fckeditor\plugins\smiley\images\kiss.gif" />
+    <Content Include="fckeditor\plugins\smiley\images\lightbulb.gif" />
+    <Content Include="fckeditor\plugins\smiley\images\omg_smile.gif" />
+    <Content Include="fckeditor\plugins\smiley\images\regular_smile.gif" />
+    <Content Include="fckeditor\plugins\smiley\images\sad_smile.gif" />
+    <Content Include="fckeditor\plugins\smiley\images\shades_smile.gif" />
+    <Content Include="fckeditor\plugins\smiley\images\teeth_smile.gif" />
+    <Content Include="fckeditor\plugins\smiley\images\thumbs_down.gif" />
+    <Content Include="fckeditor\plugins\smiley\images\thumbs_up.gif" />
+    <Content Include="fckeditor\plugins\smiley\images\tounge_smile.gif" />
+    <Content Include="fckeditor\plugins\smiley\images\whatchutalkingabout_smile.gif" />
+    <Content Include="fckeditor\plugins\smiley\images\wink_smile.gif" />
+    <Content Include="fckeditor\plugins\specialchar\dialogs\specialchar.js" />
+    <Content Include="fckeditor\plugins\specialchar\lang\en.js" />
+    <Content Include="fckeditor\plugins\stylesheetparser\plugin.js" />
+    <Content Include="fckeditor\plugins\styles\styles\default.js" />
+    <Content Include="fckeditor\plugins\tableresize\plugin.js" />
+    <Content Include="fckeditor\plugins\tabletools\dialogs\tableCell.js" />
+    <Content Include="fckeditor\plugins\table\dialogs\table.js" />
+    <Content Include="fckeditor\plugins\templates\dialogs\templates.js" />
+    <Content Include="fckeditor\plugins\templates\templates\default.js" />
+    <Content Include="fckeditor\plugins\templates\templates\images\template1.gif" />
+    <Content Include="fckeditor\plugins\templates\templates\images\template2.gif" />
+    <Content Include="fckeditor\plugins\templates\templates\images\template3.gif" />
+    <Content Include="fckeditor\plugins\uicolor\dialogs\uicolor.js" />
+    <Content Include="fckeditor\plugins\uicolor\lang\en.js" />
+    <Content Include="fckeditor\plugins\uicolor\lang\he.js" />
+    <Content Include="fckeditor\plugins\uicolor\plugin.js" />
+    <Content Include="fckeditor\plugins\uicolor\uicolor.gif" />
+    <Content Include="fckeditor\plugins\uicolor\yui\assets\hue_bg.png" />
+    <Content Include="fckeditor\plugins\uicolor\yui\assets\hue_thumb.png" />
+    <Content Include="fckeditor\plugins\uicolor\yui\assets\picker_mask.png" />
+    <Content Include="fckeditor\plugins\uicolor\yui\assets\picker_thumb.png" />
+    <Content Include="fckeditor\plugins\uicolor\yui\assets\yui.css" />
+    <Content Include="fckeditor\plugins\uicolor\yui\yui.js" />
+    <Content Include="fckeditor\plugins\wsc\dialogs\ciframe.html" />
+    <Content Include="fckeditor\plugins\wsc\dialogs\tmpFrameset.html" />
+    <Content Include="fckeditor\plugins\wsc\dialogs\wsc.css" />
+    <Content Include="fckeditor\plugins\wsc\dialogs\wsc.js" />
+    <Content Include="fckeditor\plugins\xml\plugin.js" />
+    <Content Include="fckeditor\skins\kama\dialog.css" />
+    <Content Include="fckeditor\skins\kama\editor.css" />
+    <Content Include="fckeditor\skins\kama\icons.png" />
+    <Content Include="fckeditor\skins\kama\icons_rtl.png" />
+    <Content Include="fckeditor\skins\kama\images\dialog_sides.gif" />
+    <Content Include="fckeditor\skins\kama\images\dialog_sides.png" />
+    <Content Include="fckeditor\skins\kama\images\dialog_sides_rtl.png" />
+    <Content Include="fckeditor\skins\kama\images\mini.gif" />
+    <Content Include="fckeditor\skins\kama\images\noimage.png" />
+    <Content Include="fckeditor\skins\kama\images\sprites.png" />
+    <Content Include="fckeditor\skins\kama\images\sprites_ie6.png" />
+    <Content Include="fckeditor\skins\kama\images\toolbar_start.gif" />
+    <Content Include="fckeditor\skins\kama\skin.js" />
+    <Content Include="fckeditor\skins\kama\templates.css" />
+    <Content Include="fckeditor\skins\office2003\dialog.css" />
+    <Content Include="fckeditor\skins\office2003\editor.css" />
+    <Content Include="fckeditor\skins\office2003\icons.png" />
+    <Content Include="fckeditor\skins\office2003\icons_rtl.png" />
+    <Content Include="fckeditor\skins\office2003\images\dialog_sides.gif" />
+    <Content Include="fckeditor\skins\office2003\images\dialog_sides.png" />
+    <Content Include="fckeditor\skins\office2003\images\dialog_sides_rtl.png" />
+    <Content Include="fckeditor\skins\office2003\images\mini.gif" />
+    <Content Include="fckeditor\skins\office2003\images\noimage.png" />
+    <Content Include="fckeditor\skins\office2003\images\sprites.png" />
+    <Content Include="fckeditor\skins\office2003\images\sprites_ie6.png" />
+    <Content Include="fckeditor\skins\office2003\skin.js" />
+    <Content Include="fckeditor\skins\office2003\templates.css" />
+    <Content Include="fckeditor\skins\v2\dialog.css" />
+    <Content Include="fckeditor\skins\v2\editor.css" />
+    <Content Include="fckeditor\skins\v2\icons.png" />
+    <Content Include="fckeditor\skins\v2\icons_rtl.png" />
+    <Content Include="fckeditor\skins\v2\images\dialog_sides.gif" />
+    <Content Include="fckeditor\skins\v2\images\dialog_sides.png" />
+    <Content Include="fckeditor\skins\v2\images\dialog_sides_rtl.png" />
+    <Content Include="fckeditor\skins\v2\images\mini.gif" />
+    <Content Include="fckeditor\skins\v2\images\noimage.png" />
+    <Content Include="fckeditor\skins\v2\images\sprites.png" />
+    <Content Include="fckeditor\skins\v2\images\sprites_ie6.png" />
+    <Content Include="fckeditor\skins\v2\images\toolbar_start.gif" />
+    <Content Include="fckeditor\skins\v2\skin.js" />
+    <Content Include="fckeditor\skins\v2\templates.css" />
+    <Content Include="fckeditor\themes\default\theme.js" />
+    <Content Include="IryTech.AdmissionJankari20.Web.csproj" />
+    <Content Include="IryTech.AdmissionJankari20.Web.csproj.user" />
+    <Content Include="PaymentOptions.aspx" />
+    <Content Include="PrivacyPolicy.aspx" />
+    <Content Include="Refund.aspx" />
+    <Content Include="ReportDonation.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="TermAndConditions.aspx" />
+    <Content Include="Testimonial.aspx" />
+    <Content Include="UserControl\PackageList.ascx" />
+    <Content Include="WebServices\CommonWebServices.asmx" />
+    <Content Include="app.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="db.config" />
+    <Content Include="Image\Banner\ABS.gif" />
+    <Content Include="Image\Banner\apeejay-new.gif" />
+    <Content Include="Image\Banner\apeejay.gif" />
+    <Content Include="Image\Banner\chhattisgrad.gif" />
+    <Content Include="Image\Banner\Direct_Admission.gif" />
+    <Content Include="Image\Banner\Dj_dental.gif" />
+    <Content Include="Image\Banner\GCS Medical College.jpg" />
+    <Content Include="Image\Banner\ids-institute.gif" />
+    <Content Include="Image\Banner\ITS.gif" />
+    <Content Include="Image\Banner\jaipuria.gif" />
+    <Content Include="Image\Banner\jaipuria_banner.gif" />
+    <Content Include="Image\Banner\JRE.gif" />
+    <Content Include="Image\Banner\Nimsdental.gif" />
+    <Content Include="Image\Banner\rohilkhand-medical-college.gif" />
+    <Content Include="Image\Banner\sri-sai.gif" />
+    <Content Include="Image\Banner\SRM Business School.jpg" />
+    <Content Include="Image\CollegeGallery\ping status.bmp" />
+    <Content Include="Image\CollegeGallery\Sunset.jpg" />
+    <Content Include="Image\CollegeGallery\Water lilies.jpg" />
+    <Content Include="Image\CollegeGallery\Winter.jpg" />
+    <Content Include="Image\Colleges\water_lilies.jpg" />
+    <Content Include="Image\CommonImages\20120907-170350-hp-pav.jpg" />
+    <Content Include="Image\CommonImages\404.png" />
+    <Content Include="Image\CommonImages\aaa.png" />
+    <Content Include="Image\CommonImages\abs-159x96.gif" />
+    <Content Include="Image\CommonImages\activeMenu.jpg" />
+    <Content Include="Image\CommonImages\ajClglogin.jpg" />
+    <Content Include="Image\CommonImages\Ajregister.jpg" />
+    <Content Include="Image\CommonImages\AJ_add.png" />
+    <Content Include="Image\CommonImages\AJ_bg.png" />
+    <Content Include="Image\CommonImages\AJ_favicon.ico" />
+    <Content Include="Image\CommonImages\Aj_update.png" />
+    <Content Include="Image\CommonImages\AMITY.gif" />
+    <Content Include="Image\CommonImages\ans.png" />
+    <Content Include="Image\CommonImages\aplicationForm12.jpg" />
+    <Content Include="Image\CommonImages\appjay.gif" />
+    <Content Include="Image\CommonImages\application_form.jpg" />
+    <Content Include="Image\CommonImages\arrow-square.gif" />
+    <Content Include="Image\CommonImages\arrowAB.png" />
+    <Content Include="Image\CommonImages\arrow_nav.png" />
+    <Content Include="Image\CommonImages\arrow_right.png" />
+    <Content Include="Image\CommonImages\bg-red.png" />
+    <Content Include="Image\CommonImages\bgSearch.jpg" />
+    <Content Include="Image\CommonImages\black_listed.png" />
+    <Content Include="Image\CommonImages\blueblackListed.png" />
+    <Content Include="Image\CommonImages\blueblackListed1.png" />
+    <Content Include="Image\CommonImages\blueClose.png" />
+    <Content Include="Image\CommonImages\booknowbtn.png" />
+    <Content Include="Image\CommonImages\booknowbtnh.png" />
+    <Content Include="Image\CommonImages\brdcumD.png" />
+    <Content Include="Image\CommonImages\breadcrumb_divider.png" />
+    <Content Include="Image\CommonImages\breadcrumb_dividerRed.png" />
+    <Content Include="Image\CommonImages\bredcumsArrow.png" />
+    <Content Include="Image\CommonImages\btn_submit_2.png" />
+    <Content Include="Image\CommonImages\buttonbg.png" />
+    <Content Include="Image\CommonImages\buttons.png" />
+    <Content Include="Image\CommonImages\Calendar-icon.png" />
+    <Content Include="Image\CommonImages\call.png" />
+    <Content Include="Image\CommonImages\cart5.png" />
+    <Content Include="Image\CommonImages\Checks.jpg" />
+    <Content Include="Image\CommonImages\Checks.png" />
+    <Content Include="Image\CommonImages\closebox.png" />
+    <Content Include="Image\CommonImages\closeBtn.gif" />
+    <Content Include="Image\CommonImages\closeBtn.png" />
+    <Content Include="Image\CommonImages\closeIco_newCollege.png" />
+    <Content Include="Image\CommonImages\comment_rating.png" />
+    <Content Include="Image\CommonImages\comparebtn_newCollege.png" />
+    <Content Include="Image\CommonImages\CompareWith.png" />
+    <Content Include="Image\CommonImages\confirmation.jpg" />
+    <Content Include="Image\CommonImages\ContactImg.png" />
+    <Content Include="Image\CommonImages\Copy of pay-now.png" />
+    <Content Include="Image\CommonImages\correct_tick.gif" />
+    <Content Include="Image\CommonImages\Credit-Debit-Cards.png" />
+    <Content Include="Image\CommonImages\cross.png" />
+    <Content Include="Image\CommonImages\cross1.png" />
+    <Content Include="Image\CommonImages\DDFront.jpg" />
+    <Content Include="Image\CommonImages\DDFront.png" />
+    <Content Include="Image\CommonImages\delete-67bd9c5b.png" />
+    <Content Include="Image\CommonImages\Direct_admission.png" />
+    <Content Include="Image\CommonImages\direct_admisson.png" />
+    <Content Include="Image\CommonImages\download_application_form.png" />
+    <Content Include="Image\CommonImages\DrpMenuImage.png" />
+    <Content Include="Image\CommonImages\DSPSR.gif" />
+    <Content Include="Image\CommonImages\email-add.png" />
+    <Content Include="Image\CommonImages\errorImage.png" />
+    <Content Include="Image\CommonImages\eye_rating.png" />
+    <Content Include="Image\CommonImages\fancybox.png" />
+    <Content Include="Image\CommonImages\feePayment.jpg" />
+    <Content Include="Image\CommonImages\gbtn-bg-sel.png" />
+    <Content Include="Image\CommonImages\gbtn-bg.png" />
+    <Content Include="Image\CommonImages\Gobutton.png" />
+    <Content Include="Image\CommonImages\grdBG.png" />
+    <Content Include="Image\CommonImages\gridhead.png" />
+    <Content Include="Image\CommonImages\gridhead1.png" />
+    <Content Include="Image\CommonImages\headerBG.png" />
+    <Content Include="Image\CommonImages\Header_bg.png" />
+    <Content Include="Image\CommonImages\Header_Top.png" />
+    <Content Include="Image\CommonImages\heading_bottom_bar.png" />
+    <Content Include="Image\CommonImages\heading_bottom_bar1.png" />
+    <Content Include="Image\CommonImages\HelpLine.jpg" />
+    <Content Include="Image\CommonImages\helpline_box.gif" />
+    <Content Include="Image\CommonImages\helpline_box.png" />
+    <Content Include="Image\CommonImages\help_line.png" />
+    <Content Include="Image\CommonImages\home.png" />
+    <Content Include="Image\CommonImages\images.jpg" />
+    <Content Include="Image\CommonImages\img.png" />
+    <Content Include="Image\CommonImages\Img_Does_Admission.png" />
+    <Content Include="Image\CommonImages\Img_Do_you_Give.png" />
+    <Content Include="Image\CommonImages\Img_FooterStrip.png" />
+    <Content Include="Image\CommonImages\Img_Is_There_any.png" />
+    <Content Include="Image\CommonImages\Img_I_am_a_dropper.png" />
+    <Content Include="Image\CommonImages\Img_I_Have_Low.png" />
+    <Content Include="Image\CommonImages\Information.jpg" />
+    <Content Include="Image\CommonImages\instrunction-page.jpg" />
+    <Content Include="Image\CommonImages\Interstedicon.png" />
+    <Content Include="Image\CommonImages\loading.gif" />
+    <Content Include="Image\CommonImages\LoadingImage.gif" />
+    <Content Include="Image\CommonImages\lockImg.png" />
+    <Content Include="Image\CommonImages\loginBgTop.png" />
+    <Content Include="Image\CommonImages\loginImg.png" />
+    <Content Include="Image\CommonImages\logo.png" />
+    <Content Include="Image\CommonImages\message.png" />
+    <Content Include="Image\CommonImages\messagegray.png" />
+    <Content Include="Image\CommonImages\minus.png" />
+    <Content Include="Image\CommonImages\module_top_shading.png" />
+    <Content Include="Image\CommonImages\navBg.png" />
+    <Content Include="Image\CommonImages\navigation.jpg" />
+    <Content Include="Image\CommonImages\new.gif" />
+    <Content Include="Image\CommonImages\new.png" />
+    <Content Include="Image\CommonImages\notappli.png" />
+    <Content Include="Image\CommonImages\no_result_found.png" />
+    <Content Include="Image\CommonImages\pdf_Icon.png" />
+    <Content Include="Image\CommonImages\plus.png" />
+    <Content Include="Image\CommonImages\pqr_College.png" />
+    <Content Include="Image\CommonImages\print.png" />
+    <Content Include="Image\CommonImages\qmark-8f14c0.png" />
+    <Content Include="Image\CommonImages\QusetionMark.jpg" />
+    <Content Include="Image\CommonImages\QusetionMark.png" />
+    <Content Include="Image\CommonImages\redblack_listed.png" />
+    <Content Include="Image\CommonImages\redFlag.png" />
+    <Content Include="Image\CommonImages\redRight.png" />
+    <Content Include="Image\CommonImages\right.png" />
+    <Content Include="Image\CommonImages\rightgray.png" />
+    <Content Include="Image\CommonImages\rightTick.png" />
+    <Content Include="Image\CommonImages\right_arrow.png" />
+    <Content Include="Image\CommonImages\rssButton.png" />
+    <Content Include="Image\CommonImages\searchbg.png" />
+    <Content Include="Image\CommonImages\secondary_bar.png" />
+    <Content Include="Image\CommonImages\secondary_Searchbar.png" />
+    <Content Include="Image\CommonImages\shadeBG.png" />
+    <Content Include="Image\CommonImages\share.png" />
+    <Content Include="Image\CommonImages\sidebar.png" />
+    <Content Include="Image\CommonImages\sidebar_divider.png" />
+    <Content Include="Image\CommonImages\sidebar_shadow.png" />
+    <Content Include="Image\CommonImages\small-facebook-icon.png" />
+    <Content Include="Image\CommonImages\smallGrdBG.png" />
+    <Content Include="Image\CommonImages\socialCommonLogo.png" />
+    <Content Include="Image\CommonImages\stripIcon.png" />
+    <Content Include="Image\CommonImages\Student_Ajregister.jpg" />
+    <Content Include="Image\CommonImages\sub-blue-delete.png" />
+    <Content Include="Image\CommonImages\table_sorter_header.png" />
+    <Content Include="Image\CommonImages\TextAreaBg_M.jpg" />
+    <Content Include="Image\CommonImages\textboxBG.png" />
+    <Content Include="Image\CommonImages\Unchecked.gif" />
+    <Content Include="Image\CommonImages\vs.png" />
+    <Content Include="Image\CommonImages\vs1.png" />
+    <Content Include="Image\CommonImages\whitecross.png" />
+    <Content Include="Image\CommonImages\whiteright.png" />
+    <Content Include="Image\Course\Gniit1.jpg" />
+    <Content Include="Image\Course\NoImage.jpg" />
+    <Content Include="Image\Exam\Blue hills.jpg" />
+    <Content Include="Image\Exam\nk.jpg" />
+    <Content Include="Image\Exam\NoImage.jpg" />
+    <Content Include="Image\Exam\Sunset.jpg" />
+    <Content Include="Image\Exam\test.jpg" />
+    <Content Include="Image\Exam\Water lilies.jpg" />
+    <Content Include="Image\Exam\Winter.jpg" />
+    <Content Include="Image\NewsArticle\CBSE board exams to start from March 11.png" />
+    <Content Include="Image\NewsArticle\Jaipuria Institute of Management.png" />
+    <Content Include="Image\NewsArticle\NoImage.jpg" />
+    <Content Include="Image\NewsArticle\Winter.jpg" />
+    <Content Include="Image\tempImage\.png" />
+    <Content Include="Image\tempImage\ChartPic_000001.png" />
+    <Content Include="Image\tempImage\ChartPic_000002.png" />
+    <Content Include="Image\tempImage\ChartPic_000003.png" />
+    <Content Include="Image\tempImage\ChartPic_000004.png" />
+    <Content Include="Image\tempImage\ChartPic_000005.png" />
+    <Content Include="Image\tempImage\ChartPic_000006.png" />
+    <Content Include="Image\tempImage\ChartPic_000007.png" />
+    <Content Include="Image\tempImage\ChartPic_000008.png" />
+    <Content Include="Image\tempImage\ChartPic_000009.png" />
+    <Content Include="Image\tempImage\ChartPic_000010.png" />
+    <Content Include="Image\tempImage\ChartPic_000011.png" />
+    <Content Include="Image\tempImage\ChartPic_000012.png" />
+    <Content Include="Image\tempImage\ChartPic_000013.png" />
+    <Content Include="Image\tempImage\ChartPic_000014.png" />
+    <Content Include="Image\tempImage\ChartPic_000015.png" />
+    <Content Include="Image\tempImage\ChartPic_000016.png" />
+    <Content Include="Image\tempImage\ChartPic_000017.png" />
+    <Content Include="Image\tempImage\ChartPic_000018.png" />
+    <Content Include="Image\tempImage\ChartPic_000019.png" />
+    <Content Include="Image\tempImage\ChartPic_000020.png" />
+    <Content Include="Image\tempImage\ChartPic_000021.png" />
+    <Content Include="Image\tempImage\ChartPic_000022.png" />
+    <Content Include="Image\tempImage\ChartPic_000023.png" />
+    <Content Include="Image\tempImage\ChartPic_000024.png" />
+    <Content Include="Image\tempImage\ChartPic_000025.png" />
+    <Content Include="Image\tempImage\ChartPic_000026.png" />
+    <Content Include="Image\tempImage\ChartPic_000027.png" />
+    <Content Include="Image\tempImage\ChartPic_000028.png" />
+    <Content Include="Image\tempImage\ChartPic_000029.png" />
+    <Content Include="Image\tempImage\ChartPic_000030.png" />
+    <Content Include="Image\tempImage\ChartPic_000031.png" />
+    <Content Include="Image\tempImage\ChartPic_000032.png" />
+    <Content Include="Image\tempImage\ChartPic_000033.png" />
+    <Content Include="Image\tempImage\ChartPic_000034.png" />
+    <Content Include="Image\tempImage\ChartPic_000035.png" />
+    <Content Include="Image\tempImage\ChartPic_000036.png" />
+    <Content Include="Image\tempImage\ChartPic_000037.png" />
+    <Content Include="Image\tempImage\ChartPic_000038.png" />
+    <Content Include="Image\tempImage\ChartPic_000039.png" />
+    <Content Include="Image\tempImage\ChartPic_000040.png" />
+    <Content Include="Image\tempImage\ChartPic_000041.png" />
+    <Content Include="Image\tempImage\ChartPic_000042.png" />
+    <Content Include="Image\tempImage\ChartPic_000043.png" />
+    <Content Include="Image\tempImage\ChartPic_000044.png" />
+    <Content Include="Image\tempImage\ChartPic_000045.png" />
+    <Content Include="Image\tempImage\ChartPic_000046.png" />
+    <Content Include="Image\tempImage\ChartPic_000047.png" />
+    <Content Include="Image\tempImage\ChartPic_000048.png" />
+    <Content Include="Image\tempImage\ChartPic_000049.png" />
+    <Content Include="Image\tempImage\ChartPic_000050.png" />
+    <Content Include="Image\tempImage\ChartPic_000051.png" />
+    <Content Include="Image\tempImage\ChartPic_000052.png" />
+    <Content Include="Image\tempImage\ChartPic_000053.png" />
+    <Content Include="Image\tempImage\ChartPic_000054.png" />
+    <Content Include="Image\tempImage\ChartPic_000055.png" />
+    <Content Include="Image\tempImage\ChartPic_000056.png" />
+    <Content Include="Image\tempImage\ChartPic_000057.png" />
+    <Content Include="Image\tempImage\ChartPic_000058.png" />
+    <Content Include="Image\tempImage\ChartPic_000059.png" />
+    <Content Include="Image\tempImage\ChartPic_000060.png" />
+    <Content Include="Js\ajaxupload.js" />
+    <Content Include="Js\JCollegeProfile.js" />
+    <Content Include="Js\JHome.js" />
+    <Content Include="Js\jquery.fancybox-1.3.1.js" />
+    <Content Include="Js\jquery.jshowoff.min.js" />
+    <Content Include="Js\jquery.multiselect.filter.js" />
+    <Content Include="Js\jquery.multiselect.js.js" />
+    <Content Include="Js\jquery.tipTip.js" />
+    <Content Include="Js\jquery.ui.widget.js" />
+    <Content Include="Js\JQueryReply.js" />
+    <Content Include="Js\JscriptHomeCommonQuery.js" />
+    <Content Include="Js\liteaccordion.jquery.js" />
+    <Content Include="Js\ProductAds.js" />
+    <Content Include="Js\Profile.js" />
+    <Content Include="Js\S3Silder.js" />
+    <Content Include="Js\SearchPriority.js" />
+    <Content Include="Js\tooltip.js" />
+    <Content Include="NewsAndArticles\NewsAndArticles.aspx" />
+    <Content Include="NewsAndArticles\NewsDetails.aspx" />
+    <Content Include="NewsAndArticles\NoticeDetails.aspx" />
+    <Content Include="NewsAndArticles\NoticeList.aspx" />
+    <Content Include="obj\Debug\Irytech.AdmissionJankari.Web.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Irytech.AdmissionJankari.Web.dll" />
+    <Content Include="obj\Debug\Irytech.AdmissionJankari.Web.pdb" />
+    <Content Include="Resource\Messages\Error.xml" />
+    <Content Include="Resource\Messages\FilePath.xml" />
+    <Content Include="Resource\Messages\Validatorerror.xml" />
+    <Content Include="Scripts\Autocomplete.js" />
+    <Content Include="Scripts\CommonFrontScript.js" />
+    <Content Include="Scripts\json2.js" />
+    <Content Include="Scripts\Sliderr.js" />
+    <Content Include="Styles\autoCompliteCSS.css" />
+    <Content Include="Styles\jquery.multiselect.css" />
+    <Content Include="Styles\tipTip.css" />
+    <Content Include="Styles\UI.li.css" />
+    <Content Include="themes\Blue\Site.css" />
+    <Content Include="themes\Blue\tooltip.css" />
+    <Content Include="UserControl\AddProduct.ascx" />
+    <Content Include="UserControl\AdminProfile.ascx" />
+    <Content Include="UserControl\AdmissionJankariTestimonial.ascx" />
+    <Content Include="UserControl\AjaxFileUpload.ascx" />
+    <Content Include="UserControl\BannerProduct.ascx" />
+    <Content Include="UserControl\BestPrivateCollegesList.ascx" />
+    <Content Include="UserControl\BookSeatSearch.ascx" />
+    <Content Include="UserControl\ChangePassword.ascx" />
+    <Content Include="UserControl\ColegeListByCityId.ascx" />
+    <Content Include="UserControl\ColleegRankChart.ascx" />
+    <Content Include="UserControl\CollegeAvailabelCourseExam.ascx" />
+    <Content Include="UserControl\CollegeAvailableCourse.ascx" />
+    <Content Include="UserControl\CollegeAvailableFacailties.ascx" />
+    <Content Include="UserControl\CollegeAvailableHostel.ascx" />
+    <Content Include="UserControl\CollegeAvailablePlaceMent.ascx" />
+    <Content Include="UserControl\CollegeAvailableRank.ascx" />
+    <Content Include="UserControl\CollegeBasicDetails.ascx" />
+    <Content Include="UserControl\CollegeBranchBasicInfo.ascx" />
+    <Content Include="UserControl\CollegeBranchCourse.ascx" />
+    <Content Include="UserControl\CollegeBranchExam.ascx" />
+    <Content Include="UserControl\CollegeCityPreference.ascx" />
+    <Content Include="UserControl\CollegeContactDetails.ascx" />
+    <Content Include="UserControl\CollegeCourseHighLIghts.ascx" />
+    <Content Include="UserControl\CollegeCoursePlacement.ascx" />
+    <Content Include="UserControl\CollegeDescription.ascx" />
+    <Content Include="UserControl\CollegeEarchByName.ascx" />
+    <Content Include="UserControl\CollegeFacilities.ascx" />
+    <Content Include="UserControl\CollegeGallery.ascx" />
+    <Content Include="UserControl\CollegeHighLights.ascx" />
+    <Content Include="UserControl\CollegeHighLightsOnDetails.ascx" />
+    <Content Include="UserControl\CollegeHostel.ascx" />
+    <Content Include="UserControl\CollegeNotice.ascx" />
+    <Content Include="UserControl\CollegePalcementShow.ascx" />
+    <Content Include="UserControl\CollegePresidentSpeech.ascx" />
+    <Content Include="UserControl\CollegeQueryOnDetails.ascx" />
+    <Content Include="UserControl\CollegeQuickQuery.ascx" />
+    <Content Include="UserControl\CollegeSearch.ascx" />
+    <Content Include="UserControl\CollegeTestimonialOnDetails.ascx" />
+    <Content Include="UserControl\CollegeTopHirer.ascx" />
+    <Content Include="UserControl\CommentCount.ascx" />
+    <Content Include="UserControl\CommonQuickQuery.ascx" />
+    <Content Include="UserControl\CourseStreamBasicDetails.ascx" />
+    <Content Include="UserControl\CourseStreamCoreCompanies.ascx" />
+    <Content Include="UserControl\CourseStreamDescription.ascx" />
+    <Content Include="UserControl\CourseStreamFuture.ascx" />
+    <Content Include="UserControl\CourseStreamHistory.ascx" />
+    <Content Include="UserControl\CourseStreamPreffered.ascx" />
+    <Content Include="UserControl\CourseStreamRelatedIndustry.ascx" />
+    <Content Include="UserControl\CustomPaging.ascx" />
+    <Content Include="UserControl\FckEditorBasic.ascx" />
+    <Content Include="UserControl\FckEditorCostomize.ascx" />
+    <Content Include="UserControl\FckEditorFull.ascx" />
+    <Content Include="UserControl\ForgetPassword.ascx" />
+    <Content Include="UserControl\ForwardFriends.ascx" />
+    <Content Include="UserControl\GoogleMap.ascx" />
+    <Content Include="UserControl\IndicatorControl.ascx" />
+    <Content Include="UserControl\LatestNotice.ascx" />
+    <Content Include="UserControl\LeftContentOnProductList.ascx" />
+    <Content Include="UserControl\ListViewPaging.ascx" />
+    <Content Include="UserControl\Login.ascx" />
+    <Content Include="UserControl\Print.ascx" />
+    <Content Include="UserControl\ProductPayment.ascx" />
+    <Content Include="UserControl\Register.ascx" />
+    <Content Include="UserControl\Registeration.ascx" />
+    <Content Include="UserControl\RelatedColleges.ascx" />
+    <Content Include="UserControl\ReportAbuse.ascx" />
+    <Content Include="UserControl\RightBanner.ascx" />
+    <Content Include="UserControl\Share.ascx" />
+    <Content Include="UserControl\SponseredColleges.ascx" />
+    <Content Include="UserControl\StudentAccademicInfo.ascx" />
+    <Content Include="UserControl\StudentCollegePreffered.ascx" />
+    <Content Include="UserControl\StudentCoursePreffered.ascx" />
+    <Content Include="UserControl\StudentExamAppeared.ascx" />
+    <Content Include="UserControl\StudentQuery.ascx" />
+    <Content Include="UserControl\Testimonials.ascx" />
+    <Content Include="UserControl\TextAdsProduct.ascx" />
+    <Content Include="UserControl\ThirdPartyAdvst.ascx" />
+    <Content Include="UserControl\TopRankedColleges.ascx" />
+    <Content Include="UserControl\TotalViews.ascx" />
+    <Content Include="UserControl\ucAdmission.ascx" />
+    <Content Include="UserControl\UcAjFacebookfan.ascx" />
+    <Content Include="UserControl\UcBookMySeat.ascx" />
+    <Content Include="UserControl\UcBookSeat.ascx" />
+    <Content Include="UserControl\ucBookSeatavailability.ascx" />
+    <Content Include="UserControl\UcBookSeatInstruction.ascx" />
+    <Content Include="UserControl\UcCallFromInstitute.ascx" />
+    <Content Include="UserControl\UcChangePassword.ascx" />
+    <Content Include="UserControl\UcCheckSeatAvailablity.ascx" />
+    <Content Include="UserControl\UcCollegeBranchEvent.ascx" />
+    <Content Include="UserControl\ucCollegeBranchRankSource.ascx" />
+    <Content Include="UserControl\UcCollegeCounsellingCollegeList.ascx" />
+    <Content Include="UserControl\UcCollegeCounsellingInstruction.ascx" />
+    <Content Include="UserControl\UcCollegeListRelatedUniversity.ascx" />
+    <Content Include="UserControl\UcCollegeQuery.ascx" />
+    <Content Include="UserControl\UcCollegeRealtedToExam.ascx" />
+    <Content Include="UserControl\UcCommonComment.ascx" />
+    <Content Include="UserControl\UcCommonPayment.ascx" />
+    <Content Include="UserControl\UcConsullingConformation.ascx" />
+    <Content Include="UserControl\UcCourse.ascx" />
+    <Content Include="UserControl\UcCourseListForDirectAdmission.ascx" />
+    <Content Include="UserControl\UcDiplomaInfo.ascx" />
+    <Content Include="UserControl\UcDOB.ascx" />
+    <Content Include="UserControl\UcDownloadApplicationfotm.ascx" />
+    <Content Include="UserControl\ucExamQuickQuery.ascx" />
+    <Content Include="UserControl\UcExamRealtedCourse.ascx" />
+    <Content Include="UserControl\UcExamSearch.ascx" />
+    <Content Include="UserControl\ucFacebookfanNewsArticles.ascx" />
+    <Content Include="UserControl\UcFinalIntertestedCollegeList.ascx" />
+    <Content Include="UserControl\ucFontTestimonialsDetails.ascx" />
+    <Content Include="UserControl\UcGraduateInfo.ascx" />
+    <Content Include="UserControl\ucHelpLine.ascx" />
+    <Content Include="UserControl\UcHighSchoolInfo.ascx" />
+    <Content Include="UserControl\ucHomeTopBanner.ascx" />
+    <Content Include="UserControl\UcIntermediateInfo.ascx" />
+    <Content Include="UserControl\UcIntertestedCollegeList.ascx" />
+    <Content Include="UserControl\ucLatestNews.ascx" />
+    <Content Include="UserControl\UcLoanQuery.ascx" />
+    <Content Include="UserControl\UcMostViewdExam.ascx" />
+    <Content Include="UserControl\UcMostViewdNews.ascx" />
+    <Content Include="UserControl\UcMostViewdNotice.ascx" />
+    <Content Include="UserControl\UcMostViewedCollege.ascx" />
+    <Content Include="UserControl\UcOnlineInstrucation.ascx" />
+    <Content Include="UserControl\UcParticipatedCollegeList.ascx" />
+    <Content Include="UserControl\UcRatingControl.ascx" />
+    <Content Include="UserControl\UcRegistration.ascx" />
+    <Content Include="UserControl\UcReportDonation.ascx" />
+    <Content Include="UserControl\UcReportDonationCollegeList.ascx" />
+    <Content Include="UserControl\UcReportDonationStory.ascx" />
+    <Content Include="UserControl\UcStudentAcademic.ascx" />
+    <Content Include="UserControl\UcStudentCityPrefrance.ascx" />
+    <Content Include="UserControl\UcStudentCollegePrefrance.ascx" />
+    <Content Include="UserControl\UcStudentCounsellingPersonelInfo.ascx" />
+    <Content Include="UserControl\UcStudentDirectAdmissionStep1.ascx" />
+    <Content Include="UserControl\UcStudentExamAppeared.ascx" />
+    <Content Include="UserControl\UcStudentPaymentOption.ascx" />
+    <Content Include="UserControl\UcStudentPersonelInfo.ascx" />
+    <Content Include="UserControl\UcStudentQuey.ascx" />
+    <Content Include="UserControl\UcStudentUpdateStreamPrioty.ascx" />
+    <Content Include="UserControl\UcUserFinalList.ascx" />
+    <Content Include="UserControl\UcWidgets.ascx" />
+    <Content Include="UserControl\UniversityBasicDetails.ascx" />
+    <Content Include="UserControl\UniversityContactDetails.ascx" />
+    <Content Include="UserControl\UniversityDescription.ascx" />
+    <Content Include="UrlRewriter.config" />
+    <Content Include="bin\YAF.SampleWebApplication.dll.config" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Web References\com.admissionjankari.crm\commonservices.disco" />
+    <Content Include="mail.config" />
+    <Content Include="themes\Blue\Site.Master" />
+    <Content Include="Web References\com.admissionjankari.crm\ActivityLogProperty.datasource" />
+    <Content Include="Web References\com.admissionjankari.crm\AppointmentProperty.datasource" />
+    <Content Include="Web References\com.admissionjankari.crm\CascadingDropDownNameValue.datasource" />
+    <Content Include="Web References\com.admissionjankari.crm\ClsDBTablesAttributes.datasource" />
+    <None Include="Web References\com.admissionjankari.crm\commonservices.wsdl" />
+    <Content Include="Web References\com.admissionjankari.crm\FollowupProperty.datasource" />
+    <Content Include="Web References\com.admissionjankari.crm\LeadProperty.datasource" />
+    <Content Include="Web References\com.admissionjankari.crm\Reference.map" />
+    <Content Include="Web References\com.admissionjankari.crm\ReminderProperty.datasource" />
+    <Content Include="web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\CollegeLogin.aspx.cs">
+      <DependentUpon>CollegeLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\CollegeLogin.aspx.designer.cs">
+      <DependentUpon>CollegeLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\CollegeProfile.aspx.cs">
+      <DependentUpon>CollegeProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\CollegeProfile.aspx.designer.cs">
+      <DependentUpon>CollegeProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\CollegeRegisteration.aspx.cs">
+      <DependentUpon>CollegeRegisteration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\CollegeRegisteration.aspx.designer.cs">
+      <DependentUpon>CollegeRegisteration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ForgetPassword.aspx.cs">
+      <DependentUpon>ForgetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ForgetPassword.aspx.designer.cs">
+      <DependentUpon>ForgetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\PaymentConfirmation.aspx.cs">
+      <DependentUpon>PaymentConfirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\PaymentConfirmation.aspx.designer.cs">
+      <DependentUpon>PaymentConfirmation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\PaymentOption.aspx.cs">
+      <DependentUpon>PaymentOption.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\PaymentOption.aspx.designer.cs">
+      <DependentUpon>PaymentOption.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\UserProfile.aspx.cs">
+      <DependentUpon>UserProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\UserProfile.aspx.designer.cs">
+      <DependentUpon>UserProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\AdmissionjankariTestimonial.aspx.cs">
+      <DependentUpon>AdmissionjankariTestimonial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\AdmissionjankariTestimonial.aspx.designer.cs">
+      <DependentUpon>AdmissionjankariTestimonial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ApplicationSetting.aspx.cs">
+      <DependentUpon>ApplicationSetting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\ApplicationSetting.aspx.designer.cs">
+      <DependentUpon>ApplicationSetting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\BankDetails\AddBankLoanDetails.aspx.cs">
+      <DependentUpon>AddBankLoanDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\BankDetails\AddBankLoanDetails.aspx.designer.cs">
+      <DependentUpon>AddBankLoanDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\BankDetails\ManageBankDetails.aspx.cs">
+      <DependentUpon>ManageBankDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\BankDetails\ManageBankDetails.aspx.designer.cs">
+      <DependentUpon>ManageBankDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\CollegeBookSeat\BookSeat.aspx.cs">
+      <DependentUpon>BookSeat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\CollegeBookSeat\BookSeat.aspx.designer.cs">
+      <DependentUpon>BookSeat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\College\AddCollegeBanner.aspx.cs">
+      <DependentUpon>AddCollegeBanner.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\College\AddCollegeBanner.aspx.designer.cs">
+      <DependentUpon>AddCollegeBanner.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\College\AddCollegeGallery.aspx.cs">
+      <DependentUpon>AddCollegeGallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\College\AddCollegeGallery.aspx.designer.cs">
+      <DependentUpon>AddCollegeGallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\College\AddReportDonation.aspx.cs">
+      <DependentUpon>AddReportDonation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\College\AddReportDonation.aspx.designer.cs">
+      <DependentUpon>AddReportDonation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\College\AddUniversityMaster.aspx.cs">
+      <DependentUpon>AddUniversityMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\College\AddUniversityMaster.aspx.designer.cs">
+      <DependentUpon>AddUniversityMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\College\CollegeAdvetise.aspx.cs">
+      <DependentUpon>CollegeAdvetise.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\College\CollegeAdvetise.aspx.designer.cs">
+      <DependentUpon>CollegeAdvetise.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\College\CollegeAssociationCategoryMaster.aspx.cs">
+      <DependentUpon>CollegeAssociationCategoryMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\College\CollegeAssociationCategoryMaster.aspx.designer.cs">
+      <DependentUpon>CollegeAssociationCategoryMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\College\CollegeGallery.aspx.cs">
+      <DependentUpon>CollegeGallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\College\CollegeGallery.aspx.designer.cs">
+      <DependentUpon>CollegeGallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\College\CollegeGroupMaster.aspx.cs">
+      <DependentUpon>CollegeGroupMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\College\CollegeGroupMaster.aspx.designer.cs">
+      <DependentUpon>CollegeGroupMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\College\CollegeImport\CollegeExcelImport.aspx.cs">
+      <DependentUpon>CollegeExcelImport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\College\CollegeImport\CollegeExcelImport.aspx.designer.cs">
+      <DependentUpon>CollegeExcelImport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\College\CollegeImport\CompletedExcelUtitlity.aspx.cs">
+      <DependentUpon>CompletedExcelUtitlity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\College\CollegeImport\CompletedExcelUtitlity.aspx.designer.cs">
+      <DependentUpon>CompletedExcelUtitlity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\College\CollegeImport\FieldMapping.aspx.cs">
+      <DependentUpon>FieldMapping.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\College\CollegeImport\FieldMapping.aspx.designer.cs">
+      <DependentUpon>FieldMapping.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\College\CollegeList.aspx.cs">
+      <DependentUpon>CollegeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\College\CollegeList.aspx.designer.cs">
+      <DependentUpon>CollegeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\College\CollegeOnlineParticipationStatus.aspx.cs">
+      <DependentUpon>CollegeOnlineParticipationStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\College\CollegeOnlineParticipationStatus.aspx.designer.cs">
+      <DependentUpon>CollegeOnlineParticipationStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\College\CollegeRankSourceCategory.aspx.cs">
+      <DependentUpon>CollegeRankSourceCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\College\CollegeRankSourceCategory.aspx.designer.cs">
+      <DependentUpon>CollegeRankSourceCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\College\CollegeTopHirer.aspx.cs">
+      <DependentUpon>CollegeTopHirer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\College\CollegeTopHirer.aspx.designer.cs">
+      <DependentUpon>CollegeTopHirer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\College\FactorMaster.aspx.cs">
+      <DependentUpon>FactorMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\College\FactorMaster.aspx.designer.cs">
+      <DependentUpon>FactorMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\College\HostelMaster.aspx.cs">
+      <DependentUpon>HostelMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\College\HostelMaster.aspx.designer.cs">
+      <DependentUpon>HostelMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\College\InstituteTypeDetail.aspx.cs">
+      <DependentUpon>InstituteTypeDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\College\InstituteTypeDetail.aspx.designer.cs">
+      <DependentUpon>InstituteTypeDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\College\ManageCollegeContactDetails.aspx.cs">
+      <DependentUpon>ManageCollegeContactDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\College\ManageCollegeContactDetails.aspx.designer.cs">
+      <DependentUpon>ManageCollegeContactDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\College\ManageCollegeReportDonation.aspx.cs">
+      <DependentUpon>ManageCollegeReportDonation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\College\ManageCollegeReportDonation.aspx.designer.cs">
+      <DependentUpon>ManageCollegeReportDonation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\College\UniversityCategory.aspx.cs">
+      <DependentUpon>UniversityCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\College\UniversityCategory.aspx.designer.cs">
+      <DependentUpon>UniversityCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\College\UniversityMaster.aspx.cs">
+      <DependentUpon>UniversityMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\College\UniversityMaster.aspx.designer.cs">
+      <DependentUpon>UniversityMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\College\UpdateCollegeDetails.aspx.cs">
+      <DependentUpon>UpdateCollegeDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\College\UpdateCollegeDetails.aspx.designer.cs">
+      <DependentUpon>UpdateCollegeDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\College\UpdateNewCollegeRegisteration.aspx.cs">
+      <DependentUpon>UpdateNewCollegeRegisteration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\College\UpdateNewCollegeRegisteration.aspx.designer.cs">
+      <DependentUpon>UpdateNewCollegeRegisteration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Controls\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Controls\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Course\AddCourse.aspx.cs">
+      <DependentUpon>AddCourse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Course\AddCourse.aspx.designer.cs">
+      <DependentUpon>AddCourse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Course\AddCourseStreamMaster.aspx.cs">
+      <DependentUpon>AddCourseStreamMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Course\AddCourseStreamMaster.aspx.designer.cs">
+      <DependentUpon>AddCourseStreamMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Course\CourseCategory.aspx.cs">
+      <DependentUpon>CourseCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Course\CourseCategory.aspx.designer.cs">
+      <DependentUpon>CourseCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Course\CourseEligibility.aspx.cs">
+      <DependentUpon>CourseEligibility.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Course\CourseEligibility.aspx.designer.cs">
+      <DependentUpon>CourseEligibility.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Course\CourseMaster.aspx.cs">
+      <DependentUpon>CourseMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Course\CourseMaster.aspx.designer.cs">
+      <DependentUpon>CourseMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Course\CoursePaymentMaster.aspx.cs">
+      <DependentUpon>CoursePaymentMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Course\CoursePaymentMaster.aspx.designer.cs">
+      <DependentUpon>CoursePaymentMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Course\CourseStreamMaster.aspx.cs">
+      <DependentUpon>CourseStreamMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Course\CourseStreamMaster.aspx.designer.cs">
+      <DependentUpon>CourseStreamMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\CreatePrmotionalPage.aspx.cs">
+      <DependentUpon>CreatePrmotionalPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\CreatePrmotionalPage.aspx.designer.cs">
+      <DependentUpon>CreatePrmotionalPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Exam\AddExamFormMaster.aspx.cs">
+      <DependentUpon>AddExamFormMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Exam\AddExamFormMaster.aspx.designer.cs">
+      <DependentUpon>AddExamFormMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Exam\ExamMaster.aspx.cs">
+      <DependentUpon>ExamMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Exam\ExamMaster.aspx.designer.cs">
+      <DependentUpon>ExamMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Exam\ManageExamFormMaster.aspx.cs">
+      <DependentUpon>ManageExamFormMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Exam\ManageExamFormMaster.aspx.designer.cs">
+      <DependentUpon>ManageExamFormMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Form Package\FactorMaster.aspx.cs">
+      <DependentUpon>FactorMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Form Package\FactorMaster.aspx.designer.cs">
+      <DependentUpon>FactorMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Form Package\PackageCreation.aspx.cs">
+      <DependentUpon>PackageCreation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Form Package\PackageCreation.aspx.designer.cs">
+      <DependentUpon>PackageCreation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Home\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Home\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Home\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Home\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Location\City.aspx.cs">
+      <DependentUpon>City.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Location\City.aspx.designer.cs">
+      <DependentUpon>City.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Location\Country.aspx.cs">
+      <DependentUpon>Country.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Location\Country.aspx.designer.cs">
+      <DependentUpon>Country.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Location\State.aspx.cs">
+      <DependentUpon>State.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Location\State.aspx.designer.cs">
+      <DependentUpon>State.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Location\Zone.aspx.cs">
+      <DependentUpon>Zone.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Location\Zone.aspx.designer.cs">
+      <DependentUpon>Zone.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ManageCollegeEvent.aspx.cs">
+      <DependentUpon>ManageCollegeEvent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\ManageCollegeEvent.aspx.designer.cs">
+      <DependentUpon>ManageCollegeEvent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Message\ErrorMessage.aspx.cs">
+      <DependentUpon>ErrorMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Message\ErrorMessage.aspx.designer.cs">
+      <DependentUpon>ErrorMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Message\ImagesPath.aspx.cs">
+      <DependentUpon>ImagesPath.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Message\ImagesPath.aspx.designer.cs">
+      <DependentUpon>ImagesPath.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Message\ValidationMessage.aspx.cs">
+      <DependentUpon>ValidationMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Message\ValidationMessage.aspx.designer.cs">
+      <DependentUpon>ValidationMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\NewsArticle\AddFAQDetails.aspx.cs">
+      <DependentUpon>AddFAQDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\NewsArticle\AddFAQDetails.aspx.designer.cs">
+      <DependentUpon>AddFAQDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\NewsArticle\AddNewsAndArticles.aspx.cs">
+      <DependentUpon>AddNewsAndArticles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\NewsArticle\AddNewsAndArticles.aspx.designer.cs">
+      <DependentUpon>AddNewsAndArticles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\NewsArticle\AddNoticeDetails.aspx.cs">
+      <DependentUpon>AddNoticeDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\NewsArticle\AddNoticeDetails.aspx.designer.cs">
+      <DependentUpon>AddNoticeDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\NewsArticle\FAQCategoryMaster.aspx.cs">
+      <DependentUpon>FAQCategoryMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\NewsArticle\FAQCategoryMaster.aspx.designer.cs">
+      <DependentUpon>FAQCategoryMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\NewsArticle\FAQDetails.aspx.cs">
+      <DependentUpon>FAQDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\NewsArticle\FAQDetails.aspx.designer.cs">
+      <DependentUpon>FAQDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\NewsArticle\NewsAndArticles.aspx.cs">
+      <DependentUpon>NewsAndArticles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\NewsArticle\NewsAndArticles.aspx.designer.cs">
+      <DependentUpon>NewsAndArticles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\NewsArticle\NoticeCategory.aspx.cs">
+      <DependentUpon>NoticeCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\NewsArticle\NoticeCategory.aspx.designer.cs">
+      <DependentUpon>NoticeCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\NewsArticle\NoticeMaster.aspx.cs">
+      <DependentUpon>NoticeMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\NewsArticle\NoticeMaster.aspx.designer.cs">
+      <DependentUpon>NoticeMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\PageTitle\PageTitle.aspx.cs">
+      <DependentUpon>PageTitle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\PageTitle\PageTitle.aspx.designer.cs">
+      <DependentUpon>PageTitle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\PresidentSpeech\PresidentSpeechDetails.aspx.cs">
+      <DependentUpon>PresidentSpeechDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\PresidentSpeech\PresidentSpeechDetails.aspx.designer.cs">
+      <DependentUpon>PresidentSpeechDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Product\AddAdsProduct.aspx.cs">
+      <DependentUpon>AddAdsProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Product\AddAdsProduct.aspx.designer.cs">
+      <DependentUpon>AddAdsProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Product\ManageProduct.aspx.cs">
+      <DependentUpon>ManageProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Product\ManageProduct.aspx.designer.cs">
+      <DependentUpon>ManageProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Product\ProductDetails.aspx.cs">
+      <DependentUpon>ProductDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Product\ProductDetails.aspx.designer.cs">
+      <DependentUpon>ProductDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Query\QueryList.aspx.cs">
+      <DependentUpon>QueryList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Query\QueryList.aspx.designer.cs">
+      <DependentUpon>QueryList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\RequestforRefund.aspx.cs">
+      <DependentUpon>RequestforRefund.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\RequestforRefund.aspx.designer.cs">
+      <DependentUpon>RequestforRefund.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Setting\AppsError.aspx.cs">
+      <DependentUpon>AppsError.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Setting\AppsError.aspx.designer.cs">
+      <DependentUpon>AppsError.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Setting\AppsException.aspx.cs">
+      <DependentUpon>AppsException.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Setting\AppsException.aspx.designer.cs">
+      <DependentUpon>AppsException.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Setting\UserNotification.aspx.cs">
+      <DependentUpon>UserNotification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Setting\UserNotification.aspx.designer.cs">
+      <DependentUpon>UserNotification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Testimonial\ManageTestimonial.aspx.cs">
+      <DependentUpon>ManageTestimonial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Testimonial\ManageTestimonial.aspx.designer.cs">
+      <DependentUpon>ManageTestimonial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\UserControl\ExcelSuccessCount.ascx.cs">
+      <DependentUpon>ExcelSuccessCount.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\UserControl\ExcelSuccessCount.ascx.designer.cs">
+      <DependentUpon>ExcelSuccessCount.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\User\EditUserDetails.aspx.cs">
+      <DependentUpon>EditUserDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\User\EditUserDetails.aspx.designer.cs">
+      <DependentUpon>EditUserDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\User\OnilneCounsellingMember.aspx.cs">
+      <DependentUpon>OnilneCounsellingMember.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\User\OnilneCounsellingMember.aspx.designer.cs">
+      <DependentUpon>OnilneCounsellingMember.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\User\User.aspx.cs">
+      <DependentUpon>User.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\User\User.aspx.designer.cs">
+      <DependentUpon>User.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\User\UserComment.aspx.cs">
+      <DependentUpon>UserComment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\User\UserComment.aspx.designer.cs">
+      <DependentUpon>UserComment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\User\UserMaster.aspx.cs">
+      <DependentUpon>UserMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\User\UserMaster.aspx.designer.cs">
+      <DependentUpon>UserMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\label.designer.cs" />
+    <Compile Include="ConformationPage.aspx.cs">
+      <DependentUpon>ConformationPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConformationPage.aspx.designer.cs">
+      <DependentUpon>ConformationPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContactUs.aspx.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactUs.aspx.designer.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContentWriting.aspx.cs">
+      <DependentUpon>ContentWriting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContentWriting.aspx.designer.cs">
+      <DependentUpon>ContentWriting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="error.aspx.cs">
+      <DependentUpon>error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="error.aspx.designer.cs">
+      <DependentUpon>error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="error404.aspx.cs">
+      <DependentUpon>error404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="error404.aspx.designer.cs">
+      <DependentUpon>error404.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentOptions.aspx.cs">
+      <DependentUpon>PaymentOptions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaymentOptions.aspx.designer.cs">
+      <DependentUpon>PaymentOptions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrivacyPolicy.aspx.cs">
+      <DependentUpon>PrivacyPolicy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrivacyPolicy.aspx.designer.cs">
+      <DependentUpon>PrivacyPolicy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Refund.aspx.cs">
+      <DependentUpon>Refund.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Refund.aspx.designer.cs">
+      <DependentUpon>Refund.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDonation.aspx.cs">
+      <DependentUpon>ReportDonation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportDonation.aspx.designer.cs">
+      <DependentUpon>ReportDonation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TermAndConditions.aspx.cs">
+      <DependentUpon>TermAndConditions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TermAndConditions.aspx.designer.cs">
+      <DependentUpon>TermAndConditions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Testimonial.aspx.cs">
+      <DependentUpon>Testimonial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Testimonial.aspx.designer.cs">
+      <DependentUpon>Testimonial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="themes\Blue\Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="themes\Blue\Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\AddProduct.ascx.cs">
+      <DependentUpon>AddProduct.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\AddProduct.ascx.designer.cs">
+      <DependentUpon>AddProduct.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\AdminProfile.ascx.cs">
+      <DependentUpon>AdminProfile.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\AdminProfile.ascx.designer.cs">
+      <DependentUpon>AdminProfile.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\AdmissionJankariTestimonial.ascx.cs">
+      <DependentUpon>AdmissionJankariTestimonial.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\AdmissionJankariTestimonial.ascx.designer.cs">
+      <DependentUpon>AdmissionJankariTestimonial.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\AjaxFileUpload.ascx.cs">
+      <DependentUpon>AjaxFileUpload.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\AjaxFileUpload.ascx.designer.cs">
+      <DependentUpon>AjaxFileUpload.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\BannerProduct.ascx.cs">
+      <DependentUpon>BannerProduct.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\BannerProduct.ascx.designer.cs">
+      <DependentUpon>BannerProduct.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\BestPrivateCollegesList.ascx.cs">
+      <DependentUpon>BestPrivateCollegesList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\BestPrivateCollegesList.ascx.designer.cs">
+      <DependentUpon>BestPrivateCollegesList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\BookSeatSearch.ascx.cs">
+      <DependentUpon>BookSeatSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\BookSeatSearch.ascx.designer.cs">
+      <DependentUpon>BookSeatSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ChangePassword.ascx.cs">
+      <DependentUpon>ChangePassword.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ChangePassword.ascx.designer.cs">
+      <DependentUpon>ChangePassword.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ColegeListByCityId.ascx.cs">
+      <DependentUpon>ColegeListByCityId.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ColegeListByCityId.ascx.designer.cs">
+      <DependentUpon>ColegeListByCityId.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ColleegRankChart.ascx.cs">
+      <DependentUpon>ColleegRankChart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ColleegRankChart.ascx.designer.cs">
+      <DependentUpon>ColleegRankChart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\CollegeAvailabelCourseExam.ascx.cs">
+      <DependentUpon>CollegeAvailabelCourseExam.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\CollegeAvailabelCourseExam.ascx.designer.cs">
+      <DependentUpon>CollegeAvailabelCourseExam.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\CollegeAvailableCourse.ascx.cs">
+      <DependentUpon>CollegeAvailableCourse.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\CollegeAvailableCourse.ascx.designer.cs">
+      <DependentUpon>CollegeAvailableCourse.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\CollegeAvailableFacailties.ascx.cs">
+      <DependentUpon>CollegeAvailableFacailties.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\CollegeAvailableFacailties.ascx.designer.cs">
+      <DependentUpon>CollegeAvailableFacailties.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\CollegeAvailableHostel.ascx.cs">
+      <DependentUpon>CollegeAvailableHostel.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\CollegeAvailableHostel.ascx.designer.cs">
+      <DependentUpon>CollegeAvailableHostel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\CollegeAvailablePlaceMent.ascx.cs">
+      <DependentUpon>CollegeAvailablePlaceMent.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\CollegeAvailablePlaceMent.ascx.designer.cs">
+      <DependentUpon>CollegeAvailablePlaceMent.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\CollegeAvailableRank.ascx.cs">
+      <DependentUpon>CollegeAvailableRank.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\CollegeAvailableRank.ascx.designer.cs">
+      <DependentUpon>CollegeAvailableRank.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\CollegeBasicDetails.ascx.cs">
+      <DependentUpon>CollegeBasicDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\CollegeBasicDetails.ascx.designer.cs">
+      <DependentUpon>CollegeBasicDetails.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\CollegeBranchBasicInfo.ascx.cs">
+      <DependentUpon>CollegeBranchBasicInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\CollegeBranchBasicInfo.ascx.designer.cs">
+      <DependentUpon>CollegeBranchBasicInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\CollegeBranchCourse.ascx.cs">
+      <DependentUpon>CollegeBranchCourse.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\CollegeBranchCourse.ascx.designer.cs">
+      <DependentUpon>CollegeBranchCourse.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\CollegeBranchExam.ascx.cs">
+      <DependentUpon>CollegeBranchExam.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\CollegeBranchExam.ascx.designer.cs">
+      <DependentUpon>CollegeBranchExam.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\CollegeCityPreference.ascx.cs">
+      <DependentUpon>CollegeCityPreference.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\CollegeCityPreference.ascx.designer.cs">
+      <DependentUpon>CollegeCityPreference.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\CollegeContactDetails.ascx.cs">
+      <DependentUpon>CollegeContactDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\CollegeContactDetails.ascx.designer.cs">
+      <DependentUpon>CollegeContactDetails.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\CollegeCourseHighLIghts.ascx.cs">
+      <DependentUpon>CollegeCourseHighLIghts.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\CollegeCourseHighLIghts.ascx.designer.cs">
+      <DependentUpon>CollegeCourseHighLIghts.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\CollegeCoursePlacement.ascx.cs">
+      <DependentUpon>CollegeCoursePlacement.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\CollegeCoursePlacement.ascx.designer.cs">
+      <DependentUpon>CollegeCoursePlacement.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\CollegeDescription.ascx.cs">
+      <DependentUpon>CollegeDescription.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\CollegeDescription.ascx.designer.cs">
+      <DependentUpon>CollegeDescription.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\CollegeEarchByName.ascx.cs">
+      <DependentUpon>CollegeEarchByName.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\CollegeEarchByName.ascx.designer.cs">
+      <DependentUpon>CollegeEarchByName.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\CollegeFacilities.ascx.cs">
+      <DependentUpon>CollegeFacilities.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\CollegeFacilities.ascx.designer.cs">
+      <DependentUpon>CollegeFacilities.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\CollegeGallery.ascx.cs">
+      <DependentUpon>CollegeGallery.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\CollegeGallery.ascx.designer.cs">
+      <DependentUpon>CollegeGallery.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\CollegeHighLights.ascx.cs">
+      <DependentUpon>CollegeHighLights.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\CollegeHighLights.ascx.designer.cs">
+      <DependentUpon>CollegeHighLights.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\CollegeHighLightsOnDetails.ascx.cs">
+      <DependentUpon>CollegeHighLightsOnDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\CollegeHighLightsOnDetails.ascx.designer.cs">
+      <DependentUpon>CollegeHighLightsOnDetails.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\CollegeHostel.ascx.cs">
+      <DependentUpon>CollegeHostel.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\CollegeHostel.ascx.designer.cs">
+      <DependentUpon>CollegeHostel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\CollegeNotice.ascx.cs">
+      <DependentUpon>CollegeNotice.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\CollegeNotice.ascx.designer.cs">
+      <DependentUpon>CollegeNotice.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\CollegePalcementShow.ascx.cs">
+      <DependentUpon>CollegePalcementShow.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\CollegePalcementShow.ascx.designer.cs">
+      <DependentUpon>CollegePalcementShow.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\CollegePresidentSpeech.ascx.cs">
+      <DependentUpon>CollegePresidentSpeech.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\CollegePresidentSpeech.ascx.designer.cs">
+      <DependentUpon>CollegePresidentSpeech.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\CollegeQueryOnDetails.ascx.cs">
+      <DependentUpon>CollegeQueryOnDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\CollegeQueryOnDetails.ascx.designer.cs">
+      <DependentUpon>CollegeQueryOnDetails.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\CollegeQuickQuery.ascx.cs">
+      <DependentUpon>CollegeQuickQuery.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\CollegeQuickQuery.ascx.designer.cs">
+      <DependentUpon>CollegeQuickQuery.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\CollegeSearch.ascx.cs">
+      <DependentUpon>CollegeSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\CollegeSearch.ascx.designer.cs">
+      <DependentUpon>CollegeSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\CollegeTestimonialOnDetails.ascx.cs">
+      <DependentUpon>CollegeTestimonialOnDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\CollegeTestimonialOnDetails.ascx.designer.cs">
+      <DependentUpon>CollegeTestimonialOnDetails.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\CollegeTopHirer.ascx.cs">
+      <DependentUpon>CollegeTopHirer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\CollegeTopHirer.ascx.designer.cs">
+      <DependentUpon>CollegeTopHirer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\CommentCount.ascx.cs">
+      <DependentUpon>CommentCount.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\CommentCount.ascx.designer.cs">
+      <DependentUpon>CommentCount.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\CommonQuickQuery.ascx.cs">
+      <DependentUpon>CommonQuickQuery.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\CommonQuickQuery.ascx.designer.cs">
+      <DependentUpon>CommonQuickQuery.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\CourseStreamBasicDetails.ascx.cs">
+      <DependentUpon>CourseStreamBasicDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\CourseStreamBasicDetails.ascx.designer.cs">
+      <DependentUpon>CourseStreamBasicDetails.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\CourseStreamCoreCompanies.ascx.cs">
+      <DependentUpon>CourseStreamCoreCompanies.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\CourseStreamCoreCompanies.ascx.designer.cs">
+      <DependentUpon>CourseStreamCoreCompanies.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\CourseStreamDescription.ascx.cs">
+      <DependentUpon>CourseStreamDescription.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\CourseStreamDescription.ascx.designer.cs">
+      <DependentUpon>CourseStreamDescription.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\CourseStreamFuture.ascx.cs">
+      <DependentUpon>CourseStreamFuture.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\CourseStreamFuture.ascx.designer.cs">
+      <DependentUpon>CourseStreamFuture.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\CourseStreamHistory.ascx.cs">
+      <DependentUpon>CourseStreamHistory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\CourseStreamHistory.ascx.designer.cs">
+      <DependentUpon>CourseStreamHistory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\CourseStreamPreffered.ascx.cs">
+      <DependentUpon>CourseStreamPreffered.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\CourseStreamPreffered.ascx.designer.cs">
+      <DependentUpon>CourseStreamPreffered.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\CourseStreamRelatedIndustry.ascx.cs">
+      <DependentUpon>CourseStreamRelatedIndustry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\CourseStreamRelatedIndustry.ascx.designer.cs">
+      <DependentUpon>CourseStreamRelatedIndustry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\CustomPaging.ascx.cs">
+      <DependentUpon>CustomPaging.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\CustomPaging.ascx.designer.cs">
+      <DependentUpon>CustomPaging.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\FckEditorBasic.ascx.cs">
+      <DependentUpon>FckEditorBasic.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\FckEditorBasic.ascx.designer.cs">
+      <DependentUpon>FckEditorBasic.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\FckEditorCostomize.ascx.cs">
+      <DependentUpon>FckEditorCostomize.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\FckEditorCostomize.ascx.designer.cs">
+      <DependentUpon>FckEditorCostomize.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\FckEditorFull.ascx.cs">
+      <DependentUpon>FckEditorFull.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\FckEditorFull.ascx.designer.cs">
+      <DependentUpon>FckEditorFull.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ForgetPassword.ascx.cs">
+      <DependentUpon>ForgetPassword.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ForgetPassword.ascx.designer.cs">
+      <DependentUpon>ForgetPassword.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ForwardFriends.ascx.cs">
+      <DependentUpon>ForwardFriends.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ForwardFriends.ascx.designer.cs">
+      <DependentUpon>ForwardFriends.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\GoogleMap.ascx.cs">
+      <DependentUpon>GoogleMap.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\GoogleMap.ascx.designer.cs">
+      <DependentUpon>GoogleMap.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\IndicatorControl.ascx.cs">
+      <DependentUpon>IndicatorControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\IndicatorControl.ascx.designer.cs">
+      <DependentUpon>IndicatorControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\LatestNotice.ascx.cs">
+      <DependentUpon>LatestNotice.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\LatestNotice.ascx.designer.cs">
+      <DependentUpon>LatestNotice.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\LeftContentOnProductList.ascx.cs">
+      <DependentUpon>LeftContentOnProductList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\LeftContentOnProductList.ascx.designer.cs">
+      <DependentUpon>LeftContentOnProductList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ListViewPaging.ascx.cs">
+      <DependentUpon>ListViewPaging.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ListViewPaging.ascx.designer.cs">
+      <DependentUpon>ListViewPaging.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Login.ascx.cs">
+      <DependentUpon>Login.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Login.ascx.designer.cs">
+      <DependentUpon>Login.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\PackageList.ascx.cs">
+      <DependentUpon>PackageList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\PackageList.ascx.designer.cs">
+      <DependentUpon>PackageList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Print.ascx.cs">
+      <DependentUpon>Print.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Print.ascx.designer.cs">
+      <DependentUpon>Print.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ProductPayment.ascx.cs">
+      <DependentUpon>ProductPayment.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ProductPayment.ascx.designer.cs">
+      <DependentUpon>ProductPayment.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Register.ascx.cs">
+      <DependentUpon>Register.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Register.ascx.designer.cs">
+      <DependentUpon>Register.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Registeration.ascx.cs">
+      <DependentUpon>Registeration.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Registeration.ascx.designer.cs">
+      <DependentUpon>Registeration.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\RelatedColleges.ascx.cs">
+      <DependentUpon>RelatedColleges.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\RelatedColleges.ascx.designer.cs">
+      <DependentUpon>RelatedColleges.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ReportAbuse.ascx.cs">
+      <DependentUpon>ReportAbuse.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ReportAbuse.ascx.designer.cs">
+      <DependentUpon>ReportAbuse.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\RightBanner.ascx.cs">
+      <DependentUpon>RightBanner.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\RightBanner.ascx.designer.cs">
+      <DependentUpon>RightBanner.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Share.ascx.cs">
+      <DependentUpon>Share.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Share.ascx.designer.cs">
+      <DependentUpon>Share.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\SponseredColleges.ascx.cs">
+      <DependentUpon>SponseredColleges.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\SponseredColleges.ascx.designer.cs">
+      <DependentUpon>SponseredColleges.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\StudentAccademicInfo.ascx.cs">
+      <DependentUpon>StudentAccademicInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\StudentAccademicInfo.ascx.designer.cs">
+      <DependentUpon>StudentAccademicInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\StudentCollegePreffered.ascx.cs">
+      <DependentUpon>StudentCollegePreffered.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\StudentCollegePreffered.ascx.designer.cs">
+      <DependentUpon>StudentCollegePreffered.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\StudentCoursePreffered.ascx.cs">
+      <DependentUpon>StudentCoursePreffered.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\StudentCoursePreffered.ascx.designer.cs">
+      <DependentUpon>StudentCoursePreffered.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\StudentExamAppeared.ascx.cs">
+      <DependentUpon>StudentExamAppeared.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\StudentExamAppeared.ascx.designer.cs">
+      <DependentUpon>StudentExamAppeared.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\StudentQuery.ascx.cs">
+      <DependentUpon>StudentQuery.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\StudentQuery.ascx.designer.cs">
+      <DependentUpon>StudentQuery.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Testimonials.ascx.cs">
+      <DependentUpon>Testimonials.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Testimonials.ascx.designer.cs">
+      <DependentUpon>Testimonials.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\TextAdsProduct.ascx.cs">
+      <DependentUpon>TextAdsProduct.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\TextAdsProduct.ascx.designer.cs">
+      <DependentUpon>TextAdsProduct.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ThirdPartyAdvst.ascx.cs">
+      <DependentUpon>ThirdPartyAdvst.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ThirdPartyAdvst.ascx.designer.cs">
+      <DependentUpon>ThirdPartyAdvst.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\TopRankedColleges.ascx.cs">
+      <DependentUpon>TopRankedColleges.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\TopRankedColleges.ascx.designer.cs">
+      <DependentUpon>TopRankedColleges.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\TotalViews.ascx.cs">
+      <DependentUpon>TotalViews.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\TotalViews.ascx.designer.cs">
+      <DependentUpon>TotalViews.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ucAdmission.ascx.cs">
+      <DependentUpon>ucAdmission.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucAdmission.ascx.designer.cs">
+      <DependentUpon>ucAdmission.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcAjFacebookfan.ascx.cs">
+      <DependentUpon>UcAjFacebookfan.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcAjFacebookfan.ascx.designer.cs">
+      <DependentUpon>UcAjFacebookfan.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcBookMySeat.ascx.cs">
+      <DependentUpon>UcBookMySeat.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcBookMySeat.ascx.designer.cs">
+      <DependentUpon>UcBookMySeat.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcBookSeat.ascx.cs">
+      <DependentUpon>UcBookSeat.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcBookSeat.ascx.designer.cs">
+      <DependentUpon>UcBookSeat.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ucBookSeatavailability.ascx.cs">
+      <DependentUpon>ucBookSeatavailability.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucBookSeatavailability.ascx.designer.cs">
+      <DependentUpon>ucBookSeatavailability.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcBookSeatInstruction.ascx.cs">
+      <DependentUpon>UcBookSeatInstruction.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcBookSeatInstruction.ascx.designer.cs">
+      <DependentUpon>UcBookSeatInstruction.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcCallFromInstitute.ascx.cs">
+      <DependentUpon>UcCallFromInstitute.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcCallFromInstitute.ascx.designer.cs">
+      <DependentUpon>UcCallFromInstitute.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcChangePassword.ascx.cs">
+      <DependentUpon>UcChangePassword.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcChangePassword.ascx.designer.cs">
+      <DependentUpon>UcChangePassword.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcCheckSeatAvailablity.ascx.cs">
+      <DependentUpon>UcCheckSeatAvailablity.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcCheckSeatAvailablity.ascx.designer.cs">
+      <DependentUpon>UcCheckSeatAvailablity.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcCollegeBranchEvent.ascx.cs">
+      <DependentUpon>UcCollegeBranchEvent.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcCollegeBranchEvent.ascx.designer.cs">
+      <DependentUpon>UcCollegeBranchEvent.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ucCollegeBranchRankSource.ascx.cs">
+      <DependentUpon>ucCollegeBranchRankSource.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucCollegeBranchRankSource.ascx.designer.cs">
+      <DependentUpon>ucCollegeBranchRankSource.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcCollegeCounsellingCollegeList.ascx.cs">
+      <DependentUpon>UcCollegeCounsellingCollegeList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcCollegeCounsellingCollegeList.ascx.designer.cs">
+      <DependentUpon>UcCollegeCounsellingCollegeList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcCollegeCounsellingInstruction.ascx.cs">
+      <DependentUpon>UcCollegeCounsellingInstruction.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcCollegeCounsellingInstruction.ascx.designer.cs">
+      <DependentUpon>UcCollegeCounsellingInstruction.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcCollegeListRelatedUniversity.ascx.cs">
+      <DependentUpon>UcCollegeListRelatedUniversity.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcCollegeListRelatedUniversity.ascx.designer.cs">
+      <DependentUpon>UcCollegeListRelatedUniversity.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcCollegeQuery.ascx.cs">
+      <DependentUpon>UcCollegeQuery.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcCollegeQuery.ascx.designer.cs">
+      <DependentUpon>UcCollegeQuery.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcCollegeRealtedToExam.ascx.cs">
+      <DependentUpon>UcCollegeRealtedToExam.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcCollegeRealtedToExam.ascx.designer.cs">
+      <DependentUpon>UcCollegeRealtedToExam.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcCommonComment.ascx.cs">
+      <DependentUpon>UcCommonComment.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcCommonComment.ascx.designer.cs">
+      <DependentUpon>UcCommonComment.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcCommonPayment.ascx.cs">
+      <DependentUpon>UcCommonPayment.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcCommonPayment.ascx.designer.cs">
+      <DependentUpon>UcCommonPayment.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcConsullingConformation.ascx.cs">
+      <DependentUpon>UcConsullingConformation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcConsullingConformation.ascx.designer.cs">
+      <DependentUpon>UcConsullingConformation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcCourse.ascx.cs">
+      <DependentUpon>UcCourse.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcCourse.ascx.designer.cs">
+      <DependentUpon>UcCourse.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcCourseListForDirectAdmission.ascx.cs">
+      <DependentUpon>UcCourseListForDirectAdmission.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcCourseListForDirectAdmission.ascx.designer.cs">
+      <DependentUpon>UcCourseListForDirectAdmission.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcDiplomaInfo.ascx.cs">
+      <DependentUpon>UcDiplomaInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcDiplomaInfo.ascx.designer.cs">
+      <DependentUpon>UcDiplomaInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcDOB.ascx.cs">
+      <DependentUpon>UcDOB.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcDOB.ascx.designer.cs">
+      <DependentUpon>UcDOB.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcDownloadApplicationfotm.ascx.cs">
+      <DependentUpon>UcDownloadApplicationfotm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcDownloadApplicationfotm.ascx.designer.cs">
+      <DependentUpon>UcDownloadApplicationfotm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ucExamQuickQuery.ascx.cs">
+      <DependentUpon>ucExamQuickQuery.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucExamQuickQuery.ascx.designer.cs">
+      <DependentUpon>ucExamQuickQuery.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcExamRealtedCourse.ascx.cs">
+      <DependentUpon>UcExamRealtedCourse.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcExamRealtedCourse.ascx.designer.cs">
+      <DependentUpon>UcExamRealtedCourse.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcExamSearch.ascx.cs">
+      <DependentUpon>UcExamSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcExamSearch.ascx.designer.cs">
+      <DependentUpon>UcExamSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ucFacebookfanNewsArticles.ascx.cs">
+      <DependentUpon>ucFacebookfanNewsArticles.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucFacebookfanNewsArticles.ascx.designer.cs">
+      <DependentUpon>ucFacebookfanNewsArticles.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcFinalIntertestedCollegeList.ascx.cs">
+      <DependentUpon>UcFinalIntertestedCollegeList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcFinalIntertestedCollegeList.ascx.designer.cs">
+      <DependentUpon>UcFinalIntertestedCollegeList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ucFontTestimonialsDetails.ascx.cs">
+      <DependentUpon>ucFontTestimonialsDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucFontTestimonialsDetails.ascx.designer.cs">
+      <DependentUpon>ucFontTestimonialsDetails.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcGraduateInfo.ascx.cs">
+      <DependentUpon>UcGraduateInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcGraduateInfo.ascx.designer.cs">
+      <DependentUpon>UcGraduateInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ucHelpLine.ascx.cs">
+      <DependentUpon>ucHelpLine.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucHelpLine.ascx.designer.cs">
+      <DependentUpon>ucHelpLine.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcHighSchoolInfo.ascx.cs">
+      <DependentUpon>UcHighSchoolInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcHighSchoolInfo.ascx.designer.cs">
+      <DependentUpon>UcHighSchoolInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ucHomeTopBanner.ascx.cs">
+      <DependentUpon>ucHomeTopBanner.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucHomeTopBanner.ascx.designer.cs">
+      <DependentUpon>ucHomeTopBanner.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcIntermediateInfo.ascx.cs">
+      <DependentUpon>UcIntermediateInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcIntermediateInfo.ascx.designer.cs">
+      <DependentUpon>UcIntermediateInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcIntertestedCollegeList.ascx.cs">
+      <DependentUpon>UcIntertestedCollegeList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcIntertestedCollegeList.ascx.designer.cs">
+      <DependentUpon>UcIntertestedCollegeList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ucLatestNews.ascx.cs">
+      <DependentUpon>ucLatestNews.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucLatestNews.ascx.designer.cs">
+      <DependentUpon>ucLatestNews.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcLoanQuery.ascx.cs">
+      <DependentUpon>UcLoanQuery.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcLoanQuery.ascx.designer.cs">
+      <DependentUpon>UcLoanQuery.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcMostViewdExam.ascx.cs">
+      <DependentUpon>UcMostViewdExam.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcMostViewdExam.ascx.designer.cs">
+      <DependentUpon>UcMostViewdExam.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcMostViewdNews.ascx.cs">
+      <DependentUpon>UcMostViewdNews.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcMostViewdNews.ascx.designer.cs">
+      <DependentUpon>UcMostViewdNews.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcMostViewdNotice.ascx.cs">
+      <DependentUpon>UcMostViewdNotice.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcMostViewdNotice.ascx.designer.cs">
+      <DependentUpon>UcMostViewdNotice.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcMostViewedCollege.ascx.cs">
+      <DependentUpon>UcMostViewedCollege.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcMostViewedCollege.ascx.designer.cs">
+      <DependentUpon>UcMostViewedCollege.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcOnlineInstrucation.ascx.cs">
+      <DependentUpon>UcOnlineInstrucation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcOnlineInstrucation.ascx.designer.cs">
+      <DependentUpon>UcOnlineInstrucation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcParticipatedCollegeList.ascx.cs">
+      <DependentUpon>UcParticipatedCollegeList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcParticipatedCollegeList.ascx.designer.cs">
+      <DependentUpon>UcParticipatedCollegeList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcRatingControl.ascx.cs">
+      <DependentUpon>UcRatingControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcRatingControl.ascx.designer.cs">
+      <DependentUpon>UcRatingControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcRegistration.ascx.cs">
+      <DependentUpon>UcRegistration.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcRegistration.ascx.designer.cs">
+      <DependentUpon>UcRegistration.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcReportDonation.ascx.cs">
+      <DependentUpon>UcReportDonation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcReportDonation.ascx.designer.cs">
+      <DependentUpon>UcReportDonation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcReportDonationCollegeList.ascx.cs">
+      <DependentUpon>UcReportDonationCollegeList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcReportDonationCollegeList.ascx.designer.cs">
+      <DependentUpon>UcReportDonationCollegeList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcReportDonationStory.ascx.cs">
+      <DependentUpon>UcReportDonationStory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcReportDonationStory.ascx.designer.cs">
+      <DependentUpon>UcReportDonationStory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcStudentAcademic.ascx.cs">
+      <DependentUpon>UcStudentAcademic.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcStudentAcademic.ascx.designer.cs">
+      <DependentUpon>UcStudentAcademic.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcStudentCityPrefrance.ascx.cs">
+      <DependentUpon>UcStudentCityPrefrance.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcStudentCityPrefrance.ascx.designer.cs">
+      <DependentUpon>UcStudentCityPrefrance.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcStudentCollegePrefrance.ascx.cs">
+      <DependentUpon>UcStudentCollegePrefrance.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcStudentCollegePrefrance.ascx.designer.cs">
+      <DependentUpon>UcStudentCollegePrefrance.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcStudentCounsellingPersonelInfo.ascx.cs">
+      <DependentUpon>UcStudentCounsellingPersonelInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcStudentCounsellingPersonelInfo.ascx.designer.cs">
+      <DependentUpon>UcStudentCounsellingPersonelInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcStudentDirectAdmissionStep1.ascx.cs">
+      <DependentUpon>UcStudentDirectAdmissionStep1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcStudentDirectAdmissionStep1.ascx.designer.cs">
+      <DependentUpon>UcStudentDirectAdmissionStep1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcStudentExamAppeared.ascx.cs">
+      <DependentUpon>UcStudentExamAppeared.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcStudentExamAppeared.ascx.designer.cs">
+      <DependentUpon>UcStudentExamAppeared.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcStudentPaymentOption.ascx.cs">
+      <DependentUpon>UcStudentPaymentOption.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcStudentPaymentOption.ascx.designer.cs">
+      <DependentUpon>UcStudentPaymentOption.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcStudentPersonelInfo.ascx.cs">
+      <DependentUpon>UcStudentPersonelInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcStudentPersonelInfo.ascx.designer.cs">
+      <DependentUpon>UcStudentPersonelInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcStudentQuey.ascx.cs">
+      <DependentUpon>UcStudentQuey.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcStudentQuey.ascx.designer.cs">
+      <DependentUpon>UcStudentQuey.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcStudentUpdateStreamPrioty.ascx.cs">
+      <DependentUpon>UcStudentUpdateStreamPrioty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcStudentUpdateStreamPrioty.ascx.designer.cs">
+      <DependentUpon>UcStudentUpdateStreamPrioty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcUserFinalList.ascx.cs">
+      <DependentUpon>UcUserFinalList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcUserFinalList.ascx.designer.cs">
+      <DependentUpon>UcUserFinalList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcWidgets.ascx.cs">
+      <DependentUpon>UcWidgets.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcWidgets.ascx.designer.cs">
+      <DependentUpon>UcWidgets.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UniversityBasicDetails.ascx.cs">
+      <DependentUpon>UniversityBasicDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UniversityBasicDetails.ascx.designer.cs">
+      <DependentUpon>UniversityBasicDetails.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UniversityContactDetails.ascx.cs">
+      <DependentUpon>UniversityContactDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UniversityContactDetails.ascx.designer.cs">
+      <DependentUpon>UniversityContactDetails.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UniversityDescription.ascx.cs">
+      <DependentUpon>UniversityDescription.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UniversityDescription.ascx.designer.cs">
+      <DependentUpon>UniversityDescription.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\com.admissionjankari.crm\Reference.cs" />
+    <Compile Include="WebServices\CommonWebServices.asmx.cs">
+      <DependentUpon>CommonWebServices.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Content Include="App_Code\PagerList.cs" />
+    <Compile Include="BankLoan\BankList.aspx.cs">
+      <DependentUpon>BankList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BankLoan\BankList.aspx.designer.cs">
+      <DependentUpon>BankList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BankLoan\BankLoanDetails.aspx.cs">
+      <DependentUpon>BankLoanDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BankLoan\BankLoanDetails.aspx.designer.cs">
+      <DependentUpon>BankLoanDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="College\CollegeComparison.aspx.cs">
+      <DependentUpon>CollegeComparison.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="College\CollegeComparison.aspx.designer.cs">
+      <DependentUpon>CollegeComparison.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="College\CollegeDetails.aspx.cs">
+      <DependentUpon>CollegeDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="College\CollegeDetails.aspx.designer.cs">
+      <DependentUpon>CollegeDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="College\CollegeQuery.aspx.cs">
+      <DependentUpon>CollegeQuery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="College\CollegeQuery.aspx.designer.cs">
+      <DependentUpon>CollegeQuery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="College\CollegeSearch.aspx.cs">
+      <DependentUpon>CollegeSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="College\CollegeSearch.aspx.designer.cs">
+      <DependentUpon>CollegeSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="College\CourseComparison.aspx.cs">
+      <DependentUpon>CourseComparison.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="College\CourseComparison.aspx.designer.cs">
+      <DependentUpon>CourseComparison.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="College\ParticipatedCollegeList.aspx.cs">
+      <DependentUpon>ParticipatedCollegeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="College\ParticipatedCollegeList.aspx.designer.cs">
+      <DependentUpon>ParticipatedCollegeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="College\QueryReply.aspx.cs">
+      <DependentUpon>QueryReply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="College\QueryReply.aspx.designer.cs">
+      <DependentUpon>QueryReply.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="College\SponserCollegeDetails.aspx.cs">
+      <DependentUpon>SponserCollegeDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="College\SponserCollegeDetails.aspx.designer.cs">
+      <DependentUpon>SponserCollegeDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="counselling\BookYourSeat.aspx.cs">
+      <DependentUpon>BookYourSeat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="counselling\BookYourSeat.aspx.designer.cs">
+      <DependentUpon>BookYourSeat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="counselling\ChooseCollege.aspx.cs">
+      <DependentUpon>ChooseCollege.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="counselling\ChooseCollege.aspx.designer.cs">
+      <DependentUpon>ChooseCollege.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="counselling\Confirmation.aspx.cs">
+      <DependentUpon>Confirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="counselling\Confirmation.aspx.designer.cs">
+      <DependentUpon>Confirmation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="counselling\DirectAdmission.aspx.cs">
+      <DependentUpon>DirectAdmission.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="counselling\DirectAdmission.aspx.designer.cs">
+      <DependentUpon>DirectAdmission.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="counselling\FinalStreamList.aspx.cs">
+      <DependentUpon>FinalStreamList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="counselling\FinalStreamList.aspx.designer.cs">
+      <DependentUpon>FinalStreamList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="counselling\FinalUserIntertestedList.aspx.cs">
+      <DependentUpon>FinalUserIntertestedList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="counselling\FinalUserIntertestedList.aspx.designer.cs">
+      <DependentUpon>FinalUserIntertestedList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="counselling\OnlineApplicationInstrucation.aspx.cs">
+      <DependentUpon>OnlineApplicationInstrucation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="counselling\OnlineApplicationInstrucation.aspx.designer.cs">
+      <DependentUpon>OnlineApplicationInstrucation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="counselling\Payment.aspx.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="counselling\Payment.aspx.designer.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="counselling\PaymentConformation.aspx.cs">
+      <DependentUpon>PaymentConformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="counselling\PaymentConformation.aspx.designer.cs">
+      <DependentUpon>PaymentConformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="counselling\PaymentOptions.aspx.cs">
+      <DependentUpon>PaymentOptions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="counselling\PaymentOptions.aspx.designer.cs">
+      <DependentUpon>PaymentOptions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="counselling\RegCanditate.aspx.cs">
+      <DependentUpon>RegCanditate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="counselling\RegCanditate.aspx.designer.cs">
+      <DependentUpon>RegCanditate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="counselling\StudentConformationList.aspx.cs">
+      <DependentUpon>StudentConformationList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="counselling\StudentConformationList.aspx.designer.cs">
+      <DependentUpon>StudentConformationList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="counselling\StudentCounselling.aspx.cs">
+      <DependentUpon>StudentCounselling.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="counselling\StudentCounselling.aspx.designer.cs">
+      <DependentUpon>StudentCounselling.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Course\StreamDecsription.aspx.cs">
+      <DependentUpon>StreamDecsription.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Course\StreamDecsription.aspx.designer.cs">
+      <DependentUpon>StreamDecsription.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Course\UniversityDescription.aspx.cs">
+      <DependentUpon>UniversityDescription.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Course\UniversityDescription.aspx.designer.cs">
+      <DependentUpon>UniversityDescription.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Exam\ExamDetails.aspx.cs">
+      <DependentUpon>ExamDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Exam\ExamDetails.aspx.designer.cs">
+      <DependentUpon>ExamDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Exam\ExamList.aspx.cs">
+      <DependentUpon>ExamList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Exam\ExamList.aspx.designer.cs">
+      <DependentUpon>ExamList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewsAndArticles\NewsAndArticles.aspx.cs">
+      <DependentUpon>NewsAndArticles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewsAndArticles\NewsAndArticles.aspx.designer.cs">
+      <DependentUpon>NewsAndArticles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewsAndArticles\NewsDetails.aspx.cs">
+      <DependentUpon>NewsDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewsAndArticles\NewsDetails.aspx.designer.cs">
+      <DependentUpon>NewsDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewsAndArticles\NoticeDetails.aspx.cs">
+      <DependentUpon>NoticeDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewsAndArticles\NoticeDetails.aspx.designer.cs">
+      <DependentUpon>NoticeDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewsAndArticles\NoticeList.aspx.cs">
+      <DependentUpon>NoticeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewsAndArticles\NoticeList.aspx.designer.cs">
+      <DependentUpon>NoticeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AdminPanel\Images\Colleges\" />
+    <Folder Include="AdminPanel\Images\Exam\" />
+    <Folder Include="AdminPanel\Images\Image_Date\" />
+    <Folder Include="App_Data\" />
+    <Folder Include="Image\BankImage\" />
+    <Folder Include="Image\Image_Date\" />
+    <Folder Include="Image\Notices\" />
+    <Folder Include="Image\UserImage\" />
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="Resource\ExcelUpload\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IryTech.AdmissionJankari.BL\IryTech.AdmissionJankari.BL.csproj">
+      <Project>{3f0c6ab9-254b-435a-9512-006fad9215ab}</Project>
+      <Name>IryTech.AdmissionJankari.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IryTech.AdmissionJankari.BO\IryTech.AdmissionJankari.BO.csproj">
+      <Project>{9cf08eff-dccc-421f-a43b-4849f7d3dc98}</Project>
+      <Name>IryTech.AdmissionJankari.BO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IryTech.AdmissionJankari.Components\IryTech.AdmissionJankari.Components.csproj">
+      <Project>{c1746424-b8cf-4f81-be08-256e4acf78f5}</Project>
+      <Name>IryTech.AdmissionJankari.Components</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Irytech.Components.Breadcrumbs\Irytech.Components.Breadcrumbs.csproj">
+      <Project>{1b9d3437-036b-4858-a520-2dc628c2f68e}</Project>
+      <Name>Irytech.Components.Breadcrumbs</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\label.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>label1.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1285</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1285/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

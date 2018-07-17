@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <!-- Statrt of Course Error Field    -->
+  <message MessageID="rfvCourseEligibilty" description="Please Enter Eligibilty Names">
+  </message>
+  <message MessageID="rfvCourseCategory" description="Please Enter Course Category">
+  </message>
+  <message MessageID="rfvCourse" description="Please Enter Course ">
+  </message>
+  <message MessageID="rfvHelplineNo" description="Please Enter HelplineNo ">
+  </message>
+  <message MessageID="rfvCorseMetaTag" description=" Please Enter Course Metatag">
+  </message>
+  <message MessageID="rfvCourseTitle" description=" Please Enter Course Titlet">
+  </message>
+  <message MessageID="rfvCourseMetaDesc" description=" Please Enter Course Meta Description">
+  </message>
+  <message MessageID="rfvCourseDesc" description=" Please Enter Course Dscription">
+  </message>
+  <message MessageID="rfvCoursePopularName" description=" Please Enter PopularName">
+  </message>
+  <message MessageID="rfvCourseShortName" description=" Please Enter ShortName">
+  </message>
+  <message MessageID="rfvCourseUrl" description=" Please Enter Course Url">
+  </message>
+  <!-- End of Course Error Field    -->
+  <message MessageID="rfvNewsUrl" description=" Please Enter  Url">
+  </message>
+  <message MessageID="rfvNewsSubject" description=" Please Enter Subject">
+  </message>
+  <message MessageID="rfvNewsTitle" description=" Please Enter Title">
+  </message>
+  <message MessageID="rfvNewsMetaTag" description=" Please Enter Meta Tag">
+  </message>
+  <message MessageID="rfvNewsMetaDesc" description=" Please Enter Meta Tag">
+  </message>
+  <message MessageID="rfvNewsShortDesc" description=" Please Enter Short Description">
+  </message>
+  <message MessageID="rfvNewsDesc" description=" Please Enter Description">
+  </message>
+  <message MessageID="rfvNewsBy" description=" Please Enter News Source">
+  </message>
+  <message MessageID="rfvNewsDate" description=" Please Enter News Date">
+  </message>
+  <message MessageID="rfvCountryName" description="Please Enter Country Name">
+  </message>
+  <message MessageID="rfvStateNameEnter" description="Please Enter State Name">
+  </message>
+  <message MessageID="rfvStateNameSelect" description="Please Select State Name">
+  </message>
+  <message MessageID="rfvCityName" description="Please Enter City Name">
+  </message>
+  <message MessageID="rfvZoneName" description="Please Enter Zone Name">
+  </message>
+  <message MessageID="rfvCourseStreamName" description="Please Enter Stream Name">
+  </message>
+  <message MessageID="rfvCourseId" description=" Please Select Course">
+  </message>
+  <message MessageID="rfvCourseSreamUrl" description=" Please Enter Stream Url">
+  </message>
+  <message MessageID="rfvCategoryStreamTitle" description=" Please Enter Stream Title">
+  </message>
+  <message MessageID="rfvStreamMetaTag" description="Please Enter Stream Meta Tag">
+  </message>
+  <message MessageID="rfvStreamMetaDesc" description="Please Enter StreamMeta Desc">
+  </message>
+  <message MessageID="rfvCourseStreamDescription" description=" Please Enter Stream Description">
+  </message>
+  <message MessageID="rfvCourseStreamHistory" description=" Please Enter Stream History">
+  </message>
+  <message MessageID="rfvCourseStreamFuture" description="Please Enter StreamFuture">
+  </message>
+  <message MessageID="rfvCourseStreamCoreCompanies" description="Please Enter Stream Companies">
+  </message>
+  <message MessageID="rfvCourseStreamRelatedIndustry" description=" Please Enter Stream Industry">
+  </message>
+  <message MessageID="rfvUniversityCategoryName" description=" Please Enter Stream Industry">
+  </message>
+  <message MessageID="rfvExamName" description="Please Select Exam Name">
+  </message>
+  <message MessageID="rfvExamFormUrl" description="Please Enter Exam Form Url ">
+  </message>
+  <message MessageID="rfvFormtitle" description=" Please Enter Form title">
+  </message>
+  <message MessageID="rfvFormMetaDesc" description=" Please Enter Form Meta Dscription">
+  </message>
+  <message MessageID="rfvFormMataTag" description=" Please Enter Form Mata Tag">
+  </message>
+  <message MessageID="rfvFormSubject" description=" Please Enter Form Subject">
+  </message>
+  <message MessageID="rfvFormYear" description=" Please Enter Form Year">
+  </message>
+  <message MessageID="rfvFormWebsite" description=" Please Enter Form Web site">
+  </message>
+  <message MessageID="rfvSaleExectStartDate1" description=" Please Enter Exect Start Date">
+  </message>
+  <message MessageID="rfvSaleStartDate" description="Please Enter Sale Start Date">
+  </message>
+  <message MessageID="rfvSaleEndDate" description="Please Enter Sale End Date ">
+  </message>
+  <message MessageID="rfvFormStartSaleDateRemark" description=" Please Enter Form Start Sale Date Remark">
+  </message>
+  <message MessageID="rfvSaleExectEndDate2" description=" Please Enter Sale Exect End Date">
+  </message>
+  <message MessageID="rfvFormSaleNotExectStartDate" description=" Please Enter Sale Not Exect Start Date">
+  </message>
+  <message MessageID="rfvFormSaleNotExectEndDate" description=" Please Enter Sale Not Exect End Date">
+  </message>
+  <message MessageID="rfvFormEndSaleDateRemark" description=" Please Enter Form End Sale Date Remark">
+  </message>
+  <message MessageID="rfvFormSubmitDate" description=" Please Enter Form Submit Date">
+  </message>
+  <message MessageID="rfvFormSubmitStartDate" description=" Please Enter Form Submit Start Date">
+  </message>
+  <message MessageID="rfvFormSubmitEndDate" description="Please Enter Form Submit End Date">
+  </message>
+  <message MessageID="rfvFormSubmitStartDateRemark" description="Please Enter Form Submit Start Date Remark ">
+  </message>
+  <message MessageID="ResultExactDate" description=" Please Enter Result Exact Date">
+  </message>
+  <message MessageID="rfvResultStartDate" description=" Please Enter Result Start Date">
+  </message>
+  <message MessageID="rfvResultEndtDate" description=" Please Enter Result Endt Date">
+  </message>
+  <message MessageID="rfvResultDateRemark" description=" Please Enter Result Date Remark">
+  </message>
+  <message MessageID="rfvFormResultWebsite" description=" Please Enter Form Result Website">
+  </message>
+  <message MessageID="rfvExamFormPrice" description=" Please Enter Exam Form Price">
+  </message>
+  <message MessageID="rfvExamFormStore" description=" Please Enter Exam Form Store">
+  </message>
+  <message MessageID="rfvExamFormCenter" description=" Please Enter Exam Form Center">
+  </message>
+  <message MessageID="rfvExamFormDD" description=" Please Enter Exam Form DD">
+  </message>
+  <message MessageID="rfvExamFormSyllabus" description=" Please Enter Exam Form Syllabus">
+  </message>
+  <message MessageID="rfvExamName1" description=" Please Enter exam name">
+  </message>
+  <message MessageID="rfvExamFullName" description=" Please Enter exam full name">
+  </message>
+  <message MessageID="rfvPopularName" description=" Please Enter exam popular name">
+  </message>
+  <message MessageID="rfvEligiblityCriteria" description=" Please Enter Eligiblity Criteria">
+  </message>
+  <message MessageID="rfvImageUpload" description=" Please upload image">
+  </message>
+  <message MessageID="rfvWebsite" description=" Please Enter website">
+  </message>
+  <message MessageID="rfvExamDesc" description=" Please Enter exam description">
+  </message>
+  <message MessageID="rfvAssociationCategoryType" description=" Please Enter College Association category type">
+  </message>
+  <message MessageID="rfvCourseStreamRelatedIndustry" description=" Please Enter Stream Industry">
+  </message>
+  <message MessageID="rfvUniversityCategoryName" description=" Please Enter University Category Name">
+  </message>
+  <message MessageID="rfvCollegeGroupName" description=" Please Enter College Group Name">
+  </message>
+  <message MessageID="rfvHostelType" description=" Please Enter HostelType">
+  </message>
+  <message MessageID="rfvInstituteType" description="Please Enter Institute Type">
+  </message>
+  <message MessageID="rfvUser" description=" Please Enter UserName">
+  </message>
+  <message MessageID="rfvDashBoardUrl" description=" Please Enter User DashBoardUrl">
+  </message>
+  <message MessageID="rfvUploadExcel" description=" Please Upload Exacel">
+  </message>
+  <message MessageID="revUploadExcel" description=" Please Upload .xls or .xlsx format">
+  </message>
+  <message MessageID="rfvFAQCategoryName" description=" Please Enter FAQ Category Name">
+  </message>
+  <message MessageID="rfvFAQCategoryId" description=" Please Select FAQ Category">
+  </message>
+  <message MessageID="rfvFAQDetailsAnswer" description=" Please Enter FAQ Details Answer">
+  </message>
+  <message MessageID="rfvfileUploadExcel" description=" Please Upload .xls or .xlsx format">
+  </message>
+  <message MessageID="rfvFAQName" description=" Please Enter FAQ Name">
+  </message>
+  <message MessageID="rfvUploadexcel" description=" Please Upload .xls or .xlsx format">
+  </message>
+  <message MessageID="rfvCountryCode" description=" Please Enter Country Code">
+  </message>
+  <message MessageID="revExcelUpload" description=" Please Enter Country Excel upload">
+  </message>
+  <message MessageID="rfvUpload" description=" Please Enter Country upload">
+  </message>
+  <message MessageID="rfvImageUpload" description=" Please Select Logo">
+  </message>
+  <message MessageID="rfvExcelUpload" description=" Please Upload Excel">
+  </message>
+  <message MessageID="rfvConutryName" description=" Please Select Country">
+  </message>
+  <message MessageID="rfvZoneName" description=" Please Select Zone">
+  </message>
+  <message MessageID="rfvStateNameEnter" description=" Please Select State Name">
+  </message>
+  <message MessageID="rfvExcelUpload" description=" Please Upload Excel">
+  </message>
+  <message MessageID="rfvSettingName" description="Please Enter Setting Name ">
+  </message>
+  <message MessageID="rfvSettingValue" description="Please Enter Setting Value ">
+  </message>
+  <message MessageID="rfvCommon" description="*">
+  </message>
+  <message MessageID="rfvCandidateName" description="Candidate's name field Cannot  be blank">
+  </message>
+  <message MessageID="rfvEmailId" description="Field Email cannot be blank">
+  </message>
+  <message MessageID="revEmailId" description="Incorrect Email format, please try again">
+  </message>
+  <message MessageID="rfvContactNo" description=" Please enter contact no">
+  </message>
+  <message MessageID="revContactNo" description="Enter 10 digits in contact no">
+  </message>
+  <message MessageID="rfvGender" description="Please select gender">
+  </message>
+  <message MessageID="rfvDOB" description="Date of birth Cannot  be blank">
+  </message>
+  <message MessageID="revMobile" description="Please Enter 10 digit numeric mobile number">
+  </message>
+  <message MessageID="revEmail" description="Incorrect Email format, please try again">
+  </message>
+  <message MessageID="rfvEmailId" description="Field Email cannot be blank">
+  </message>
+  <message MessageID="rfvMobile" description="Please Enter Mobile Number">
+  </message>
+  <message MessageID="rfvPassword" description="Field Password cannot be blank">
+  </message>
+  <message MessageID="rfvOldPassword" description="Old Password can`t be blank">
+  </message>
+  <message MessageID="rfvNewPassword" description="New Password can`t be blank">
+  </message>
+  <message MessageID="rfvCoursePaymentCategory" description="Please Select Category Name">
+  </message>
+  <message MessageID="rfvddlCourse" description="Please Select Course Name">
+  </message>
+  <message MessageID="rfvOnlinePaymentAmount" description="Please Enter Online Payment Amount">
+  </message>
+  <message MessageID="rfvOfflinePaymentAmount" description="Please Enter Offline Payment Amount">
+  </message>
+  <message MessageID="rfvUserCategory" description="Please Select User Category">
+  </message>
+  <!-- Start of College Register Error Field    -->
+  <message MessageID="rfvCollegeName" description="Field College Name cannot be blank">
+  </message>
+  <message MessageID="rfvCollegeContactPersonName" description="Field Name Of Contact Person cannot be blank">
+  </message>
+  <message MessageID="rfvState" description="Select State">
+  </message>
+  <message MessageID="rfvCity" description="Select City">
+  </message>
+  <message MessageID="revPhone" description="Enter phone number in digit">
+  </message>
+  <!-- End of college Error Field    -->
+  <!-- Start of College profile Error Field    -->
+  <message MessageID="revCollegeEst" description="Enter establishment in digit">
+  </message>
+  <message MessageID="revPinCode" description="Enter pincode in 6 digit in number">
+  </message>
+  <message MessageID="revFax" description="Enter fax in digit">
+  </message>8
+    <message MessageID="rfvCollegeMgt" description="Enter college management"></message>
+  <message MessageID="rfvCollegeEst" description="Field College Establishment cannot be blank"></message><message MessageID="revCollegeEst" description="Check college establishment"></message><!-- End of college profile Field    --></Root>

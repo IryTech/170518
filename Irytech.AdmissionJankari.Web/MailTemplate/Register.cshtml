@@ -1,0 +1,46 @@
+﻿   @using IryTech.AdmissionJankari.BO
+@using IryTech.AdmissionJankari.Components
+ <html>
+<head>
+    <title>Welcome to AdmissionJankari.com</title>
+</head>
+    <body>
+      
+
+        <div style='font-size: 13px; border: solid 1px #7f9db9; margin: 5px; color: #666666;
+	                                  font-family: Arial, Verdana'>
+            <div style='padding-left: 15px; padding-bottom: 10px; text-align: left; background-color: #3b5998;
+		                                                                                                  padding-top: 9px;'>
+                <a href="http://orderramukaka.com/">AdmissionJankari</a></div>
+            <br />
+            <div style='padding-left: 15px; padding-bottom: 10px;'>
+                Dear <strong>@System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(UserRegistrationProperty.UserFullName)</strong>,
+                <br />
+                <br />
+                Thank You very much for joining with us.<br />
+                Please find your login credential details below:<br />
+                <br />
+                User ID&nbsp;&nbsp;&nbsp;&nbsp; : <strong>new UserRegistrationProperty()EmailId.</strong>
+                <br />
+                Password : <strong>new UserRegistrationProperty().password.</strong>
+                <br />
+                <br />
+                Your account is ready to use and you can login anytime by using the following link:
+                <strong><a href="@ApplicationConfig.LoginUrl">click here</a></strong>
+                <br />
+                <br />
+                Once again please except our hearty welcome and thank you for giving us an opportunity
+                to serve you.<br />
+                <br />
+                Wish you happy 
+                a good relation with us.
+                <br />
+                <br />
+                <strong>Thanks & Regards,<br />
+                    AdmissionJankari</strong><br />
+                <a href='http://www.orderramuakaka.com/' style='text-decoration: none'><strong><i>www.AdmissionJankari.com</i></strong></a>
+                <br />Helpline Number:@ClsCommon.HelpLineNo
+            </div>
+        </div>
+    </body>
+</html>

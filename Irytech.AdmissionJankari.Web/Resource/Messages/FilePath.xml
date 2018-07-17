@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <FilePathId PathId="ExamImg" lgpath="~/Image/Exam/" description="No Record Found">
+  </FilePathId>
+  <FilePathId PathId="NoticeImage" lgpath="~/Image/Notices/" description="No Images Found">
+  </FilePathId>
+  <FilePathId PathId="NewsImage" lgpath="~/Image/NewsArticle/" description="No Images Found">
+  </FilePathId>
+  <FilePathId PathId="UniversityImage" lgpath="~/Image/Colleges/" description="No Images Found">
+  </FilePathId>
+  <FilePathId PathId="ExcelUpload" lgpath="/Resource/ExcelUpload/" description="No Images Found">
+  </FilePathId>
+  <FilePathId PathId="CommonImage" lgpath="~/Image/CommonImages/" description="No Images Found">
+  </FilePathId>
+  <FilePathId PathId="BankImage" lgpath="~/Image/BankImage/" description="No Images Found">
+  </FilePathId>
+  <FilePathId PathId="CourseImage" lgpath="~/Image/Course/" description="No Images Found">
+  </FilePathId>
+  <FilePathId PathId="UserImage" lgpath="~/Image/UserImage/" description="No Images Found">
+  </FilePathId>
+  <FilePathId PathId="BannerImage" lgpath="~/Image/Banner/" description="No Images Found">
+  </FilePathId>
+  <FilePathId PathId="NewsArticle" lgpath="~/Image/NewsArticle/" description="No Images Found">    
+  </FilePathId>
+  <FilePathId PathId="CollegeGallery" lgpath="~/Image/CollegeGallery/" description="No Images Found">
+  </FilePathId>
+</Root>

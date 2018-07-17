@@ -1,0 +1,115 @@
+﻿<%@ Master Language="C#" AutoEventWireup="True" CodeBehind="Admin.master.cs" Inherits="IryTech.AdmissionJankari20.Web.AdminPanel.Controls.Admin" %>
+<%@ Import Namespace="IryTech.AdmissionJankari.Components" %>
+<%@ Register Src="/UserControl/AdminProfile.ascx" TagPrefix="AJ" TagName="Admin" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="/AdminPanel/StyleSheets/Admin_style.css"/>
+    <link href="~/Styles/autoCompliteCSS.css" rel="stylesheet" type="text/css" />
+    <script src="/AdminPanel/JS/jquery-1.7.min.js" type="text/javascript"></script>
+        <script src="/AdminPanel/JS/commonscripts.js" type="text/javascript"></script>
+<title>Admission Jankari</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body> 
+    <div class="switcher">
+        <div class="logos">
+            <a href="/AdminPanel/Home/Home.aspx" class="logo">
+                <img src="../Images/CommonImages/test.png" title="Admissionjankari.com" alt="Logo" /></a> <a href="/AdminPanel/Home/Home.aspx" class="logoContent" title="Admissionjankari.com" >Admission Jankari</a>
+        </div>
+        <ul class="menu">
+            <li class="purchase"><a style="cursor:default !important;" href="#">Welcome : <span>
+                <asp:Label ID="lblUserName" ForeColor="#ffaaaa" runat="server"></asp:Label></span></a></li>
+            <li class="purchase"><a href="<%=Utils.AbsoluteWebRoot %>">Logout</a></li>
+        </ul>
+    </div>
+    <div class="clear">
+    
+    </div>
+
+
+
+
+
+<div class="paguOuterDiv">
+        
+<form id="form1" runat="server">
+
+<Ajex:ToolkitScriptManager id="ScriptManager" CombineScripts="true" runat="server" />
+
+
+ <div class="sidebar">
+ <div id="accordiona">
+
+<div id="nav">
+ 
+<asp:Menu ID="menuBar" StaticEnableDefaultPopOutImage="False" runat="server" Orientation="Vertical"      
+                     Width="100%"  >
+                    <DynamicHoverStyle  ForeColor="White" />
+                    <DynamicMenuItemStyle  CssClass="mainlinkOpen" />
+                    <DynamicMenuStyle />
+                    <DynamicSelectedStyle />
+                    <LevelSelectedStyles >
+                        <asp:MenuItemStyle  />
+                    </LevelSelectedStyles>
+                    <StaticHoverStyle CssClass="mainlinkhover"  />
+                    <StaticMenuItemStyle CssClass="mainlink"  />
+                    <StaticSelectedStyle  CssClass="selectedMenu"  />
+                </asp:Menu>
+          
+ </div>
+ </div>
+ </div>
+
+
+ 
+
+    
+    <div class="mainContent">
+    <div class="breadcrumbs">
+    	<a href="../Home/Home.aspx">Home</a>
+        <%--<span>Form Styling</span>--%>
+    </div>
+        <div class="rightContent">
+            
+       		
+          
+
+                     <div id="rightMainDiv">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolderMain"  runat="server">
+                 	
+                </asp:ContentPlaceHolder>
+            </div>
+           
+
+            
+
+</div>
+<%--<div class="leftContent" id="lftAdminProfile" >
+<aside id="sidebar" class="column">
+		<AJ:Admin ID="Admin1" runat="server" />
+	</aside><!-- end of sidebar -->
+</div>--%>
+
+</div>
+ </form>
+
+</div> 
+
+
+<div id="footer" class="clear">
+		<div class="copyrights">&copy; 2013, All Right Reserve www.admissionjankari.com</div>
+		<ul class="footer-links">
+			<li><a href="" title=""><i class="icon-cogs"></i>Contact admin</a></li>
+			<li><a href="" title=""><i class="icon-screenshot"></i>Report bug</a></li>
+		</ul>
+        <div class="clear"></div>
+	</div>
+
+</body>
+
+
+</html>
